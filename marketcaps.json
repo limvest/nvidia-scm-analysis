@@ -1,0 +1,502 @@
+[
+  {
+    "name": "NVIDIA",
+    "ticker": "NVDA",
+    "category": "설계",
+    "note": "Tier0 허브",
+    "marketCap_local": 5316647321600,
+    "currency": "USD",
+    "marketCap_usd": 5316647321600.0,
+    "price": 219.51
+  },
+  {
+    "name": "Cadence",
+    "ticker": "CDNS",
+    "category": "EDA",
+    "note": "",
+    "marketCap_local": 98869002240,
+    "currency": "USD",
+    "marketCap_usd": 98869002240.0,
+    "price": 358.46
+  },
+  {
+    "name": "Synopsys",
+    "ticker": "SNPS",
+    "category": "EDA",
+    "note": "",
+    "marketCap_local": 96543432704,
+    "currency": "USD",
+    "marketCap_usd": 96543432704.0,
+    "price": 503.98
+  },
+  {
+    "name": "Broadcom",
+    "ticker": "AVGO",
+    "category": "경쟁/ASIC",
+    "note": "",
+    "marketCap_local": 1962851434496,
+    "currency": "USD",
+    "marketCap_usd": 1962851434496.0,
+    "price": 414.57
+  },
+  {
+    "name": "TSMC",
+    "ticker": "TSM",
+    "category": "파운드리",
+    "note": "Critical",
+    "marketCap_local": 2111672811520,
+    "currency": "USD",
+    "marketCap_usd": 2111672811520.0,
+    "price": 407.15
+  },
+  {
+    "name": "Samsung",
+    "ticker": "005930.KS",
+    "category": "메모리/파운드리",
+    "note": "",
+    "marketCap_local": 1966685657497600,
+    "currency": "KRW",
+    "marketCap_usd": 1307393317198.3018,
+    "price": 299500.0
+  },
+  {
+    "name": "Intel",
+    "ticker": "INTC",
+    "category": "대안 파운드리",
+    "note": "",
+    "marketCap_local": 595581009920,
+    "currency": "USD",
+    "marketCap_usd": 595581009920.0,
+    "price": 118.5
+  },
+  {
+    "name": "GlobalFoundries",
+    "ticker": "GFS",
+    "category": "SiPho 파운드리",
+    "note": "",
+    "marketCap_local": 44613677056,
+    "currency": "USD",
+    "marketCap_usd": 44613677056.0,
+    "price": 81.35
+  },
+  {
+    "name": "Tower Semi",
+    "ticker": "TSEM",
+    "category": "SiPho 파운드리",
+    "note": "",
+    "marketCap_local": 33199128576,
+    "currency": "USD",
+    "marketCap_usd": 33199128576.0,
+    "price": 279.01
+  },
+  {
+    "name": "ASML",
+    "ticker": "ASML",
+    "category": "EUV 노광",
+    "note": "Critical",
+    "marketCap_local": 613584928768,
+    "currency": "USD",
+    "marketCap_usd": 613584928768.0,
+    "price": 1592.0
+  },
+  {
+    "name": "SK Hynix",
+    "ticker": "000660.KS",
+    "category": "HBM",
+    "note": "Critical",
+    "marketCap_local": 1377118583783424,
+    "currency": "KRW",
+    "marketCap_usd": 915466905737.698,
+    "price": 1940000.0
+  },
+  {
+    "name": "Micron",
+    "ticker": "MU",
+    "category": "HBM",
+    "note": "",
+    "marketCap_local": 859446050816,
+    "currency": "USD",
+    "marketCap_usd": 859446050816.0,
+    "price": 762.1
+  },
+  {
+    "name": "Disco",
+    "ticker": "6146.T",
+    "category": "후공정장비",
+    "note": "Critical",
+    "marketCap_local": 7120532013056,
+    "currency": "JPY",
+    "marketCap_usd": 44790544723.01613,
+    "price": 65650.0
+  },
+  {
+    "name": "Advantest",
+    "ticker": "6857.T",
+    "category": "테스터",
+    "note": "High",
+    "marketCap_local": 19400449064960,
+    "currency": "JPY",
+    "marketCap_usd": 122035359141.33855,
+    "price": 26745.0
+  },
+  {
+    "name": "한미반도체",
+    "ticker": "042700.KS",
+    "category": "TC본더",
+    "note": "Critical",
+    "marketCap_local": 31538622234624,
+    "currency": "KRW",
+    "marketCap_usd": 20965924974.33185,
+    "price": 332500.0
+  },
+  {
+    "name": "ASMPT",
+    "ticker": "0522.HK",
+    "category": "본더",
+    "note": "",
+    "marketCap_local": 73076326400,
+    "currency": "HKD",
+    "marketCap_usd": 9328575110.70338,
+    "price": 174.9
+  },
+  {
+    "name": "BESI",
+    "ticker": "BESI.AS",
+    "category": "하이브리드본딩",
+    "note": "",
+    "marketCap_local": 21419655168,
+    "currency": "EUR",
+    "marketCap_usd": 24889211617.265625,
+    "price": 270.4
+  },
+  {
+    "name": "FormFactor",
+    "ticker": "FORM",
+    "category": "프로브카드",
+    "note": "",
+    "marketCap_local": 9978210304,
+    "currency": "USD",
+    "marketCap_usd": 9978210304.0,
+    "price": 128.0
+  },
+  {
+    "name": "Ajinomoto",
+    "ticker": "2802.T",
+    "category": "ABF필름",
+    "note": "Critical",
+    "marketCap_local": 4953101828096,
+    "currency": "JPY",
+    "marketCap_usd": 31156678818.690125,
+    "price": 5176.0
+  },
+  {
+    "name": "Resonac",
+    "ticker": "4004.T",
+    "category": "NCF필름",
+    "note": "High",
+    "marketCap_local": 3132824748032,
+    "currency": "JPY",
+    "marketCap_usd": 19706522873.404778,
+    "price": 17310.0
+  },
+  {
+    "name": "Ibiden",
+    "ticker": "4062.T",
+    "category": "ABF기판",
+    "note": "",
+    "marketCap_local": 4991513788416,
+    "currency": "JPY",
+    "marketCap_usd": 31398302987.1451,
+    "price": 17875.0
+  },
+  {
+    "name": "Shin-Etsu 신에쓰",
+    "ticker": "4063.T",
+    "category": "실리콘웨이퍼",
+    "note": "High",
+    "marketCap_local": 12732104441856,
+    "currency": "JPY",
+    "marketCap_usd": 80089225408.35692,
+    "price": 6857.0
+  },
+  {
+    "name": "SUMCO",
+    "ticker": "3436.T",
+    "category": "실리콘웨이퍼",
+    "note": "High",
+    "marketCap_local": 1076417265664,
+    "currency": "JPY",
+    "marketCap_usd": 6771027163.412452,
+    "price": 3078.0
+  },
+  {
+    "name": "Soitec",
+    "ticker": "SOI.PA",
+    "category": "SOI웨이퍼",
+    "note": "High",
+    "marketCap_local": 5950950400,
+    "currency": "EUR",
+    "marketCap_usd": 6914885541.7022705,
+    "price": 166.6
+  },
+  {
+    "name": "Tosoh",
+    "ticker": "4042.T",
+    "category": "전구체/석영",
+    "note": "",
+    "marketCap_local": 806827196416,
+    "currency": "JPY",
+    "marketCap_usd": 5075214823.633201,
+    "price": 2620.5
+  },
+  {
+    "name": "Coherent",
+    "ticker": "COHR",
+    "category": "InP레이저/CPO",
+    "note": "High",
+    "marketCap_local": 73951666176,
+    "currency": "USD",
+    "marketCap_usd": 73951666176.0,
+    "price": 378.0
+  },
+  {
+    "name": "Lumentum",
+    "ticker": "LITE",
+    "category": "InP레이저/CPO",
+    "note": "",
+    "marketCap_local": 75038097408,
+    "currency": "USD",
+    "marketCap_usd": 75038097408.0,
+    "price": 964.5
+  },
+  {
+    "name": "Marvell",
+    "ticker": "MRVL",
+    "category": "광DSP",
+    "note": "Medium",
+    "marketCap_local": 166959235072,
+    "currency": "USD",
+    "marketCap_usd": 166959235072.0,
+    "price": 190.69
+  },
+  {
+    "name": "IQE",
+    "ticker": "IQE.L",
+    "category": "InP에피",
+    "note": "",
+    "marketCap_local": 390483072,
+    "currency": "GBP",
+    "marketCap_usd": 524624159.791872,
+    "price": 39.85
+  },
+  {
+    "name": "AXT",
+    "ticker": "AXTI",
+    "category": "InP기판",
+    "note": "High",
+    "marketCap_local": 7917513728,
+    "currency": "USD",
+    "marketCap_usd": 7917513728.0,
+    "price": 121.02
+  },
+  {
+    "name": "AIXTRON",
+    "ticker": "AIXA.DE",
+    "category": "MOCVD장비",
+    "note": "Critical",
+    "marketCap_local": 5903211520,
+    "currency": "EUR",
+    "marketCap_usd": 6859413916.348267,
+    "price": 52.34
+  },
+  {
+    "name": "Veeco",
+    "ticker": "VECO",
+    "category": "MOCVD장비",
+    "note": "",
+    "marketCap_local": 3524073472,
+    "currency": "USD",
+    "marketCap_usd": 3524073472.0,
+    "price": 57.74
+  },
+  {
+    "name": "Hamamatsu",
+    "ticker": "6965.T",
+    "category": "SD엔진",
+    "note": "Critical",
+    "marketCap_local": 775672430592,
+    "currency": "JPY",
+    "marketCap_usd": 4879240852.950065,
+    "price": 2673.5
+  },
+  {
+    "name": "Sivers",
+    "ticker": "SIVE.ST",
+    "category": "InP DFB레이저",
+    "note": "",
+    "marketCap_local": 17510377472,
+    "currency": "SEK",
+    "marketCap_usd": 1875264621.4293194,
+    "price": 59.05
+  },
+  {
+    "name": "Credo",
+    "ticker": "CRDO",
+    "category": "고속연결",
+    "note": "",
+    "marketCap_local": 35670773760,
+    "currency": "USD",
+    "marketCap_usd": 35670773760.0,
+    "price": 193.39
+  },
+  {
+    "name": "Corning",
+    "ticker": "GLW",
+    "category": "광섬유",
+    "note": "",
+    "marketCap_local": 165147787264,
+    "currency": "USD",
+    "marketCap_usd": 165147787264.0,
+    "price": 191.89
+  },
+  {
+    "name": "Prysmian",
+    "ticker": "PRY.MI",
+    "category": "광섬유/케이블",
+    "note": "",
+    "marketCap_local": 42820980736,
+    "currency": "EUR",
+    "marketCap_usd": 49757124605.319824,
+    "price": 149.3
+  },
+  {
+    "name": "Furukawa",
+    "ticker": "5801.T",
+    "category": "광섬유",
+    "note": "",
+    "marketCap_local": 3466838409216,
+    "currency": "JPY",
+    "marketCap_usd": 21807581305.826523,
+    "price": 49280.0
+  },
+  {
+    "name": "Murata",
+    "ticker": "6981.T",
+    "category": "MLCC",
+    "note": "",
+    "marketCap_local": 12245099610112,
+    "currency": "JPY",
+    "marketCap_usd": 77025800982.12605,
+    "price": 6727.0
+  },
+  {
+    "name": "TDK",
+    "ticker": "6762.T",
+    "category": "MLCC",
+    "note": "",
+    "marketCap_local": 5962060005376,
+    "currency": "JPY",
+    "marketCap_usd": 37503365594.37631,
+    "price": 3141.0
+  },
+  {
+    "name": "Air Liquide",
+    "ticker": "AI.PA",
+    "category": "특수가스",
+    "note": "",
+    "marketCap_local": 103714119680,
+    "currency": "EUR",
+    "marketCap_usd": 120513736200.12207,
+    "price": 179.72
+  },
+  {
+    "name": "Linde",
+    "ticker": "LIN",
+    "category": "특수가스",
+    "note": "",
+    "marketCap_local": 237882310656,
+    "currency": "USD",
+    "marketCap_usd": 237882310656.0,
+    "price": 514.51
+  },
+  {
+    "name": "Air Products",
+    "ticker": "APD",
+    "category": "특수가스",
+    "note": "",
+    "marketCap_local": 64619708416,
+    "currency": "USD",
+    "marketCap_usd": 64619708416.0,
+    "price": 290.19
+  },
+  {
+    "name": "Dowa",
+    "ticker": "5714.T",
+    "category": "인듐/소재",
+    "note": "",
+    "marketCap_local": 601242533888,
+    "currency": "JPY",
+    "marketCap_usd": 3782018050.633292,
+    "price": 10165.0
+  },
+  {
+    "name": "Foxconn 鴻海",
+    "ticker": "2317.TW",
+    "category": "시스템조립",
+    "note": "High",
+    "marketCap_local": 3465475260416,
+    "currency": "TWD",
+    "marketCap_usd": 109938307558.91342,
+    "price": 247.5
+  },
+  {
+    "name": "Wistron",
+    "ticker": "3231.TW",
+    "category": "시스템조립",
+    "note": "",
+    "marketCap_local": 445257678848,
+    "currency": "TWD",
+    "marketCap_usd": 14125299406.778393,
+    "price": 140.0
+  },
+  {
+    "name": "Quanta",
+    "ticker": "2382.TW",
+    "category": "시스템조립",
+    "note": "",
+    "marketCap_local": 1187191586816,
+    "currency": "TWD",
+    "marketCap_usd": 37662318728.27289,
+    "price": 308.0
+  },
+  {
+    "name": "Delta Electronics",
+    "ticker": "2308.TW",
+    "category": "전력/CDU",
+    "note": "",
+    "marketCap_local": 5273012928512,
+    "currency": "TWD",
+    "marketCap_usd": 167280408467.63693,
+    "price": 2030.0
+  },
+  {
+    "name": "Vertiv",
+    "ticker": "VRT",
+    "category": "전력/냉각",
+    "note": "",
+    "marketCap_local": 124220784640,
+    "currency": "USD",
+    "marketCap_usd": 124220784640.0,
+    "price": 323.4
+  },
+  {
+    "name": "Schneider",
+    "ticker": "SU.PA",
+    "category": "전력인프라",
+    "note": "",
+    "marketCap_local": 148877000704,
+    "currency": "EUR",
+    "marketCap_usd": 172992102179.18945,
+    "price": 264.6
+  }
+]

@@ -1,0 +1,686 @@
+[
+  {
+    "key": "henkel",
+    "name": "Henkel",
+    "country": "EU",
+    "sub": "필름",
+    "problem": "mismatch_scm_text",
+    "current_note": "CoWoS·I-Cube·X-Cube 등 TSMC 2.5D/3D 패키징 모듈 공식 소재 공급사 · 플립칩 패키징용 CUF·NCF·NCP 전범위 포트폴리오 · Loctite Eccobond UF 9000AE: AI/HPC 대형 die 플립칩 BGA·CoWoS 전용 소재 | Henkel(독일): 반도체 패키징용 언더필·몰딩 컴파운드·TIM 공급사. CUF(모세관",
+    "batch": 1
+  },
+  {
+    "key": "namics",
+    "name": "Namics",
+    "country": "JP",
+    "sub": "필름",
+    "problem": "mismatch_scm_text",
+    "current_note": "'세계 최대 패키징 레벨 CUF 공급사' 자칭(namics-corp.com) · TSMC CoWoS용 MUF 공급사 자격 보유, A20 WMCM 자격심사 경쟁 중 · Fujifilm 계열 → 일본 정밀 화학 기반의 신뢰성 높음 | NAMICS Corporation(일본, Fujifilm 계열): 세계 최대 패키징 레벨 모세관 언더필(CUF) 공급사. CoW",
+    "batch": 1
+  },
+  {
+    "key": "soitec",
+    "name": "Soitec",
+    "country": "EU",
+    "sub": "SOI웨이퍼",
+    "problem": "mismatch_scm_text",
+    "current_note": "SiPh 기반 SOI 웨이퍼 95%+ 독점(Bank of America 추정, 2차) · SmartCut 특허 ~4,300건 · FY2025 €891M(-9%) EBIT 15.2%(전년 25%→급락) · Photonics-SOI €100M · Rubin CPO·Feynman OIO 모두 SOI 기판 필수 → 구조적 이중 수혜 · 성장 20~30% 전망(Bo",
+    "batch": 1
+  },
+  {
+    "key": "amat",
+    "name": "Applied Materials",
+    "country": "US",
+    "sub": "전공정장비",
+    "problem": "mismatch_scm_text",
+    "current_note": "PVD 80%+ · CMP 64% · FY2025 Non-GAAP OPM 30.7% · 상위2고객 34%(TSMC+Samsung추정) · 中 31%→하락 중 · CoWoS 공정 채용 (1차: AMAT 10-K)",
+    "batch": 1
+  },
+  {
+    "key": "teradyne",
+    "name": "Teradyne",
+    "country": "US",
+    "sub": "후공정장비",
+    "problem": "mismatch_scm_text",
+    "current_note": "2025 TSMC OIP '올해의 파트너' 수상(3DFabric 테스팅) · Magnum 7H: HBM2E~HBM4E 전 버전 지원, 핀 9,216개, 처리량 1.6x · FY2025 메모리 사업 역대 최대 매출 | 테라다인 — SoC·메모리 ATE(자동화 테스트 장비) 세계 2위. TSMC 3DFabric OIP 파트너로 멀티다이 테스트 선도.",
+    "batch": 1
+  },
+  {
+    "key": "asmpt",
+    "name": "ASMPT",
+    "country": "HK",
+    "sub": "후공정장비",
+    "problem": "mismatch_scm_text",
+    "current_note": "와이어본더·다이본더 · SK하이닉스 TC본더 한미반도체 대안 진입(7대 발주) · 한미반도체 독점 붕괴 수혜 · HBM4E TC본더 공급 경쟁 가속 · 시장점유 2026 20~30% 목표(2차)",
+    "batch": 1
+  },
+  {
+    "key": "ibiden",
+    "name": "Ibiden (ABF기판)",
+    "country": "JP",
+    "sub": "ABF기판",
+    "problem": "mismatch_scm_text",
+    "current_note": "ABF기판 GPU 75%(Blackwell 기준·2차) · FY2026 ¥420B +13.7% OPM 14.3% · $3.3B 캐파증설(애리조나 포함) · Ajinomoto ABF필름이 원가 15~25% · 신팹 리드타임 24~36개월 (1차: Ibiden IR)",
+    "batch": 1
+  },
+  {
+    "key": "unimicron",
+    "name": "Unimicron",
+    "country": "TW",
+    "sub": "기판",
+    "problem": "mismatch_scm_text",
+    "current_note": "NVIDIA Blackwell GPU 기판: Ibiden 75% + Unimicron 25%(2025년 추정) · Goldman Sachs: Unimicron 2026년 기판 매출 22% 성장 전망 · Google TPU·AWS AI칩 기판 지배적 공급사 | 대만 Unimicron Technology. ABF 기판 시장 최대 점유사. 2025년 NVIDIA",
+    "batch": 1
+  },
+  {
+    "key": "cadence",
+    "name": "Cadence",
+    "country": "US",
+    "sub": "EDA",
+    "problem": "mismatch_scm_text",
+    "current_note": "NVIDIA Grace Blackwell 아키텍처 공식 파트너 · Cadence Millennium M2000 AI Supercomputer(NVIDIA Blackwell 기반) 출시 · Cadence Cerebrus AI Studio: 최대 20% PPA 개선, 5-10x 납기 단축 | Cadence Design Systems — 미국 캘리포니아 산호세.",
+    "batch": 1
+  },
+  {
+    "key": "siemens_eda",
+    "name": "Siemens EDA",
+    "country": "EU",
+    "sub": "EDA",
+    "problem": "mismatch_scm_text",
+    "current_note": "Calibre DRC/LVS: TSMC 모든 선단 공정(3nm·2nm·1.6nm급) 인증 · TSMC 3DFabric CoWoS·SoIC 3D IC 검증 플로우 지원 · NVIDIA NIM·Nemotron 모델 통합 AI EDA 시스템 | Siemens EDA (구 Mentor Graphics) — 반도체 물리 검증 표준 Calibre 플랫폼 보유. TSM",
+    "batch": 1
+  },
+  {
+    "key": "arm",
+    "name": "Arm Holdings",
+    "country": "US",
+    "sub": "IP",
+    "problem": "mismatch_scm_text",
+    "current_note": "Vera CPU 아키텍처 IP · 데이터센터 CPU 90%+ 라이선스 · FY2025 라이선스 $1,839M +28.5% 로열티 $2,168M +21% · Feynman Rosa CPU도 Arm 계승 (1차: ARM 20-F)",
+    "batch": 2
+  },
+  {
+    "key": "rambus",
+    "name": "Rambus",
+    "country": "US",
+    "sub": "IP",
+    "problem": "mismatch_scm_text",
+    "current_note": "SK Hynix 포괄 라이선스: 2034년까지 (2023년 4월 10년 연장) · Micron 포괄 라이선스: 2029년까지 (2024년 12월 5년 연장) · HBM2E·HBM3·HBM4 인터페이스 IP 포함 | Rambus — 메모리 인터페이스 IP 및 보안 솔루션 전문 기업. HBM·DDR 메모리 인터페이스 특허 포트폴리오 보유. SK Hynix(20",
+    "batch": 2
+  },
+  {
+    "key": "tsmc",
+    "name": "TSMC",
+    "country": "TW",
+    "sub": "파운드리",
+    "problem": "mismatch_scm_text",
+    "current_note": "N3P+CoWoS-L GPU 100% · NVIDIA 매출비중 19%(2025·2위고객) · OPM 50.8% · CoWoS 60~63% NVIDIA독점 · 어닝콜 'fully booked 2025~2026' (1차: TSMC 연차보고서 SEC 6-K)",
+    "batch": 2
+  },
+  {
+    "key": "intel_f",
+    "name": "Intel Foundry",
+    "country": "US",
+    "sub": "파운드리",
+    "problem": "mismatch_scm_text",
+    "current_note": "NVIDIA, 18A 공정 테스트 후 일시 중단 보도 (ainvest.com) · DigiTimes 2026-01: NVIDIA, Feynman GPU(2028) I/O 다이 18A/14A 탐색 중 · Intel-UMC 12nm 공정 공동 개발 (2024년 발표, 2027년 양산 목표) | Intel Foundry (IFS) — Intel의 파운드리 서비스",
+    "batch": 2
+  },
+  {
+    "key": "gf",
+    "name": "GlobalFoundries",
+    "country": "US",
+    "sub": "파운드리",
+    "problem": "mismatch_scm_text",
+    "current_note": "TeraPHY OIO 칩렛 유일 파운드리(45SPCLO 공정) · FY2025 OPM 11.7% Non-IFRS 15.7% · 2025.11 AMF(싱가포르) 인수로 SiPh 캐파 확대 · 비상장(Mubadala 소유) → 캐파·수율 외부 검증 불가 · Feynman 광인터커넥트 핵심 단일 파운드리 (1차: GF 6-K; AMF 인수 공시)",
+    "batch": 2
+  },
+  {
+    "key": "tsmc_coupe",
+    "name": "TSMC COUPE",
+    "country": "TW",
+    "sub": "파운드리",
+    "problem": "mismatch_scm_text",
+    "current_note": "Co-packaged Optics and Ushered Photonics Engine · NVLink 스위치 CPO 파운드리 · 2026 H2 양산 목표 · NVIDIA 단독 의존 · GF 45SPCLO 대비 후속 통합 플랫폼 · 대만 지정학=TSMC N3P와 동일 리스크 (TrendForce 2026.4; borecraft 2026.5, 2차)",
+    "batch": 2
+  },
+  {
+    "key": "skhynix",
+    "name": "SK Hynix",
+    "country": "KR",
+    "sub": "메모리",
+    "problem": "mismatch_scm_text",
+    "current_note": "HBM4 주공급 70%(Rubin) · FY2025 OPM 48.6% · Q1 2026 OPM 72%(역대최고) · NVIDIA 매출비중 ~27% · HBM 3년치 완판 (1차: SK하이닉스 IR·CNBC 2026.4.23)",
+    "batch": 2
+  },
+  {
+    "key": "micron",
+    "name": "Micron",
+    "country": "US",
+    "sub": "메모리",
+    "problem": "mismatch_scm_text",
+    "current_note": "HBM4 Rubin 20% 공급 직접명시 · Q1 FY2026 OPM 47%(역대최고) 매출 $13.6B +57% · Vera Rubin용 HBM4 36GB 12-Hi 양산 명시 · 2026 HBM 완판 · HBM TAM $35B→$100B(2028) (1차: Micron 10-Q·8-K·FY2026)",
+    "batch": 2
+  },
+  {
+    "key": "samsung_m",
+    "name": "Samsung Memory",
+    "country": "KR",
+    "sub": "메모리",
+    "problem": "mismatch_scm_text",
+    "current_note": "NVIDIA Vera Rubin 검증 단계 통과 공식 확인(wccftech, igorslab 2026) · HBM4 핀 속도 11~11.7 Gbps(JEDEC 초과), 오버클럭 13Gbps · 로직 기저 다이를 자사 4nm 파운드리로 내재화(TSMC 미사용) | Samsung Electronics Memory — 대한민국 화성시. HBM4 2번째 공급사. ",
+    "batch": 2
+  },
+  {
+    "key": "marvell",
+    "name": "Marvell (광DSP)",
+    "country": "US",
+    "sub": "칩",
+    "problem": "mismatch_scm_text",
+    "current_note": "Ara PAM4 DSP: TSMC 3nm, 200G 전기 I/O, 200G-per-wavelength · NVIDIA와 NVLink Fusion 에코시스템 연계(2026.3 발표) · NVIDIA $2B 지분 투자 | Marvell Technology — 미국 캘리포니아 본사. 광DSP(Ara PAM4) 및 커스텀 ASIC 전문. TSMC 3nm 공정 기반",
+    "batch": 2
+  },
+  {
+    "key": "lumentum",
+    "name": "Lumentum",
+    "country": "US",
+    "sub": "광엔진",
+    "problem": "mismatch_scm_text",
+    "current_note": "CPO 광엔진 · NVIDIA $20억 전략투자+다년간구매약정 2026.3 · 시리즈A 전환우선주(경영권 보호조항 가능성) · Q3 FY2026 $808M +90%(역대최고) · 그린즈버러 InP팹 인수 2028 +$50억 캐파 · Feynman ELSFP ELS 공급 전환 (1차: Lumentum 10-K·IR)",
+    "batch": 3
+  },
+  {
+    "key": "credo",
+    "name": "Credo Technology",
+    "country": "US",
+    "sub": "칩",
+    "problem": "mismatch_scm_text",
+    "current_note": "AEC 시장 점유율 73% (650 Group, 2025 Q2) · FY2026 Q2 매출 YoY 272% 성장 · NVIDIA NVL72: 72개 GPU 간 통신에 Credo AEC 사용 | Credo Technology — AEC(Active Electrical Cable)·SerDes·Retimer 전문 팹리스. NVIDIA NVL72 GPU 클러스터",
+    "batch": 3
+  },
+  {
+    "key": "astera",
+    "name": "Astera Labs",
+    "country": "US",
+    "sub": "칩",
+    "problem": "mismatch_scm_text",
+    "current_note": "CXL/PCIe 스마트 컨트롤러 · Feynman 메모리 풀링(CXL) 핵심 · Q1 2026 매출 $308.4M +93%YoY · Microsoft Azure M-series 실배포 · CXL 4.0 128GT/s 지원 (1차: Astera Labs IR 뉴스룸)",
+    "batch": 3
+  },
+  {
+    "key": "mellanox",
+    "name": "Mellanox (NVIDIA子)",
+    "country": "US",
+    "sub": "칩",
+    "problem": "mismatch_scm_text",
+    "current_note": "ConnectX-7 NIC이 GB200/GH200 시스템 표준 탑재 · NVL72: PCIe Gen6 NIC 슬롯 8개, 800G 이더넷 또는 HDR InfiniBand 지원 · NVIDIA 네트워킹 매출 FY2026 Q3 $73억(YoY +98%) | NVIDIA 자회사(2020년 $70억 인수). InfiniBand·이더넷 NIC 및 스위치 공급. Co",
+    "batch": 3
+  },
+  {
+    "key": "vishay",
+    "name": "Vishay",
+    "country": "US",
+    "sub": "패시브",
+    "problem": "mismatch_scm_text",
+    "current_note": "GB200 8kW VRM: Renesas 컨트롤러 + Vishay MOSFET 조합 공식 채택 · vPolyTan(T55): GB200 대량 탑재, 2025년 공급 부족 발생 · Q4 FY2025 매출 $8.01억, 백로그 14% QoQ 증가(3년 내 최고) | 미국 종합 패시브·반도체 기업. GB200 NVL72/36 VRM에 MOSFET(Infineon",
+    "batch": 3
+  },
+  {
+    "key": "amphenol",
+    "name": "Amphenol",
+    "country": "US",
+    "sub": "커넥터",
+    "problem": "mismatch_scm_text",
+    "current_note": "FY2025 연매출 $23.1B(+52% YoY), Q1 FY2026 가이던스 $69~70억 · IT Datacom 매출비중: 2024년 24% → 2025년 36% · GB200 NVL72 NVLink 스파인 카트리지 Amphenol 제품 확인(eBay OEM 리스팅) | 글로벌 커넥터 1위 기업. GB200 NVL72 NVLink 스파인 카트리지(bli",
+    "batch": 3
+  },
+  {
+    "key": "samtec",
+    "name": "Samtec",
+    "country": "US",
+    "sub": "커넥터",
+    "problem": "mismatch_scm_text",
+    "current_note": "NVIDIA Jetson TX1/TX2: Samtec SEARAY 400핀 B2B 커넥터 탑재 확인 · SEARAY: 56Gbps NRZ/112Gbps PAM4, 최대 500핀, 0.8mm 피치 · Si-Fly HD: 224Gbps PAM4, 오픈 랙 유닛당 2,048 차동쌍 | 미국 커넥터 전문기업(비상장). SEARAY 고속 B2B 커넥터로 NVIDIA",
+    "batch": 3
+  },
+  {
+    "key": "ttm",
+    "name": "TTM Technologies",
+    "country": "US",
+    "sub": "PCB",
+    "problem": "mismatch_scm_text",
+    "current_note": "GB300 UBB 공급가 $750~800/ea · NVSwitch tray PCB: WUS(60%)+TTM(40%) 이원 체계 · 미국 유일 ASIC급 PCB 업체 — 탈중국 공급망에서 전략적 가치 | 북미 최대 PCB 업체, 세계 Top 5. NVIDIA GPU 서버 PCB 직접 공급 확인. GB300 UBB 및 NVSwitch tray PCB 2차 공급",
+    "batch": 3
+  },
+  {
+    "key": "nvidia",
+    "name": "NVIDIA",
+    "country": "US",
+    "sub": "통합",
+    "problem": "mismatch_scm_text",
+    "current_note": "Vera Rubin NVL72: 72 GPU + 36 CPU, 260TB/s 랙 레벨 대역폭 · CPO 광학($4B: Lumentum+Coherent), EDA($2B: Synopsys, Cadence 파트너십), 메모리(HBM4 3사 구조) 전략 투자 · Foxconn·Wistron·Quanta·Inventec 4개 ODM 조립 파트너 | NVIDIA C",
+    "batch": 3
+  },
+  {
+    "key": "foxconn",
+    "name": "Foxconn",
+    "country": "TW",
+    "sub": "ODM",
+    "problem": "mismatch_scm_text",
+    "current_note": "NVL72 주조립 · FY2025 OPM 3.20%(전년 2.92%) · 고가AI랙이 총이익률 오히려 희석 · ODM 3사 AI서버 75~80% 대만집중=TSMC와 동일 지정학 이중노출 (1차: Foxconn IR)",
+    "batch": 3
+  },
+  {
+    "key": "wistron",
+    "name": "Wistron",
+    "country": "TW",
+    "sub": "ODM",
+    "problem": "mismatch_scm_text",
+    "current_note": "NVL72 조립 · Q4 2025 총이익률 5.62% 매출 NT$2.19조 +108%YoY · 완성랙 비중 확대로 마진 하락 역설 (1차: Wistron IR)",
+    "batch": 4
+  },
+  {
+    "key": "schneider",
+    "name": "Schneider Electric",
+    "country": "EU",
+    "sub": "전원",
+    "problem": "mismatch_scm_text",
+    "current_note": "Motivair 인수로 직접액냉·CDU 포트폴리오 통합 · NVIDIA 공동 GB200 NVL72 레퍼런스 설계 발표 · Galaxy VXL UPS 출시(500~1250kW, 최대 99% 효율) | 프랑스 상장(EPA:SU). 데이터센터 전력·냉각 종합 솔루션. NVIDIA와 AI 팩토리 레퍼런스 설계 공동개발(2024.12). Motivair 인수($85",
+    "batch": 4
+  },
+  {
+    "key": "motivair",
+    "name": "Motivair",
+    "country": "US",
+    "sub": "냉각",
+    "problem": "mismatch_scm_text",
+    "current_note": "MCDU-10: NVL72 ORV3 랙 4U 폼팩터, 최대 210kW · Schneider Electric 인수 후 전력+냉각 통합 플랫폼 · NVIDIA 공식 파트너 CDU 공급사 | 미국 뉴욕주 버팔로 소재 CDU 업체. Schneider Electric 자회사(75% 인수, 2024.10, $850M). NVIDIA GB200 NVL72 전용 MCDU",
+    "batch": 4
+  },
+  {
+    "key": "coolitsys",
+    "name": "CoolIT Systems",
+    "country": "US",
+    "sub": "냉각",
+    "problem": "mismatch_scm_text",
+    "current_note": "NVIDIA와 2009년부터 협력(NV200 GPU 냉각판 설계) · Blackwell 플랫폼 지원 CDU·DLC 서버·랙 매니폴드 출시 · 다기가와트 규모 캐나다·해외 제조 확장 중 | 캐나다 Calgary 소재 직접액냉(DLC) 전문업체. NVIDIA 파트너 네트워크 정식 등록(2024). Ecolab이 $4.75B에 인수 협의 중(2025 보도).",
+    "batch": 4
+  },
+  {
+    "key": "corning",
+    "name": "Corning",
+    "country": "US",
+    "sub": "광케이블",
+    "problem": "mismatch_scm_text",
+    "current_note": "광섬유 세계1위 · Optical Comms FY2025 $6.27B +35% · Core OPM Q4 20.2%(Springboard 목표 1년 조기) · NVIDIA $32억 계약 Meta $60억 계약 · NVL72 랙=일반서버 대비 광섬유 36배 (1차: Corning IR)",
+    "batch": 4
+  },
+  {
+    "key": "lasertec",
+    "name": "Lasertec",
+    "country": "JP",
+    "sub": "EUV마스크검사(독점)",
+    "problem": "ticker_only",
+    "current_note": "TYO:6920",
+    "batch": 4
+  },
+  {
+    "key": "hoya",
+    "name": "Hoya",
+    "country": "JP",
+    "sub": "EUV포토마스크블랭크(75%+)",
+    "problem": "ticker_only",
+    "current_note": "TYO:7741",
+    "batch": 4
+  },
+  {
+    "key": "agc",
+    "name": "AGC (旭硝子)",
+    "country": "JP",
+    "sub": "EUV석영유리·마스크블랭크",
+    "problem": "ticker_only",
+    "current_note": "TYO:5201",
+    "batch": 4
+  },
+  {
+    "key": "mitsui_chem",
+    "name": "Mitsui Chemicals",
+    "country": "JP",
+    "sub": "CNT EUV펠리클(High-NA)",
+    "problem": "ticker_only",
+    "current_note": "TYO:4183",
+    "batch": 4
+  },
+  {
+    "key": "jx_metals",
+    "name": "JX Advanced Metals",
+    "country": "JP",
+    "sub": "Cu스퍼터링타깃(글로벌60%)",
+    "problem": "ticker_only",
+    "current_note": "TYO:5016",
+    "batch": 4
+  },
+  {
+    "key": "asahi_kasei",
+    "name": "Asahi Kasei",
+    "country": "JP",
+    "sub": "PIMEL PSPI감광폴리이미드",
+    "problem": "ticker_only",
+    "current_note": "TYO:3407",
+    "batch": 5
+  },
+  {
+    "key": "rohm",
+    "name": "Rohm",
+    "country": "JP",
+    "sub": "SiC·GaN AI서버전력반도체",
+    "problem": "ticker_only",
+    "current_note": "TYO:6963",
+    "batch": 5
+  },
+  {
+    "key": "taiyo_yuden",
+    "name": "Taiyo Yuden",
+    "country": "JP",
+    "sub": "AI서버용 임베디드MLCC",
+    "problem": "ticker_only",
+    "current_note": "TYO:6976",
+    "batch": 5
+  },
+  {
+    "key": "nitto_denko",
+    "name": "Nitto Denko",
+    "country": "JP",
+    "sub": "다이싱·백그라인딩테이프(1위)",
+    "problem": "ticker_only",
+    "current_note": "TYO:6988",
+    "batch": 5
+  },
+  {
+    "key": "mgc",
+    "name": "Mitsubishi Gas Chemical",
+    "country": "JP",
+    "sub": "BT레진(기판핵심수지)",
+    "problem": "ticker_only",
+    "current_note": "TYO:4182",
+    "batch": 5
+  },
+  {
+    "key": "sumitomo_chem",
+    "name": "Sumitomo Chemical",
+    "country": "JP",
+    "sub": "ArFi포토레지스트",
+    "problem": "ticker_only",
+    "current_note": "TYO:4005",
+    "batch": 5
+  },
+  {
+    "key": "fujimi",
+    "name": "Fujimi",
+    "country": "JP",
+    "sub": "CMP연마슬러리",
+    "problem": "ticker_only",
+    "current_note": "TYO:5384",
+    "batch": 5
+  },
+  {
+    "key": "renesas",
+    "name": "Renesas Electronics",
+    "country": "JP",
+    "sub": "전력IC·BMC마이크로컨트롤러",
+    "problem": "ticker_only",
+    "current_note": "TYO:6723",
+    "batch": 5
+  },
+  {
+    "key": "sk_materials",
+    "name": "SK Materials",
+    "country": "KR",
+    "sub": "NF3·WF6 특수가스(점유율40%+)",
+    "problem": "ticker_only",
+    "current_note": "KOSDAQ:036490",
+    "batch": 5
+  },
+  {
+    "key": "soulbrain",
+    "name": "Soulbrain Holdings",
+    "country": "KR",
+    "sub": "HF·BOE 반도체 식각액",
+    "problem": "ticker_only",
+    "current_note": "KOSDAQ:036830",
+    "batch": 5
+  },
+  {
+    "key": "oci_company",
+    "name": "OCI Company",
+    "country": "KR",
+    "sub": "H2O2·인산·반도체급 케미컬",
+    "problem": "ticker_only",
+    "current_note": "KOSPI:456040",
+    "batch": 6
+  },
+  {
+    "key": "dongjin",
+    "name": "Dongjin Semichem",
+    "country": "KR",
+    "sub": "EUV 포토레지스트·현상액",
+    "problem": "ticker_only",
+    "current_note": "KOSDAQ:005290",
+    "batch": 6
+  },
+  {
+    "key": "lg_chem_semi",
+    "name": "LG Chem (반도체소재)",
+    "country": "KR",
+    "sub": "PID 필름·첨단패키징 소재",
+    "problem": "ticker_only",
+    "current_note": "KOSPI:051910",
+    "batch": 6
+  },
+  {
+    "key": "isc_korea",
+    "name": "ISC Co.",
+    "country": "KR",
+    "sub": "HBM·반도체 테스트 소켓",
+    "problem": "ticker_only",
+    "current_note": "KOSDAQ:095340",
+    "batch": 6
+  },
+  {
+    "key": "wonik_ips",
+    "name": "Wonik IPS",
+    "country": "KR",
+    "sub": "ALD·CVD 반도체 증착장비",
+    "problem": "ticker_only",
+    "current_note": "KOSDAQ:240810",
+    "batch": 6
+  },
+  {
+    "key": "koh_young",
+    "name": "Koh Young Technology",
+    "country": "KR",
+    "sub": "3D SPI·패키징 검사장비",
+    "problem": "ticker_only",
+    "current_note": "KOSDAQ:098460",
+    "batch": 6
+  },
+  {
+    "key": "ase_group",
+    "name": "ASE Technology (SPIL)",
+    "country": "TW",
+    "sub": "CoWoS·CoWoP 고급패키징 OSAT",
+    "problem": "ticker_only",
+    "current_note": "TWSE:3711",
+    "batch": 6
+  },
+  {
+    "key": "nan_ya_pcb",
+    "name": "Nan Ya PCB",
+    "country": "TW",
+    "sub": "ABF 기판·AI GPU 서버 기판",
+    "problem": "ticker_only",
+    "current_note": "TWSE:8046",
+    "batch": 6
+  },
+  {
+    "key": "walsin_tech",
+    "name": "Walsin Technology",
+    "country": "TW",
+    "sub": "MLCC·칩저항 수동부품",
+    "problem": "ticker_only",
+    "current_note": "TWSE:2492",
+    "batch": 6
+  },
+  {
+    "key": "chroma_ate",
+    "name": "Chroma ATE",
+    "country": "TW",
+    "sub": "GPU SLT 시스템레벨테스트(독점)",
+    "problem": "ticker_only",
+    "current_note": "TWSE:2360",
+    "batch": 6
+  },
+  {
+    "key": "wus_pcb",
+    "name": "WUS Printed Circuit",
+    "country": "TW",
+    "sub": "AI 서버용 52층 초고다층 PCB",
+    "problem": "ticker_only",
+    "current_note": "HKEX:1366",
+    "batch": 7
+  },
+  {
+    "key": "taiwan_mask",
+    "name": "Taiwan Mask Corp (TMC)",
+    "country": "TW",
+    "sub": "반도체 포토마스크",
+    "problem": "ticker_only",
+    "current_note": "TWSE:2338",
+    "batch": 7
+  },
+  {
+    "key": "powertech_tech",
+    "name": "Powertech Technology (PTI)",
+    "country": "TW",
+    "sub": "HBM 테스트·패키징·FOPLP",
+    "problem": "ticker_only",
+    "current_note": "TWSE:6239",
+    "batch": 7
+  },
+  {
+    "key": "elite_material",
+    "name": "Elite Material (EMC)",
+    "country": "TW",
+    "sub": "고성능 CCL(동박적층판) M9인증",
+    "problem": "ticker_only",
+    "current_note": "TWSE:2383",
+    "batch": 7
+  },
+  {
+    "key": "asmi",
+    "name": "ASM International",
+    "country": "EU",
+    "sub": "ALD·에피 반도체 장비",
+    "problem": "ticker_only",
+    "current_note": "AMS:ASM",
+    "batch": 7
+  },
+  {
+    "key": "basf_semi",
+    "name": "BASF Electronic Materials",
+    "country": "EU",
+    "sub": "반도체급 황산·NH4OH",
+    "problem": "ticker_only",
+    "current_note": "XETR:BAS",
+    "batch": 7
+  },
+  {
+    "key": "evonik",
+    "name": "Evonik Industries",
+    "country": "EU",
+    "sub": "CMP용 콜로이달 실리카",
+    "problem": "ticker_only",
+    "current_note": "XETR:EVK",
+    "batch": 7
+  },
+  {
+    "key": "wacker_chemie",
+    "name": "Wacker Chemie",
+    "country": "EU",
+    "sub": "반도체급 폴리실리콘 원료",
+    "problem": "ticker_only",
+    "current_note": "XETR:WCH",
+    "batch": 7
+  },
+  {
+    "key": "infineon",
+    "name": "Infineon Technologies",
+    "country": "EU",
+    "sub": "SiC·GaN 800VDC 전력반도체",
+    "problem": "ticker_only",
+    "current_note": "XETR:IFX",
+    "batch": 7
+  },
+  {
+    "key": "stmicro",
+    "name": "STMicroelectronics",
+    "country": "EU",
+    "sub": "GaN 800VDC→12V/6V 전력IC",
+    "problem": "ticker_only",
+    "current_note": "NYSE:STM",
+    "batch": 7
+  },
+  {
+    "key": "nxp",
+    "name": "NXP Semiconductors",
+    "country": "EU",
+    "sub": "BMC SoC·서버 관리 컨트롤러",
+    "problem": "ticker_only",
+    "current_note": "NASDAQ:NXPI",
+    "batch": 8
+  },
+  {
+    "key": "jenoptik",
+    "name": "Jenoptik",
+    "country": "EU",
+    "sub": "EUV·DUV 마이크로옵틱스",
+    "problem": "ticker_only",
+    "current_note": "XETR:JEN",
+    "batch": 8
+  },
+  {
+    "key": "china_re",
+    "name": "China Northern Rare Earth",
+    "country": "CN",
+    "sub": "NdFeB 자석 소재 (수출통제)",
+    "problem": "ticker_only",
+    "current_note": "SSE:600111",
+    "batch": 8
+  },
+  {
+    "key": "jiangxi_copper",
+    "name": "Jiangxi Copper",
+    "country": "CN",
+    "sub": "HVLP 동박 (PCB·기판용 구리)",
+    "problem": "ticker_only",
+    "current_note": "SEHK:0358",
+    "batch": 8
+  },
+  {
+    "key": "yunnan_tin",
+    "name": "Yunnan Tin Group",
+    "country": "CN",
+    "sub": "납프리 솔더볼·인듐 소재",
+    "problem": "ticker_only",
+    "current_note": "SZSE:000960",
+    "batch": 8
+  },
+  {
+    "key": "cmoc",
+    "name": "CMOC Group (中国钼业)",
+    "country": "CN",
+    "sub": "Mo·W 스퍼터링 소재 (수출통제)",
+    "problem": "ticker_only",
+    "current_note": "SEHK:3993",
+    "batch": 8
+  }
+]

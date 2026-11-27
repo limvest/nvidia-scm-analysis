@@ -1,0 +1,16 @@
+[
+  {"key":"synopsys","opm":27.0,"per":75.1,"pbr":7.5,"ev_ebitda":66.6,"debt_ratio":-0.6,"revenue_usd":6.13,"price_return_1y":-6.9,"confidence":"medium"},
+  {"key":"cadence","opm":29.1,"per":82.7,"pbr":18.0,"ev_ebitda":50.6,"debt_ratio":0.8,"revenue_usd":4.64,"price_return_1y":19.1,"confidence":"medium"},
+  {"key":"marvell","opm":-12.5,"per":null,"pbr":7.3,"ev_ebitda":57.7,"debt_ratio":6.3,"revenue_usd":5.77,"price_return_1y":70.0,"confidence":"medium"},
+  {"key":"foxconn","opm":2.9,"per":16.2,"pbr":1.9,"ev_ebitda":9.0,"debt_ratio":-0.8,"revenue_usd":214.4,"price_return_1y":40.0,"confidence":"medium"},
+  {"key":"merck_e","opm":16.7,"per":16.4,"pbr":2.4,"ev_ebitda":9.2,"debt_ratio":1.7,"revenue_usd":22.9,"price_return_1y":-35.0,"confidence":"medium"},
+  {"key":"nxp","opm":27.1,"per":25.9,"pbr":6.8,"ev_ebitda":15.6,"debt_ratio":2.5,"revenue_usd":12.61,"price_return_1y":20.0,"confidence":"medium"},
+  {"key":"murata","opm":16.1,"per":22.6,"pbr":2.8,"ev_ebitda":9.1,"debt_ratio":-1.4,"revenue_usd":11.6,"price_return_1y":-12.0,"confidence":"medium"},
+  {"key":"coherent","opm":2.0,"per":null,"pbr":2.5,"ev_ebitda":24.3,"debt_ratio":4.2,"revenue_usd":4.71,"price_return_1y":80.0,"confidence":"medium"},
+  {"key":"renesas","opm":29.5,"per":null,"pbr":1.8,"ev_ebitda":20.5,"debt_ratio":1.8,"revenue_usd":8.99,"price_return_1y":20.0,"confidence":"medium"},
+  {"key":"teradyne","opm":18.5,"per":37.0,"pbr":6.7,"ev_ebitda":28.0,"debt_ratio":-0.4,"revenue_usd":2.82,"price_return_1y":20.6,"confidence":"medium"},
+  {"key":"stmicro","opm":12.6,"per":28.0,"pbr":1.8,"ev_ebitda":6.5,"debt_ratio":-0.9,"revenue_usd":13.27,"price_return_1y":-52.0,"confidence":"medium"},
+  {"key":"tdk","opm":9.9,"per":27.4,"pbr":1.8,"ev_ebitda":9.9,"debt_ratio":0.5,"revenue_usd":14.7,"price_return_1y":25.0,"confidence":"medium"},
+  {"key":"evonik","opm":3.8,"per":17.5,"pbr":0.9,"ev_ebitda":6.3,"debt_ratio":2.3,"revenue_usd":16.3,"price_return_1y":-20.0,"confidence":"medium"},
+  {"key":"screen","opm":19.9,"per":15.7,"pbr":3.3,"ev_ebitda":9.0,"debt_ratio":-1.5,"revenue_usd":3.43,"price_return_1y":60.3,"confidence":"medium"}
+]

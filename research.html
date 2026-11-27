@@ -1,0 +1,917 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>NVIDIA Rubin SCM — 투자 리서치</title>
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  :root {
+    --bg: #0d0d0b;
+    --bg2: #111110;
+    --bg3: #1a1a18;
+    --border: #2a2a28;
+    --text: #EFEEE8;
+    --text2: #a0a09a;
+    --green: #22c55e;
+    --blue: #0ea5e9;
+    --purple: #7c3aed;
+    --amber: #f59e0b;
+    --red: #ef4444;
+    --orange: #f97316;
+  }
+  body { background: var(--bg); color: var(--text); font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; font-size: 14px; line-height: 1.6; }
+  /* HEADER */
+  header { position: sticky; top: 0; z-index: 100; background: #0a0a08; border-bottom: 1px solid #222; padding: 0 24px; display: flex; align-items: center; gap: 24px; height: 52px; }
+  .back-btn { color: var(--text2); text-decoration: none; font-size: 13px; transition: color .15s; }
+  .back-btn:hover { color: var(--text); }
+  .header-title { font-size: 15px; font-weight: 600; letter-spacing: -0.01em; }
+  .tab-nav { display: flex; gap: 4px; margin-left: auto; }
+  .tab-btn { padding: 6px 16px; border-radius: 6px; border: 1px solid transparent; background: none; color: var(--text2); font-size: 13px; cursor: pointer; transition: all .15s; }
+  .tab-btn.active { background: var(--bg3); border-color: var(--border); color: var(--text); }
+  .tab-btn:hover:not(.active) { color: var(--text); }
+  /* MAIN */
+  main { max-width: 1200px; margin: 0 auto; padding: 32px 24px 64px; }
+  .tab-pane { display: none; }
+  .tab-pane.active { display: block; }
+  /* SECTION */
+  section { margin-bottom: 48px; }
+  h2 { font-size: 18px; font-weight: 600; margin-bottom: 4px; }
+  .section-sub { color: var(--text2); font-size: 13px; margin-bottom: 20px; }
+  h3 { font-size: 15px; font-weight: 600; margin: 32px 0 12px; }
+  /* TABLE */
+  .table-wrap { overflow-x: auto; border-radius: 10px; border: 1px solid var(--border); }
+  table { width: 100%; border-collapse: collapse; }
+  thead th { background: var(--bg2); padding: 10px 12px; text-align: left; font-size: 12px; color: var(--text2); font-weight: 500; white-space: nowrap; cursor: pointer; user-select: none; border-bottom: 1px solid var(--border); }
+  thead th:hover { color: var(--text); }
+  thead th.sorted-asc::after { content: ' ↑'; color: var(--blue); }
+  thead th.sorted-desc::after { content: ' ↓'; color: var(--blue); }
+  tbody tr { border-bottom: 1px solid var(--border); transition: background .1s; }
+  tbody tr:last-child { border-bottom: none; }
+  tbody tr:hover { background: var(--bg3); }
+  td { padding: 10px 12px; font-size: 13px; white-space: nowrap; }
+  td.num { text-align: right; font-variant-numeric: tabular-nums; }
+  /* GRADE BADGE */
+  .badge { display: inline-block; padding: 2px 7px; border-radius: 4px; font-size: 11px; font-weight: 700; letter-spacing: 0.05em; }
+  .grade-A { background: rgba(34,197,94,.18); color: var(--green); border: 1px solid rgba(34,197,94,.3); }
+  .grade-B { background: rgba(14,165,233,.18); color: var(--blue); border: 1px solid rgba(14,165,233,.3); }
+  .grade-C { background: rgba(124,58,237,.18); color: #a78bfa; border: 1px solid rgba(124,58,237,.3); }
+  .grade-D { background: rgba(245,158,11,.15); color: var(--amber); border: 1px solid rgba(245,158,11,.3); }
+  /* RET COLOR */
+  .ret-pos { color: var(--green); }
+  .ret-neg { color: var(--red); }
+  /* SCORE BAR */
+  .score-cell { display: flex; align-items: center; gap: 8px; }
+  .score-bar-bg { flex: 1; height: 4px; background: var(--border); border-radius: 2px; min-width: 60px; }
+  .score-bar-fill { height: 4px; border-radius: 2px; background: linear-gradient(90deg, var(--blue), var(--purple)); }
+  /* BUCKET CARDS */
+  .bucket-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 16px; }
+  .bucket-card { background: var(--bg2); border: 1px solid var(--border); border-radius: 12px; padding: 20px; }
+  .bucket-label { font-size: 11px; font-weight: 700; letter-spacing: 0.08em; color: var(--text2); text-transform: uppercase; margin-bottom: 10px; }
+  .bucket-card.theme-a .bucket-label { color: var(--green); }
+  .bucket-card.theme-b .bucket-label { color: var(--blue); }
+  .bucket-card.theme-c .bucket-label { color: var(--purple); }
+  .bucket-card.theme-d .bucket-label { color: var(--amber); }
+  .bucket-stocks { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 8px; }
+  .stock-chip { font-size: 12px; padding: 3px 10px; border-radius: 20px; background: var(--bg3); border: 1px solid var(--border); color: var(--text2); }
+  .bucket-desc { font-size: 12px; color: var(--text2); margin-top: 8px; line-height: 1.5; }
+  /* DEEP DIVE CARDS */
+  .dive-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 20px; }
+  .dive-card { background: var(--bg2); border: 1px solid var(--border); border-radius: 12px; padding: 24px; }
+  .dive-header { display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 12px; }
+  .dive-name { font-size: 16px; font-weight: 700; }
+  .dive-ticker { font-size: 12px; color: var(--text2); margin-top: 2px; }
+  .verdict { display: flex; gap: 2px; }
+  .star { color: var(--amber); font-size: 14px; }
+  .star.empty { color: var(--border); }
+  .dive-summary { font-size: 12px; color: var(--text2); line-height: 1.5; margin-bottom: 14px; }
+  .metrics-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; margin-bottom: 14px; }
+  .metric { background: var(--bg3); border-radius: 6px; padding: 8px 10px; }
+  .metric-label { font-size: 10px; color: var(--text2); text-transform: uppercase; letter-spacing: 0.06em; }
+  .metric-value { font-size: 15px; font-weight: 700; margin-top: 2px; }
+  .dive-row { font-size: 12px; margin-bottom: 6px; }
+  .dive-row span { color: var(--text2); margin-right: 4px; }
+  /* US CONTROL TIERS */
+  .tier-section { margin-bottom: 32px; }
+  .tier-header { display: flex; align-items: center; gap: 12px; margin-bottom: 12px; }
+  .tier-score { width: 32px; height: 32px; border-radius: 8px; display: flex; align-items: center; justify-content: center; font-weight: 800; font-size: 16px; flex-shrink: 0; }
+  .tier-5 { background: rgba(34,197,94,.2); color: var(--green); border: 1px solid rgba(34,197,94,.4); }
+  .tier-4 { background: rgba(14,165,233,.2); color: var(--blue); border: 1px solid rgba(14,165,233,.4); }
+  .tier-3 { background: rgba(245,158,11,.15); color: var(--amber); border: 1px solid rgba(245,158,11,.3); }
+  .tier-2 { background: rgba(249,115,22,.15); color: var(--orange); border: 1px solid rgba(249,115,22,.3); }
+  .tier-1 { background: rgba(239,68,68,.15); color: var(--red); border: 1px solid rgba(239,68,68,.3); }
+  .tier-title { font-weight: 600; font-size: 14px; }
+  .tier-sub { font-size: 12px; color: var(--text2); }
+  .company-chips { display: flex; flex-wrap: wrap; gap: 8px; }
+  .company-chip { font-size: 12px; padding: 4px 12px; border-radius: 6px; background: var(--bg3); border: 1px solid var(--border); }
+  /* PICK CARDS */
+  .pick-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(340px, 1fr)); gap: 20px; }
+  .pick-card { background: var(--bg2); border: 1px solid var(--border); border-radius: 12px; padding: 22px; }
+  .pick-card.top { border-color: rgba(34,197,94,.35); }
+  .pick-badge { font-size: 10px; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; margin-bottom: 8px; }
+  .pick-badge.three-five { color: var(--blue); }
+  .pick-badge.five-ten { color: var(--purple); }
+  .pick-name { font-size: 17px; font-weight: 700; margin-bottom: 4px; }
+  .pick-score-row { display: flex; gap: 6px; margin-bottom: 10px; }
+  .pick-mech { font-size: 12px; color: var(--text2); line-height: 1.6; margin-bottom: 12px; }
+  .pick-kpi-row { display: grid; grid-template-columns: repeat(3, 1fr); gap: 8px; }
+  .pick-kpi { background: var(--bg3); border-radius: 6px; padding: 8px; }
+  .pick-kpi-label { font-size: 10px; color: var(--text2); }
+  .pick-kpi-val { font-size: 13px; font-weight: 700; margin-top: 2px; }
+  /* SCENARIO TABLE */
+  .scenario-table { width: 100%; border-collapse: collapse; }
+  .scenario-table th { background: var(--bg2); padding: 10px 14px; text-align: left; font-size: 12px; color: var(--text2); font-weight: 500; border-bottom: 1px solid var(--border); }
+  .scenario-table td { padding: 12px 14px; font-size: 13px; border-bottom: 1px solid var(--border); vertical-align: top; }
+  .scenario-table tr:last-child td { border-bottom: none; }
+  .prob-badge { display: inline-block; padding: 2px 8px; border-radius: 4px; font-size: 12px; font-weight: 700; background: var(--bg3); border: 1px solid var(--border); }
+  .winners { color: var(--green); font-size: 12px; }
+  .losers { color: var(--red); font-size: 12px; }
+  /* SURVIVAL BOX */
+  .survival-box { background: var(--bg2); border: 1px solid rgba(34,197,94,.35); border-radius: 10px; padding: 20px 24px; margin-top: 24px; display: flex; align-items: center; gap: 20px; }
+  .survival-label { font-size: 12px; color: var(--text2); white-space: nowrap; }
+  .survival-stocks { display: flex; gap: 10px; flex-wrap: wrap; }
+  .survival-chip { padding: 5px 16px; background: rgba(34,197,94,.12); border: 1px solid rgba(34,197,94,.3); border-radius: 8px; color: var(--green); font-weight: 700; font-size: 13px; }
+  /* STARS */
+  .stars-3::before { content: '★★★'; color: var(--amber); }
+  .stars-2h::before { content: '★★☆'; color: var(--amber); }
+  .stars-1h::before { content: '★☆☆'; color: var(--amber); }
+  /* FOOTER */
+  .disclaimer { margin-top: 48px; padding: 16px 20px; background: var(--bg2); border: 1px solid var(--border); border-radius: 8px; font-size: 11px; color: var(--text2); line-height: 1.7; }
+</style>
+</head>
+<body>
+
+<header>
+  <a href="index.html" class="back-btn">← SCM 맵</a>
+  <span class="header-title">NVIDIA Rubin SCM — 투자 리서치</span>
+  <nav class="tab-nav">
+    <button class="tab-btn active" onclick="switchTab('screening')">투자 스크리닝</button>
+    <button class="tab-btn" onclick="switchTab('reshore')">미국 리쇼어링</button>
+  </nav>
+</header>
+
+<main>
+
+<!-- ============================================================ TAB 1: 투자 스크리닝 ============================================================ -->
+<div id="tab-screening" class="tab-pane active">
+
+  <section>
+    <h2>SCM 공급망 투자 스크리닝</h2>
+    <p class="section-sub">NVIDIA Rubin/Feynman SCM 공급망 상장사 84개 복합 점수 순위 — 2026-05-23 기준</p>
+
+    <div class="table-wrap">
+      <table id="screening-table">
+        <thead>
+          <tr>
+            <th onclick="sortTable(0)">#</th>
+            <th onclick="sortTable(1)">종목</th>
+            <th onclick="sortTable(2)">등급</th>
+            <th onclick="sortTable(3)">시총</th>
+            <th onclick="sortTable(4)">OPM%</th>
+            <th onclick="sortTable(5)">NvExp</th>
+            <th onclick="sortTable(6)">EV/E</th>
+            <th onclick="sortTable(7)">PER</th>
+            <th onclick="sortTable(8)">1Y수익</th>
+            <th onclick="sortTable(9)">Score</th>
+          </tr>
+        </thead>
+        <tbody id="table-body"></tbody>
+      </table>
+    </div>
+  </section>
+
+  <section>
+    <h2>투자 테마별 분류</h2>
+    <p class="section-sub">복합 점수 + 독점 포지션 기반 4가지 테마 버킷</p>
+    <div class="bucket-grid" id="bucket-grid"></div>
+  </section>
+
+  <section>
+    <h2>딥다이브: 4종목 상세</h2>
+    <p class="section-sub">SCM 포지션 + 재무 + 리스크 전체 분석</p>
+    <div class="dive-grid" id="dive-grid"></div>
+  </section>
+
+</div>
+
+<!-- ============================================================ TAB 2: 미국 리쇼어링 ============================================================ -->
+<div id="tab-reshore" class="tab-pane">
+
+  <section>
+    <h2>미국 컨트롤 SCM 재편 — 수혜주 분석</h2>
+    <p class="section-sub">트럼프 공급망 주권 전략 하의 3-5년 / 5-10년 투자 테마 — 2026-05-23 기준</p>
+
+    <h3>트럼프의 3가지 정책 도구</h3>
+    <div class="bucket-grid">
+      <div class="bucket-card theme-a">
+        <div class="bucket-label">보조금 (당근)</div>
+        <div style="font-size:14px;font-weight:700;margin-bottom:6px;">CHIPS Act</div>
+        <div class="bucket-desc">총 $527억 투자. Intel $7.86B, TSMC $6.6B, Samsung $6.4B, Micron $6.1B, SK Hynix $3.87B, GFS $1.5B. 미국 내 팹 건설 유도.</div>
+      </div>
+      <div class="bucket-card theme-b">
+        <div class="bucket-label">관세 (채찍)</div>
+        <div style="font-size:14px;font-weight:700;margin-bottom:6px;">무역 압박</div>
+        <div class="bucket-desc">TSMC의 $1,650억 미국 투자 약속 = 관세 협박의 결과. 해외 생산 패널티 + 미국 투자 강제. 동맹도 예외 없음.</div>
+      </div>
+      <div class="bucket-card theme-c">
+        <div class="bucket-label">수출통제 (무기화)</div>
+        <div style="font-size:14px;font-weight:700;margin-bottom:6px;">기술 봉쇄</div>
+        <div class="bucket-desc">ASML EUV = 미국 라이선스 없이 불가. Lam/AMAT/KLA 중국 납품 차단. 동맹국도 미국 허가 종속. 중국 WFE 점유율 6.5%로 증가 중.</div>
+      </div>
+    </div>
+
+    <h3>US Control Score 기업 매핑</h3>
+    <div id="tier-container"></div>
+  </section>
+
+  <section>
+    <h2>버킷별 Top Pick</h2>
+
+    <h3>3-5년 (2027-2030)</h3>
+    <div class="pick-grid" id="picks-3-5"></div>
+
+    <h3 style="margin-top:36px;">5-10년 (2030-2035)</h3>
+    <div class="pick-grid" id="picks-5-10"></div>
+  </section>
+
+  <section>
+    <h2>시나리오 리스크</h2>
+    <p class="section-sub">3개 시나리오별 승자·패자 분석</p>
+    <div class="table-wrap">
+      <table class="scenario-table">
+        <thead>
+          <tr>
+            <th>시나리오</th>
+            <th>확률</th>
+            <th>승자</th>
+            <th>패자</th>
+          </tr>
+        </thead>
+        <tbody id="scenario-body"></tbody>
+      </table>
+    </div>
+    <div class="survival-box">
+      <div class="survival-label">전 시나리오 생존 기업</div>
+      <div class="survival-stocks">
+        <div class="survival-chip">KLA (KLAC)</div>
+        <div class="survival-chip">Corning (GLW)</div>
+        <div class="survival-chip">GlobalFoundries (GFS)</div>
+      </div>
+    </div>
+  </section>
+
+</div>
+
+</main>
+
+<div class="disclaimer" style="max-width:1200px;margin:0 auto 64px;padding:0 24px;">
+  <div style="padding:16px 20px;background:#111110;border:1px solid #2a2a28;border-radius:8px;">
+    본 문서는 NVIDIA Rubin SCM 분석 프로젝트의 부산물이며 투자 권유가 아닙니다. 재무 수치는 공개 데이터 기반이며 시점 불일치 및 추정 오류 가능성이 있습니다. SCM 연결 강도(grade, nv_exp, switch_mo)는 내부 추정치입니다.
+  </div>
+</div>
+
+<script>
+/* ==================== DATA ==================== */
+var ROWS = [
+  {rank:1,  key:'lasertec',     grade:'A', mcap:'$12B',  opm:42,   nv_exp:95, ev_ebitda:15.2, per:23,    ret1y:'-55%', score:174.8},
+  {rank:2,  key:'hoya',         grade:'A', mcap:'$25B',  opm:31,   nv_exp:90, ev_ebitda:23.2, per:37,    ret1y:'+52%', score:158.4},
+  {rank:3,  key:'mitsui_chem',  grade:'A', mcap:'$4B',   opm:7,    nv_exp:80, ev_ebitda:8.1,  per:33,    ret1y:'+47%', score:147.1},
+  {rank:4,  key:'tsmc',         grade:'A', mcap:'$900B', opm:51,   nv_exp:19, ev_ebitda:18.0, per:29,    ret1y:'+120%',score:147.0},
+  {rank:5,  key:'ajinomoto',    grade:'A', mcap:'$18B',  opm:50,   nv_exp:40, ev_ebitda:18.6, per:38,    ret1y:'+57%', score:145.7},
+  {rank:6,  key:'jx_metals',    grade:'A', mcap:'$5B',   opm:12,   nv_exp:70, ev_ebitda:16.6, per:42,    ret1y:'—',    score:136.6},
+  {rank:7,  key:'asmi',         grade:'A', mcap:'$18B',  opm:28,   nv_exp:70, ev_ebitda:29.8, per:59,    ret1y:'—',    score:135.9},
+  {rank:8,  key:'shinetsu_si',  grade:'B', mcap:'$40B',  opm:29,   nv_exp:8,  ev_ebitda:9.0,  per:21,    ret1y:'+41%', score:134.5},
+  {rank:9,  key:'agc',          grade:'B', mcap:'$6B',   opm:8,    nv_exp:60, ev_ebitda:6.4,  per:17,    ret1y:'+27%', score:129.5},
+  {rank:10, key:'skhynix',      grade:'B', mcap:'$95B',  opm:35,   nv_exp:27, ev_ebitda:12.3, per:16,    ret1y:'+22%', score:122.4},
+  {rank:11, key:'cmoc',         grade:'B', mcap:'$15B',  opm:15,   nv_exp:20, ev_ebitda:4.6,  per:8,     ret1y:'-28%', score:121.4},
+  {rank:12, key:'aixtron',      grade:'B', mcap:'$3B',   opm:21,   nv_exp:15, ev_ebitda:13.0, per:49,    ret1y:'—',    score:115.8},
+  {rank:13, key:'asahi_kasei',  grade:'B', mcap:'$10B',  opm:7,    nv_exp:55, ev_ebitda:6.3,  per:12,    ret1y:'+19%', score:114.3},
+  {rank:14, key:'soitec',       grade:'B', mcap:'$5B',   opm:15,   nv_exp:15, ev_ebitda:10.5, per:21,    ret1y:'-55%', score:113.1},
+  {rank:15, key:'nitto_denko',  grade:'B', mcap:'$11B',  opm:14,   nv_exp:65, ev_ebitda:6.9,  per:16,    ret1y:'+11%', score:111.9},
+  {rank:16, key:'ase_group',    grade:'B', mcap:'$14B',  opm:10,   nv_exp:70, ev_ebitda:11.7, per:31,    ret1y:'+15%', score:110.7},
+  {rank:17, key:'hamamatsu',    grade:'A', mcap:'$8B',   opm:7.6,  nv_exp:8,  ev_ebitda:9.5,  per:37,    ret1y:'-15%', score:108.7},
+  {rank:18, key:'disco',        grade:'B', mcap:'$20B',  opm:42,   nv_exp:20, ev_ebitda:31.9, per:38,    ret1y:'-10%', score:105.8},
+  {rank:19, key:'sumco',        grade:'B', mcap:'$5B',   opm:0.3,  nv_exp:5,  ev_ebitda:6.9,  per:43,    ret1y:'-30%', score:103.2},
+  {rank:20, key:'advantest',    grade:'B', mcap:'$25B',  opm:35,   nv_exp:20, ev_ebitda:30.0, per:54,    ret1y:'+120%',score:98.7},
+  {rank:21, key:'jenoptik',     grade:'D', mcap:'$1B',   opm:13,   nv_exp:50, ev_ebitda:13.9, per:32,    ret1y:'+131%',score:97.3},
+  {rank:22, key:'resonac',      grade:'B', mcap:'$4B',   opm:5,    nv_exp:15, ev_ebitda:8.6,  per:15,    ret1y:'+493%',score:95.8},
+  {rank:23, key:'infineon',     grade:'C', mcap:'$40B',  opm:13,   nv_exp:50, ev_ebitda:9.0,  per:23,    ret1y:'-16%', score:95.2},
+  {rank:24, key:'fujimi',       grade:'C', mcap:'$2B',   opm:13,   nv_exp:50, ev_ebitda:16.0, per:30,    ret1y:'+102%',score:95.1},
+  {rank:25, key:'wus_pcb',      grade:'C', mcap:'$1B',   opm:11,   nv_exp:60, ev_ebitda:13.3, per:10,    ret1y:'—',    score:94.2},
+  {rank:26, key:'ibiden',       grade:'B', mcap:'$6B',   opm:14,   nv_exp:60, ev_ebitda:34.0, per:72,    ret1y:'+180%',score:94.0},
+  {rank:27, key:'sum_elec',     grade:'B', mcap:'$15B',  opm:7,    nv_exp:8,  ev_ebitda:15.0, per:26,    ret1y:'+80%', score:89.8},
+  {rank:28, key:'soulbrain',    grade:'C', mcap:'$1B',   opm:14,   nv_exp:40, ev_ebitda:16.0, per:42,    ret1y:'+159%',score:89.8},
+  {rank:29, key:'asml',         grade:'A', mcap:'$290B', opm:35,   nv_exp:15, ev_ebitda:28.2, per:37,    ret1y:'-20%', score:89.0},
+  {rank:30, key:'wacker',       grade:'C', mcap:'$2B',   opm:5,    nv_exp:40, ev_ebitda:28.6, per:null,  ret1y:'+15%', score:88.5}
+];
+
+var BUCKETS = [
+  {
+    theme: 'theme-a',
+    label: 'A. 퀄리티+밸류 — 독점인데 싸다',
+    desc: 'Grade A~B이면서 EV/EBITDA 저평가. 밸류에이션 재평가 트리거 보유.',
+    stocks: ['soitec','cmoc','agc','asahi_kasei','nitto_denko','mitsui_chem']
+  },
+  {
+    theme: 'theme-b',
+    label: 'B. 눌림+반등 — Grade A인데 하락',
+    desc: '-15%~-60% 낙폭. 독점 해자 유지 확인 시 반등 베팅.',
+    stocks: ['lasertec','asml','hamamatsu']
+  },
+  {
+    theme: 'theme-c',
+    label: 'C. 모멘텀 — 달렸지만 유효',
+    desc: '모멘텀 중 퀄리티 우선: ibiden(ABF기판), advantest(HBM테스트), lam(Grade A).',
+    stocks: ['ibiden','advantest','resonac','fujimi','soulbrain']
+  },
+  {
+    theme: 'theme-d',
+    label: 'D. 소형 히든챔피언 ($5B 미만)',
+    desc: 'Grade A~C, 시총 $5B 미만. 리스크 높지만 독점 포지션 선명.',
+    stocks: ['mitsui_chem','aixtron','resonac','fujimi','soulbrain']
+  }
+];
+
+var DIVES = [
+  {
+    name: 'Lasertec',
+    ticker: 'TSE: 6920',
+    stars: 3,
+    summary: 'EUV 패턴 마스크 검사 유일 공급사. 순현금 ¥130B + -55% 낙폭 + High-NA 교체수요 대기. 어크티닉 패턴 검사는 전 세계 유일.',
+    metrics: [
+      {label:'OPM', val:'48.9%', color:'var(--green)'},
+      {label:'순현금', val:'¥130B', color:'var(--blue)'},
+      {label:'EV/EBITDA', val:'15.2x', color:'var(--text)'},
+      {label:'낙폭', val:'-55%', color:'var(--red)'}
+    ],
+    trigger: 'High-NA EUV 전환 → ACTIS 완전 교체수요. TSMC N2 양산 증가.',
+    risk: 'FY2026 주문 회복 CY2027 추가 연기 시 하락. 中 시장 영구 손실.',
+    scm: 'Rubin N2 → EUV → 포토마스크 → Lasertec 검사 (대체재 없음)',
+    buffer: '3-6개월'
+  },
+  {
+    name: 'AGC Inc.',
+    ticker: 'TSE: 5201',
+    stars: 2.5,
+    summary: 'EUV 마스크 블랭크 59% 독점. 전세계 EUV 기반 첨단 공정이 의존. PBR 0.8x 콩글로머리트 디스카운트.',
+    metrics: [
+      {label:'OPM(전사)', val:'6.3%', color:'var(--text)'},
+      {label:'EV/EBITDA', val:'6.4x', color:'var(--green)'},
+      {label:'PBR', val:'0.8x', color:'var(--blue)'},
+      {label:'마스크 점유', val:'~59%', color:'var(--amber)'}
+    ],
+    trigger: 'Electronics 사업부 분리/상장 발표 시 즉각 재평가. High-NA 블랭크 ASP 상승.',
+    risk: '생명과학 추가 손상차손. 디스플레이 유리 구조적 약세. 촉매 없으면 디스카운트 지속.',
+    scm: 'ASML EUV → AGC 블랭크(59%) → 포토마스크 → TSMC → Rubin',
+    buffer: '4-8주'
+  },
+  {
+    name: 'Soitec',
+    ticker: 'Euronext: SOI',
+    stars: 2.5,
+    summary: 'SOI 웨이퍼 독점(SmartCut). Rubin CPO용 Photonics-SOI 유일 공급. RF-SOI 재고조정 + CEO 교체 + 가이던스 철회로 -60%.',
+    metrics: [
+      {label:'EV/EBITDA', val:'~10.5x', color:'var(--text)'},
+      {label:'CPO연결', val:'유일', color:'var(--green)'},
+      {label:'매출 낙폭', val:'-31% yoy', color:'var(--red)'},
+      {label:'핵심이벤트', val:'5/27 실적', color:'var(--amber)'}
+    ],
+    trigger: '2026-05-27 FY2026 실적 + FY2027 가이던스. Photonics-SOI/CPO 슈퍼사이클 확인.',
+    risk: 'RF-SOI 구조적 약세 지속. CEO 교체 전략 불연속. 트로프 장기화 시 밸류트랩.',
+    scm: 'Rubin CPO(1.6T) → 실리콘 포토닉스 → Photonics-SOI → Soitec 유일',
+    buffer: '공급 중단 시 CPO 생산 즉시 정지'
+  },
+  {
+    name: 'Hamamatsu',
+    ticker: 'TSE: 6965',
+    stars: 1,
+    summary: 'PMT 80-90% 독점 + EUV 계측 연결. OPM 42%→7.6% 정정 후 투자 매력 대폭 감소. NVIDIA 직접 노출 제한적.',
+    metrics: [
+      {label:'OPM(수정)', val:'7.6%', color:'var(--amber)'},
+      {label:'EV/EBITDA', val:'9.5x', color:'var(--text)'},
+      {label:'NvExp', val:'8%', color:'var(--text2)'},
+      {label:'Score', val:'108.7', color:'var(--text2)'}
+    ],
+    trigger: 'OPM 2분기 연속 회복 확인 + 의료/산업 수요 반등 시.',
+    risk: '중국 의료기기 국산화로 구조적 매출 손실. Rubin SCM 연결 간접적(Energetiq EUV 계측 경로).',
+    scm: 'Energetiq(자회사) → EUV 메트롤로지 광원 → ASML 연결 (간접)',
+    buffer: '해당 없음 (직접 연결 없음)'
+  }
+];
+
+/* ==================== US CONTROL TIERS ==================== */
+var TIERS = [
+  {
+    score: 5,
+    title: '완전 미국 통제',
+    sub: '미국 본사 + 미국 제조 + 정부 직접 관여',
+    companies: ['Intel Foundry (INTC)', 'GlobalFoundries (GFS)', 'KLA (KLAC)', 'Corning (GLW)']
+  },
+  {
+    score: 4,
+    title: '핵심 미국 기업',
+    sub: '미국 본사, 핵심 IP·결정권 미국',
+    companies: ['Micron (MU)', 'Lam Research (LRCX)', 'Applied Materials (AMAT)', 'Vertiv (VRT)', 'Entegris (ENTG)']
+  },
+  {
+    score: 3,
+    title: '조건부 미국 정렬',
+    sub: '외국 본사 + 미국 팹 건설 / 미국 기술 종속',
+    companies: ['TSMC Arizona (TSM)', 'Wolfspeed (WOLF)', 'Eaton (ETN)', 'Amphenol (APH)']
+  },
+  {
+    score: 2,
+    title: '레버리지 대상',
+    sub: 'Five Eyes 정렬이나 미국 통제권 밖',
+    companies: ['Celestica (CLS)', 'ASML', 'Lasertec', 'AGC', 'Hamamatsu', 'TEL']
+  },
+  {
+    score: 1,
+    title: '제재·관세 위험권',
+    sub: '미국 컨트롤 외부',
+    companies: ['SMIC', 'Hua Hong', '중국 반도체 기업 전반']
+  }
+];
+
+/* ==================== PICKS ==================== */
+var PICKS_3_5 = [
+  {
+    name: 'Micron (MU)',
+    stars: 3,
+    us: '4/5',
+    badge: 'A — CHIPS Act',
+    mech: '미국 유일 HBM 공급사. 수출통제 강화 시 미국산 HBM 컴플라이언스 필수 → 독점 수혜. HBM4(Rubin 전용 36GB 12-Hi) 이미 양산. 아이다호 팹 2027 온라인.',
+    kpis: [{l:'총마진', v:'75→81%'}, {l:'HBM 2026', v:'완판'}, {l:'CHIPS Act', v:'$6.1B'}],
+    top: true
+  },
+  {
+    name: 'KLA (KLAC)',
+    stars: 3,
+    us: '5/5',
+    badge: 'B — 장비·소재',
+    mech: '공정 제어 장비 글로벌 50%+ 독점. AI칩 = 레이어 증가 = 검사 단계 자동 증가. Advanced Packaging +70% yoy. 소프트웨어로 SaaS형 수익 전환 중.',
+    kpis: [{l:'OPM', v:'41-44%'}, {l:'FCF', v:'$3.75B'}, {l:'China%', v:'~26%'}],
+    top: true
+  },
+  {
+    name: 'Corning (GLW)',
+    stars: 3,
+    us: '5/5',
+    badge: 'C — AI 인프라',
+    mech: 'AI 데이터센터 광섬유 수요 구조적. NC 히코리 미국산 제조 — 관세 충격 시 경쟁 우위. Meta $6B + Apple $2.5B 앵커 계약. BofA 2030 Optical $10.3B 타겟.',
+    kpis: [{l:'Optical 성장', v:'+36% yoy'}, {l:'엔터프라이즈', v:'+61% yoy'}, {l:'OPM', v:'20.2%'}],
+    top: true
+  },
+  {
+    name: 'Lam Research (LRCX)',
+    stars: 2.5,
+    us: '4/5',
+    badge: 'B — 장비·소재',
+    mech: 'HBM 식각 장비 독점. 중국 ~$600M 손실 but HBM capex 상쇄. FY2025 매출 $18.4B (+24% yoy).',
+    kpis: [{l:'OPM', v:'34-35%'}, {l:'China%', v:'~30-35%'}, {l:'매출', v:'$18.4B'}],
+    top: false
+  },
+  {
+    name: 'Entegris (ENTG)',
+    stars: 2.5,
+    us: '4/5',
+    badge: 'B — 장비·소재',
+    mech: '미국 유일 대형 반도체 소재사. US 팹 웨이퍼 스타트 당 소모품 소비 비례. CHIPS Act 조건 강화 시 독점 수혜.',
+    kpis: [{l:'분기 매출', v:'$807M'}, {l:'조정 OPM', v:'21.1%'}, {l:'CHIPS Act', v:'$75M'}],
+    top: false
+  }
+];
+
+var PICKS_5_10 = [
+  {
+    name: 'GlobalFoundries (GFS)',
+    stars: 3,
+    us: '5/5',
+    badge: 'A — CHIPS Act',
+    mech: 'DoD Trusted Foundry 유일 인증 — 군용 레이더, 미사일, 위성 칩. 모든 미국 정부 구매 우선 채널. 방산 지출 구조적 증가. Malta NY 완전 미국산 패키징.',
+    kpis: [{l:'FY2025 매출', v:'$6.79B'}, {l:'순현금', v:'$4.2B'}, {l:'배당 개시', v:'2026'}],
+    top: true
+  },
+  {
+    name: 'Intel Foundry (INTC)',
+    stars: 2.5,
+    us: '5/5',
+    badge: 'A — CHIPS Act',
+    mech: '미국 유일 선단공정 팹. 정부 9.9% 지분 보유. 18A HVM 개시(2025.10). 국가 보호 자산 — 시장 논리와 별개로 존재 보장.',
+    kpis: [{l:'CHIPS Act', v:'$7.86B'}, {l:'정부지분', v:'9.9%'}, {l:'외부고객', v:'미확보'}],
+    top: false
+  },
+  {
+    name: 'Corning (GLW)',
+    stars: 2.5,
+    us: '5/5',
+    badge: 'C — AI 인프라',
+    mech: 'CPO(Co-Packaged Optics) 채택 시 서버당 광섬유 콘텐츠 급증. Soitec Photonics-SOI와 함께 AI 광인터커넥트 인프라 핵심. 미국산 제조 유지.',
+    kpis: [{l:'CPO 연결', v:'잠재적'}, {l:'앵커 계약', v:'Meta+Apple'}, {l:'US Score', v:'5/5'}],
+    top: false
+  }
+];
+
+/* ==================== SCENARIOS ==================== */
+var SCENARIOS = [
+  {
+    name: 'S1: 미국 주도 디커플링 성공',
+    sub: 'TSMC AZ N2 수율 대만 동등, Intel 18A 외부 고객 확보',
+    prob: '35%',
+    winners: 'Micron · KLA · GFS · Corning · Intel',
+    losers: 'ASML · 일본 소재기업 일부'
+  },
+  {
+    name: 'S2: 교착 상태 (현재 연장)',
+    sub: '비용 프리미엄 지속, 단계적 이행',
+    prob: '45%',
+    winners: 'Micron · KLA · Lam · Corning',
+    losers: 'Intel Foundry (손실 지속) · Wolfspeed'
+  },
+  {
+    name: 'S3: 중국 반격 가속',
+    sub: 'SMIC 7nm 자립, 화웨이 AI칩 경쟁력 회복',
+    prob: '20%',
+    winners: 'GFS(방산 무관) · KLA(중국 제외 시장) · Corning',
+    losers: 'Lam/AMAT(중국 차단 시 타격) · TSMC AZ'
+  }
+];
+
+/* ==================== RENDER: TABLE ==================== */
+var sortCol = 9;
+var sortAsc = false;
+
+function renderTable(data) {
+  var tbody = document.getElementById('table-body');
+  while (tbody.firstChild) tbody.removeChild(tbody.firstChild);
+
+  data.forEach(function(r) {
+    var tr = document.createElement('tr');
+
+    var tdRank = document.createElement('td');
+    tdRank.textContent = r.rank;
+    tdRank.className = 'num';
+    tr.appendChild(tdRank);
+
+    var tdKey = document.createElement('td');
+    tdKey.textContent = r.key;
+    tdKey.style.fontWeight = '500';
+    tr.appendChild(tdKey);
+
+    var tdGrade = document.createElement('td');
+    var badge = document.createElement('span');
+    badge.className = 'badge grade-' + r.grade;
+    badge.textContent = r.grade;
+    tdGrade.appendChild(badge);
+    tr.appendChild(tdGrade);
+
+    var tdMcap = document.createElement('td');
+    tdMcap.textContent = r.mcap;
+    tdMcap.className = 'num';
+    tr.appendChild(tdMcap);
+
+    var tdOpm = document.createElement('td');
+    tdOpm.textContent = r.opm + '%';
+    tdOpm.className = 'num';
+    tr.appendChild(tdOpm);
+
+    var tdNv = document.createElement('td');
+    tdNv.textContent = r.nv_exp;
+    tdNv.className = 'num';
+    tr.appendChild(tdNv);
+
+    var tdEv = document.createElement('td');
+    tdEv.textContent = r.ev_ebitda + 'x';
+    tdEv.className = 'num';
+    tr.appendChild(tdEv);
+
+    var tdPer = document.createElement('td');
+    tdPer.textContent = r.per != null ? r.per + 'x' : '—';
+    tdPer.className = 'num';
+    tr.appendChild(tdPer);
+
+    var tdRet = document.createElement('td');
+    tdRet.textContent = r.ret1y;
+    tdRet.className = 'num';
+    if (r.ret1y.charAt(0) === '+') tdRet.classList.add('ret-pos');
+    if (r.ret1y.charAt(0) === '-') tdRet.classList.add('ret-neg');
+    tr.appendChild(tdRet);
+
+    var tdScore = document.createElement('td');
+    var scoreDiv = document.createElement('div');
+    scoreDiv.className = 'score-cell';
+    var scoreNum = document.createElement('span');
+    scoreNum.textContent = r.score.toFixed(1);
+    scoreNum.style.fontWeight = '700';
+    scoreNum.style.minWidth = '38px';
+    var barBg = document.createElement('div');
+    barBg.className = 'score-bar-bg';
+    var barFill = document.createElement('div');
+    barFill.className = 'score-bar-fill';
+    barFill.style.width = (r.score / 180 * 100).toFixed(1) + '%';
+    barBg.appendChild(barFill);
+    scoreDiv.appendChild(scoreNum);
+    scoreDiv.appendChild(barBg);
+    tdScore.appendChild(scoreDiv);
+    tr.appendChild(tdScore);
+
+    tbody.appendChild(tr);
+  });
+}
+
+function sortTable(col) {
+  var headers = document.querySelectorAll('#screening-table thead th');
+  headers.forEach(function(h) { h.classList.remove('sorted-asc', 'sorted-desc'); });
+
+  if (sortCol === col) sortAsc = !sortAsc;
+  else { sortCol = col; sortAsc = col === 0; }
+
+  headers[col].classList.add(sortAsc ? 'sorted-asc' : 'sorted-desc');
+
+  var colKeys = ['rank','key','grade','mcap','opm','nv_exp','ev_ebitda','per','ret1y','score'];
+  var key = colKeys[col];
+
+  var sorted = ROWS.slice().sort(function(a, b) {
+    var va = a[key], vb = b[key];
+    if (va == null) return 1;
+    if (vb == null) return -1;
+    if (typeof va === 'string' && typeof vb === 'string') {
+      return sortAsc ? va.localeCompare(vb) : vb.localeCompare(va);
+    }
+    return sortAsc ? va - vb : vb - va;
+  });
+  renderTable(sorted);
+}
+
+/* ==================== RENDER: BUCKETS ==================== */
+function renderBuckets() {
+  var container = document.getElementById('bucket-grid');
+  BUCKETS.forEach(function(b) {
+    var card = document.createElement('div');
+    card.className = 'bucket-card ' + b.theme;
+
+    var labelEl = document.createElement('div');
+    labelEl.className = 'bucket-label';
+    labelEl.textContent = b.label;
+    card.appendChild(labelEl);
+
+    var chips = document.createElement('div');
+    chips.className = 'bucket-stocks';
+    b.stocks.forEach(function(s) {
+      var chip = document.createElement('span');
+      chip.className = 'stock-chip';
+      chip.textContent = s;
+      chips.appendChild(chip);
+    });
+    card.appendChild(chips);
+
+    var desc = document.createElement('div');
+    desc.className = 'bucket-desc';
+    desc.textContent = b.desc;
+    card.appendChild(desc);
+
+    container.appendChild(card);
+  });
+}
+
+/* ==================== RENDER: DEEP DIVES ==================== */
+function makeStars(stars) {
+  var div = document.createElement('div');
+  div.className = 'verdict';
+  var full = Math.floor(stars);
+  var half = stars % 1 >= 0.4;
+  for (var i = 0; i < 3; i++) {
+    var s = document.createElement('span');
+    if (i < full) { s.className = 'star'; s.textContent = '★'; }
+    else if (i === full && half) { s.className = 'star'; s.textContent = '☆'; s.style.opacity = '0.7'; }
+    else { s.className = 'star empty'; s.textContent = '☆'; }
+    div.appendChild(s);
+  }
+  return div;
+}
+
+function renderDives() {
+  var container = document.getElementById('dive-grid');
+  DIVES.forEach(function(d) {
+    var card = document.createElement('div');
+    card.className = 'dive-card';
+
+    var header = document.createElement('div');
+    header.className = 'dive-header';
+
+    var titleWrap = document.createElement('div');
+    var nameEl = document.createElement('div');
+    nameEl.className = 'dive-name';
+    nameEl.textContent = d.name;
+    var tickerEl = document.createElement('div');
+    tickerEl.className = 'dive-ticker';
+    tickerEl.textContent = d.ticker;
+    titleWrap.appendChild(nameEl);
+    titleWrap.appendChild(tickerEl);
+    header.appendChild(titleWrap);
+    header.appendChild(makeStars(d.stars));
+    card.appendChild(header);
+
+    var summary = document.createElement('div');
+    summary.className = 'dive-summary';
+    summary.textContent = d.summary;
+    card.appendChild(summary);
+
+    var metrics = document.createElement('div');
+    metrics.className = 'metrics-grid';
+    d.metrics.forEach(function(m) {
+      var box = document.createElement('div');
+      box.className = 'metric';
+      var lbl = document.createElement('div');
+      lbl.className = 'metric-label';
+      lbl.textContent = m.label;
+      var val = document.createElement('div');
+      val.className = 'metric-value';
+      val.textContent = m.val;
+      val.style.color = m.color;
+      box.appendChild(lbl);
+      box.appendChild(val);
+      metrics.appendChild(box);
+    });
+    card.appendChild(metrics);
+
+    var rows = [
+      {label: 'SCM 연결:', val: d.scm},
+      {label: '버퍼:', val: d.buffer},
+      {label: '반등 트리거:', val: d.trigger},
+      {label: '리스크:', val: d.risk}
+    ];
+    rows.forEach(function(row) {
+      var rowEl = document.createElement('div');
+      rowEl.className = 'dive-row';
+      var sp = document.createElement('span');
+      sp.textContent = row.label;
+      var txt = document.createTextNode(row.val);
+      rowEl.appendChild(sp);
+      rowEl.appendChild(txt);
+      card.appendChild(rowEl);
+    });
+
+    container.appendChild(card);
+  });
+}
+
+/* ==================== RENDER: TIERS ==================== */
+function renderTiers() {
+  var container = document.getElementById('tier-container');
+  TIERS.forEach(function(t) {
+    var section = document.createElement('div');
+    section.className = 'tier-section';
+
+    var headerEl = document.createElement('div');
+    headerEl.className = 'tier-header';
+
+    var scoreBox = document.createElement('div');
+    scoreBox.className = 'tier-score tier-' + t.score;
+    scoreBox.textContent = t.score;
+    headerEl.appendChild(scoreBox);
+
+    var textWrap = document.createElement('div');
+    var titleEl = document.createElement('div');
+    titleEl.className = 'tier-title';
+    titleEl.textContent = t.title;
+    var subEl = document.createElement('div');
+    subEl.className = 'tier-sub';
+    subEl.textContent = t.sub;
+    textWrap.appendChild(titleEl);
+    textWrap.appendChild(subEl);
+    headerEl.appendChild(textWrap);
+    section.appendChild(headerEl);
+
+    var chips = document.createElement('div');
+    chips.className = 'company-chips';
+    t.companies.forEach(function(c) {
+      var chip = document.createElement('div');
+      chip.className = 'company-chip';
+      chip.textContent = c;
+      chips.appendChild(chip);
+    });
+    section.appendChild(chips);
+    container.appendChild(section);
+  });
+}
+
+/* ==================== RENDER: PICKS ==================== */
+function renderPicks(picks, containerId, badgeClass) {
+  var container = document.getElementById(containerId);
+  picks.forEach(function(p) {
+    var card = document.createElement('div');
+    card.className = 'pick-card' + (p.top ? ' top' : '');
+
+    var badgeEl = document.createElement('div');
+    badgeEl.className = 'pick-badge ' + badgeClass;
+    badgeEl.textContent = '버킷 ' + p.badge;
+    card.appendChild(badgeEl);
+
+    var nameEl = document.createElement('div');
+    nameEl.className = 'pick-name';
+    nameEl.textContent = p.name;
+    card.appendChild(nameEl);
+
+    var scoreRow = document.createElement('div');
+    scoreRow.className = 'pick-score-row';
+
+    var starsEl = makeStars(p.stars);
+    scoreRow.appendChild(starsEl);
+
+    var usBadge = document.createElement('span');
+    usBadge.className = 'badge grade-' + (p.us === '5/5' ? 'A' : p.us === '4/5' ? 'B' : 'C');
+    usBadge.textContent = 'US ' + p.us;
+    scoreRow.appendChild(usBadge);
+    card.appendChild(scoreRow);
+
+    var mechEl = document.createElement('div');
+    mechEl.className = 'pick-mech';
+    mechEl.textContent = p.mech;
+    card.appendChild(mechEl);
+
+    var kpiRow = document.createElement('div');
+    kpiRow.className = 'pick-kpi-row';
+    p.kpis.forEach(function(k) {
+      var kpi = document.createElement('div');
+      kpi.className = 'pick-kpi';
+      var lbl = document.createElement('div');
+      lbl.className = 'pick-kpi-label';
+      lbl.textContent = k.l;
+      var val = document.createElement('div');
+      val.className = 'pick-kpi-val';
+      val.textContent = k.v;
+      kpi.appendChild(lbl);
+      kpi.appendChild(val);
+      kpiRow.appendChild(kpi);
+    });
+    card.appendChild(kpiRow);
+    container.appendChild(card);
+  });
+}
+
+/* ==================== RENDER: SCENARIOS ==================== */
+function renderScenarios() {
+  var tbody = document.getElementById('scenario-body');
+  SCENARIOS.forEach(function(s) {
+    var tr = document.createElement('tr');
+
+    var tdName = document.createElement('td');
+    var nameStrong = document.createElement('strong');
+    nameStrong.textContent = s.name;
+    var subDiv = document.createElement('div');
+    subDiv.style.fontSize = '11px';
+    subDiv.style.color = 'var(--text2)';
+    subDiv.style.marginTop = '3px';
+    subDiv.textContent = s.sub;
+    tdName.appendChild(nameStrong);
+    tdName.appendChild(subDiv);
+    tr.appendChild(tdName);
+
+    var tdProb = document.createElement('td');
+    var probBadge = document.createElement('span');
+    probBadge.className = 'prob-badge';
+    probBadge.textContent = s.prob;
+    tdProb.appendChild(probBadge);
+    tr.appendChild(tdProb);
+
+    var tdWin = document.createElement('td');
+    tdWin.className = 'winners';
+    tdWin.textContent = s.winners;
+    tr.appendChild(tdWin);
+
+    var tdLose = document.createElement('td');
+    tdLose.className = 'losers';
+    tdLose.textContent = s.losers;
+    tr.appendChild(tdLose);
+
+    tbody.appendChild(tr);
+  });
+}
+
+/* ==================== TAB SWITCH ==================== */
+function switchTab(id) {
+  document.querySelectorAll('.tab-pane').forEach(function(p) { p.classList.remove('active'); });
+  document.querySelectorAll('.tab-btn').forEach(function(b) { b.classList.remove('active'); });
+  document.getElementById('tab-' + id).classList.add('active');
+  document.querySelectorAll('.tab-btn').forEach(function(b) {
+    if (b.getAttribute('onclick') === "switchTab('" + id + "')") b.classList.add('active');
+  });
+}
+
+/* ==================== INIT ==================== */
+(function init() {
+  renderTable(ROWS);
+  renderBuckets();
+  renderDives();
+  renderTiers();
+  renderPicks(PICKS_3_5, 'picks-3-5', 'three-five');
+  renderPicks(PICKS_5_10, 'picks-5-10', 'five-ten');
+  renderScenarios();
+
+  // default sort indicator
+  document.querySelectorAll('#screening-table thead th')[9].classList.add('sorted-desc');
+})();
+</script>
+</body>
+</html>

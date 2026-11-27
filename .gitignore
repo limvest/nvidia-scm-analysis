@@ -1,0 +1,13 @@
+# 중간 작업 파일
+deepdive_*.json
+factcheck_*.json
+flows_SA*.json
+verify_SA*.json
+chart_a*.txt
+chart_b.txt
+chart_master.txt
+
+# build 중간산물
+docs/superpowers/plans/note_work/batch_*.json
+docs/superpowers/plans/note_work/review_summary.md
+.vercel

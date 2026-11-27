@@ -1,0 +1,1494 @@
+{
+  "nodes": {
+    "cn_in": {
+      "substitution": 0.25,
+      "inventory_weeks": 10,
+      "tier": 0,
+      "country": "CN",
+      "grade": "Critical",
+      "usd_b": null,
+      "name": "중국 인듐광산"
+    },
+    "cn_phos": {
+      "substitution": 0.3,
+      "inventory_weeks": 8,
+      "tier": 0,
+      "country": "CN",
+      "grade": "Critical",
+      "usd_b": null,
+      "name": "중국 적린"
+    },
+    "dowa": {
+      "substitution": 0.16,
+      "inventory_weeks": 8,
+      "tier": 0,
+      "country": "JP",
+      "grade": "",
+      "usd_b": 3.8,
+      "name": "Dowa"
+    },
+    "sum_mining": {
+      "substitution": 0.16,
+      "inventory_weeks": 4,
+      "tier": 0,
+      "country": "JP",
+      "grade": "",
+      "usd_b": 14.2,
+      "name": "Sumitomo Mining"
+    },
+    "umicore": {
+      "substitution": 0.16,
+      "inventory_weeks": 4,
+      "tier": 0,
+      "country": "EU",
+      "grade": "",
+      "usd_b": 3.4,
+      "name": "Umicore"
+    },
+    "heraeus": {
+      "substitution": 0.16,
+      "inventory_weeks": 4,
+      "tier": 0,
+      "country": "EU",
+      "grade": "",
+      "usd_b": null,
+      "name": "Heraeus"
+    },
+    "tosoh": {
+      "substitution": 0.16,
+      "inventory_weeks": 4,
+      "tier": 0,
+      "country": "JP",
+      "grade": "",
+      "usd_b": 5.1,
+      "name": "Tosoh"
+    },
+    "albemarle": {
+      "substitution": 0.16,
+      "inventory_weeks": 4,
+      "tier": 0,
+      "country": "US",
+      "grade": "",
+      "usd_b": 6.5,
+      "name": "Albemarle"
+    },
+    "covestro": {
+      "substitution": 0.16,
+      "inventory_weeks": 4,
+      "tier": 0,
+      "country": "EU",
+      "grade": "",
+      "usd_b": 6.2,
+      "name": "Covestro"
+    },
+    "linde": {
+      "substitution": 0.16,
+      "inventory_weeks": 4,
+      "tier": 1,
+      "country": "EU",
+      "grade": "",
+      "usd_b": 237.9,
+      "name": "Linde"
+    },
+    "air_liq": {
+      "substitution": 0.16,
+      "inventory_weeks": 4,
+      "tier": 1,
+      "country": "EU",
+      "grade": "",
+      "usd_b": 120.5,
+      "name": "Air Liquide"
+    },
+    "air_prod": {
+      "substitution": 0.16,
+      "inventory_weeks": 4,
+      "tier": 1,
+      "country": "US",
+      "grade": "",
+      "usd_b": 64.6,
+      "name": "Air Products"
+    },
+    "showa_g": {
+      "substitution": 0.16,
+      "inventory_weeks": 4,
+      "tier": 1,
+      "country": "JP",
+      "grade": "",
+      "usd_b": 19.7,
+      "name": "Showa Denko (가스)"
+    },
+    "merck_e": {
+      "substitution": 0.31,
+      "inventory_weeks": 4,
+      "tier": 1,
+      "country": "EU",
+      "grade": "High",
+      "usd_b": 52.0,
+      "name": "Merck KGaA"
+    },
+    "jsr": {
+      "substitution": 0.2,
+      "inventory_weeks": 6,
+      "tier": 1,
+      "country": "JP",
+      "grade": "High",
+      "usd_b": null,
+      "name": "JSR"
+    },
+    "tok": {
+      "substitution": 0.25,
+      "inventory_weeks": 6,
+      "tier": 1,
+      "country": "JP",
+      "grade": "High",
+      "usd_b": 3.9,
+      "name": "Tokyo Ohka (TOK)"
+    },
+    "shin_pr": {
+      "substitution": 0.31,
+      "inventory_weeks": 4,
+      "tier": 1,
+      "country": "JP",
+      "grade": "High",
+      "usd_b": null,
+      "name": "Shin-Etsu (PR부문)"
+    },
+    "entegris": {
+      "substitution": 0.5,
+      "inventory_weeks": 6,
+      "tier": 1,
+      "country": "US",
+      "grade": "High",
+      "usd_b": 13.2,
+      "name": "Entegris"
+    },
+    "cabot": {
+      "substitution": 0.16,
+      "inventory_weeks": 4,
+      "tier": 1,
+      "country": "US",
+      "grade": "",
+      "usd_b": 1.9,
+      "name": "Cabot Micro"
+    },
+    "stella": {
+      "substitution": 0.16,
+      "inventory_weeks": 4,
+      "tier": 1,
+      "country": "JP",
+      "grade": "",
+      "usd_b": 0.5,
+      "name": "Stella Chemifa"
+    },
+    "kanto": {
+      "substitution": 0.16,
+      "inventory_weeks": 4,
+      "tier": 1,
+      "country": "JP",
+      "grade": "",
+      "usd_b": 0.8,
+      "name": "Kanto Chemical"
+    },
+    "daikin": {
+      "substitution": 0.16,
+      "inventory_weeks": 4,
+      "tier": 1,
+      "country": "JP",
+      "grade": "",
+      "usd_b": null,
+      "name": "Daikin (불소)"
+    },
+    "ajinomoto": {
+      "substitution": 0.05,
+      "inventory_weeks": 8,
+      "tier": 1,
+      "country": "JP",
+      "grade": "Critical",
+      "usd_b": 31.2,
+      "name": "Ajinomoto (ABF필름)"
+    },
+    "resonac": {
+      "substitution": 0.1,
+      "inventory_weeks": 6,
+      "tier": 1,
+      "country": "JP",
+      "grade": "High",
+      "usd_b": 19.7,
+      "name": "Resonac (NCF필름)"
+    },
+    "henkel": {
+      "substitution": 0.16,
+      "inventory_weeks": 4,
+      "tier": 1,
+      "country": "EU",
+      "grade": "",
+      "usd_b": 32.0,
+      "name": "Henkel"
+    },
+    "namics": {
+      "substitution": 0.16,
+      "inventory_weeks": 4,
+      "tier": 1,
+      "country": "JP",
+      "grade": "",
+      "usd_b": null,
+      "name": "Namics"
+    },
+    "fuji_mb": {
+      "substitution": 0.16,
+      "inventory_weeks": 4,
+      "tier": 1,
+      "country": "JP",
+      "grade": "",
+      "usd_b": null,
+      "name": "Fujifilm (마스크블랭크)"
+    },
+    "shinetsu_si": {
+      "substitution": 0.2,
+      "inventory_weeks": 8,
+      "tier": 2,
+      "country": "JP",
+      "grade": "High",
+      "usd_b": 80.1,
+      "name": "Shin-Etsu (Si웨이퍼)"
+    },
+    "sumco": {
+      "substitution": 0.2,
+      "inventory_weeks": 8,
+      "tier": 2,
+      "country": "JP",
+      "grade": "High",
+      "usd_b": 6.8,
+      "name": "SUMCO"
+    },
+    "siltronic": {
+      "substitution": 0.212,
+      "inventory_weeks": 4,
+      "tier": 2,
+      "country": "EU",
+      "grade": "",
+      "usd_b": 1.8,
+      "name": "Siltronic"
+    },
+    "sk_siltron": {
+      "substitution": 0.16,
+      "inventory_weeks": 4,
+      "tier": 2,
+      "country": "KR",
+      "grade": "",
+      "usd_b": null,
+      "name": "SK Siltron"
+    },
+    "axt": {
+      "substitution": 0.2,
+      "inventory_weeks": 6,
+      "tier": 2,
+      "country": "US",
+      "grade": "Critical",
+      "usd_b": 0.5,
+      "name": "AXT"
+    },
+    "sum_elec_inp": {
+      "substitution": 0.15,
+      "inventory_weeks": 6,
+      "tier": 2,
+      "country": "JP",
+      "grade": "High",
+      "usd_b": 52.6,
+      "name": "Sumitomo Elec (InP)"
+    },
+    "soitec": {
+      "substitution": 0.85,
+      "inventory_weeks": 12,
+      "tier": 2,
+      "country": "EU",
+      "grade": "High",
+      "usd_b": 6.9,
+      "name": "Soitec"
+    },
+    "carl_zeiss": {
+      "substitution": 1.0,
+      "inventory_weeks": 8,
+      "tier": 3,
+      "country": "EU",
+      "grade": "Critical",
+      "usd_b": null,
+      "name": "Carl Zeiss SMT"
+    },
+    "trumpf": {
+      "substitution": 1.0,
+      "inventory_weeks": 8,
+      "tier": 3,
+      "country": "EU",
+      "grade": "Critical",
+      "usd_b": null,
+      "name": "Trumpf"
+    },
+    "cymer": {
+      "substitution": 1.0,
+      "inventory_weeks": 8,
+      "tier": 3,
+      "country": "US",
+      "grade": "Critical",
+      "usd_b": null,
+      "name": "Cymer (ASML자회사)"
+    },
+    "hamamatsu": {
+      "substitution": 0.05,
+      "inventory_weeks": 8,
+      "tier": 3,
+      "country": "JP",
+      "grade": "Critical",
+      "usd_b": 4.9,
+      "name": "Hamamatsu Photonics"
+    },
+    "mks": {
+      "substitution": 0.11,
+      "inventory_weeks": 4,
+      "tier": 3,
+      "country": "US",
+      "grade": "",
+      "usd_b": 3.2,
+      "name": "MKS Instruments"
+    },
+    "ucl": {
+      "substitution": 0.11,
+      "inventory_weeks": 4,
+      "tier": 3,
+      "country": "US",
+      "grade": "",
+      "usd_b": 3.8,
+      "name": "Ultra Clean Holdings"
+    },
+    "asml": {
+      "substitution": 0.0,
+      "inventory_weeks": 4,
+      "tier": 4,
+      "country": "NL",
+      "grade": "Critical",
+      "usd_b": 613.6,
+      "name": "ASML"
+    },
+    "amat": {
+      "substitution": 0.58,
+      "inventory_weeks": 4,
+      "tier": 4,
+      "country": "US",
+      "grade": "High",
+      "usd_b": 162.0,
+      "name": "Applied Materials"
+    },
+    "lam": {
+      "substitution": 0.54,
+      "inventory_weeks": 4,
+      "tier": 4,
+      "country": "US",
+      "grade": "High",
+      "usd_b": 93.0,
+      "name": "Lam Research"
+    },
+    "kla": {
+      "substitution": 0.556,
+      "inventory_weeks": 4,
+      "tier": 4,
+      "country": "US",
+      "grade": "High",
+      "usd_b": 96.0,
+      "name": "KLA"
+    },
+    "tel": {
+      "substitution": 0.7,
+      "inventory_weeks": 8,
+      "tier": 4,
+      "country": "JP",
+      "grade": "High",
+      "usd_b": 64.0,
+      "name": "Tokyo Electron"
+    },
+    "screen": {
+      "substitution": 0.15,
+      "inventory_weeks": 4,
+      "tier": 4,
+      "country": "JP",
+      "grade": "",
+      "usd_b": 4.8,
+      "name": "Screen Holdings"
+    },
+    "axcelis": {
+      "substitution": 0.11,
+      "inventory_weeks": 4,
+      "tier": 4,
+      "country": "US",
+      "grade": "",
+      "usd_b": 2.5,
+      "name": "Axcelis"
+    },
+    "hitachi_ht": {
+      "substitution": 0.11,
+      "inventory_weeks": 4,
+      "tier": 4,
+      "country": "JP",
+      "grade": "",
+      "usd_b": null,
+      "name": "Hitachi High-Tech"
+    },
+    "aixtron": {
+      "substitution": 0.08,
+      "inventory_weeks": 12,
+      "tier": 4,
+      "country": "EU",
+      "grade": "Critical",
+      "usd_b": 6.9,
+      "name": "AIXTRON"
+    },
+    "veeco": {
+      "substitution": 0.15,
+      "inventory_weeks": 4,
+      "tier": 4,
+      "country": "US",
+      "grade": "",
+      "usd_b": 3.5,
+      "name": "Veeco"
+    },
+    "disco": {
+      "substitution": 0.15,
+      "inventory_weeks": 4,
+      "tier": 5,
+      "country": "JP",
+      "grade": "Critical",
+      "usd_b": 44.8,
+      "name": "Disco"
+    },
+    "advantest": {
+      "substitution": 0.8,
+      "inventory_weeks": 6,
+      "tier": 5,
+      "country": "JP",
+      "grade": "High",
+      "usd_b": 122.0,
+      "name": "Advantest"
+    },
+    "teradyne": {
+      "substitution": 0.14,
+      "inventory_weeks": 4,
+      "tier": 5,
+      "country": "US",
+      "grade": "Medium",
+      "usd_b": 17.0,
+      "name": "Teradyne"
+    },
+    "hanmi": {
+      "substitution": 0.7,
+      "inventory_weeks": 4,
+      "tier": 5,
+      "country": "KR",
+      "grade": "High",
+      "usd_b": 21.0,
+      "name": "한미반도체"
+    },
+    "asmpt": {
+      "substitution": 0.31,
+      "inventory_weeks": 4,
+      "tier": 5,
+      "country": "HK",
+      "grade": "High",
+      "usd_b": 9.3,
+      "name": "ASMPT"
+    },
+    "besi": {
+      "substitution": 0.498,
+      "inventory_weeks": 4,
+      "tier": 5,
+      "country": "EU",
+      "grade": "High",
+      "usd_b": 24.9,
+      "name": "BESI"
+    },
+    "formfactor": {
+      "substitution": 0.14,
+      "inventory_weeks": 4,
+      "tier": 5,
+      "country": "US",
+      "grade": "Medium",
+      "usd_b": 10.0,
+      "name": "FormFactor"
+    },
+    "cohu": {
+      "substitution": 0.08,
+      "inventory_weeks": 4,
+      "tier": 5,
+      "country": "US",
+      "grade": "",
+      "usd_b": 1.4,
+      "name": "Cohu"
+    },
+    "ks": {
+      "substitution": 0.08,
+      "inventory_weeks": 4,
+      "tier": 5,
+      "country": "US",
+      "grade": "",
+      "usd_b": 2.1,
+      "name": "Kulicke & Soffa"
+    },
+    "dnp": {
+      "substitution": 0.08,
+      "inventory_weeks": 4,
+      "tier": 5,
+      "country": "JP",
+      "grade": "",
+      "usd_b": 8.5,
+      "name": "Dai Nippon Printing"
+    },
+    "toppan": {
+      "substitution": 0.08,
+      "inventory_weeks": 4,
+      "tier": 5,
+      "country": "JP",
+      "grade": "",
+      "usd_b": 7.3,
+      "name": "Toppan"
+    },
+    "photronics": {
+      "substitution": 0.08,
+      "inventory_weeks": 4,
+      "tier": 5,
+      "country": "US",
+      "grade": "",
+      "usd_b": 1.0,
+      "name": "Photronics"
+    },
+    "kurita": {
+      "substitution": 0.08,
+      "inventory_weeks": 4,
+      "tier": 5,
+      "country": "JP",
+      "grade": "",
+      "usd_b": 4.2,
+      "name": "Kurita Water"
+    },
+    "organo": {
+      "substitution": 0.08,
+      "inventory_weeks": 4,
+      "tier": 5,
+      "country": "JP",
+      "grade": "",
+      "usd_b": 1.5,
+      "name": "Organo"
+    },
+    "pall": {
+      "substitution": 0.08,
+      "inventory_weeks": 4,
+      "tier": 5,
+      "country": "US",
+      "grade": "",
+      "usd_b": null,
+      "name": "Pall (Danaher)"
+    },
+    "ibiden": {
+      "substitution": 0.15,
+      "inventory_weeks": 6,
+      "tier": 6,
+      "country": "JP",
+      "grade": "High",
+      "usd_b": 31.4,
+      "name": "Ibiden (ABF기판)"
+    },
+    "shinko": {
+      "substitution": 0.08,
+      "inventory_weeks": 4,
+      "tier": 6,
+      "country": "JP",
+      "grade": "",
+      "usd_b": 3.8,
+      "name": "Shinko Electric (기판)"
+    },
+    "ats": {
+      "substitution": 0.16,
+      "inventory_weeks": 4,
+      "tier": 6,
+      "country": "EU",
+      "grade": "",
+      "usd_b": 1.0,
+      "name": "AT&S"
+    },
+    "unimicron": {
+      "substitution": 0.24,
+      "inventory_weeks": 4,
+      "tier": 6,
+      "country": "TW",
+      "grade": "Medium",
+      "usd_b": 3.2,
+      "name": "Unimicron"
+    },
+    "kinsus": {
+      "substitution": 0.08,
+      "inventory_weeks": 4,
+      "tier": 6,
+      "country": "TW",
+      "grade": "",
+      "usd_b": 1.1,
+      "name": "Kinsus"
+    },
+    "kyocera": {
+      "substitution": 0.08,
+      "inventory_weeks": 4,
+      "tier": 6,
+      "country": "JP",
+      "grade": "",
+      "usd_b": 13.0,
+      "name": "Kyocera (세라믹패키지)"
+    },
+    "ngk": {
+      "substitution": 0.08,
+      "inventory_weeks": 4,
+      "tier": 6,
+      "country": "JP",
+      "grade": "",
+      "usd_b": 5.0,
+      "name": "NGK Insulators"
+    },
+    "iqe": {
+      "substitution": 0.7,
+      "inventory_weeks": 4,
+      "tier": 6,
+      "country": "EU",
+      "grade": "Critical",
+      "usd_b": 0.5,
+      "name": "IQE"
+    },
+    "cadence": {
+      "substitution": 0.85,
+      "inventory_weeks": 999,
+      "tier": 7,
+      "country": "US",
+      "grade": "High",
+      "usd_b": 98.9,
+      "name": "Cadence"
+    },
+    "synopsys": {
+      "substitution": 0.85,
+      "inventory_weeks": 999,
+      "tier": 7,
+      "country": "US",
+      "grade": "High",
+      "usd_b": 96.5,
+      "name": "Synopsys"
+    },
+    "siemens_eda": {
+      "substitution": 0.08,
+      "inventory_weeks": 4,
+      "tier": 7,
+      "country": "EU",
+      "grade": "",
+      "usd_b": null,
+      "name": "Siemens EDA"
+    },
+    "arm": {
+      "substitution": 0.9,
+      "inventory_weeks": 999,
+      "tier": 7,
+      "country": "US",
+      "grade": "High",
+      "usd_b": 160.0,
+      "name": "Arm Holdings"
+    },
+    "ansys": {
+      "substitution": 0.08,
+      "inventory_weeks": 4,
+      "tier": 7,
+      "country": "US",
+      "grade": "",
+      "usd_b": 35.0,
+      "name": "Ansys"
+    },
+    "rambus": {
+      "substitution": 0.08,
+      "inventory_weeks": 4,
+      "tier": 7,
+      "country": "US",
+      "grade": "",
+      "usd_b": 3.8,
+      "name": "Rambus"
+    },
+    "imec": {
+      "substitution": 0.08,
+      "inventory_weeks": 4,
+      "tier": 7,
+      "country": "EU",
+      "grade": "",
+      "usd_b": null,
+      "name": "IMEC"
+    },
+    "tsmc": {
+      "substitution": 0.02,
+      "inventory_weeks": 6,
+      "tier": 8,
+      "country": "TW",
+      "grade": "Critical",
+      "usd_b": 2111.7,
+      "name": "TSMC"
+    },
+    "samsung_f": {
+      "substitution": 0.14,
+      "inventory_weeks": 4,
+      "tier": 8,
+      "country": "KR",
+      "grade": "Medium",
+      "usd_b": null,
+      "name": "Samsung Foundry"
+    },
+    "intel_f": {
+      "substitution": 0.08,
+      "inventory_weeks": 4,
+      "tier": 8,
+      "country": "US",
+      "grade": "",
+      "usd_b": 595.6,
+      "name": "Intel Foundry"
+    },
+    "umc": {
+      "substitution": 0.08,
+      "inventory_weeks": 4,
+      "tier": 8,
+      "country": "TW",
+      "grade": "",
+      "usd_b": 24.0,
+      "name": "UMC"
+    },
+    "gf": {
+      "substitution": 0.5,
+      "inventory_weeks": 6,
+      "tier": 8,
+      "country": "US",
+      "grade": "High",
+      "usd_b": 44.6,
+      "name": "GlobalFoundries"
+    },
+    "tsmc_coupe": {
+      "substitution": 0.0,
+      "inventory_weeks": 6,
+      "tier": 8,
+      "country": "TW",
+      "grade": "Critical",
+      "usd_b": null,
+      "name": "TSMC COUPE"
+    },
+    "tower": {
+      "substitution": 0.7,
+      "inventory_weeks": 8,
+      "tier": 8,
+      "country": "IL",
+      "grade": "Medium",
+      "usd_b": 33.2,
+      "name": "Tower Semi"
+    },
+    "skhynix": {
+      "substitution": 0.1,
+      "inventory_weeks": 6,
+      "tier": 8,
+      "country": "KR",
+      "grade": "Critical",
+      "usd_b": 915.5,
+      "name": "SK Hynix"
+    },
+    "micron": {
+      "substitution": 0.5,
+      "inventory_weeks": 6,
+      "tier": 8,
+      "country": "US",
+      "grade": "High",
+      "usd_b": 859.4,
+      "name": "Micron"
+    },
+    "samsung_m": {
+      "substitution": 0.2,
+      "inventory_weeks": 6,
+      "tier": 8,
+      "country": "KR",
+      "grade": "High",
+      "usd_b": null,
+      "name": "Samsung Memory"
+    },
+    "kioxia": {
+      "substitution": 0.08,
+      "inventory_weeks": 4,
+      "tier": 8,
+      "country": "JP",
+      "grade": "",
+      "usd_b": null,
+      "name": "Kioxia"
+    },
+    "wd": {
+      "substitution": 0.08,
+      "inventory_weeks": 4,
+      "tier": 8,
+      "country": "US",
+      "grade": "",
+      "usd_b": 20.0,
+      "name": "Western Digital"
+    },
+    "broadcom": {
+      "substitution": 0.5,
+      "inventory_weeks": 6,
+      "tier": 9,
+      "country": "US",
+      "grade": "High",
+      "usd_b": 1962.9,
+      "name": "Broadcom"
+    },
+    "marvell": {
+      "substitution": 0.55,
+      "inventory_weeks": 6,
+      "tier": 9,
+      "country": "US",
+      "grade": "Medium",
+      "usd_b": 167.0,
+      "name": "Marvell (광DSP)"
+    },
+    "coherent": {
+      "substitution": 0.6,
+      "inventory_weeks": 8,
+      "tier": 9,
+      "country": "US",
+      "grade": "High",
+      "usd_b": 74.0,
+      "name": "Coherent"
+    },
+    "lumentum": {
+      "substitution": 0.6,
+      "inventory_weeks": 8,
+      "tier": 9,
+      "country": "US",
+      "grade": "High",
+      "usd_b": 75.0,
+      "name": "Lumentum"
+    },
+    "sivers": {
+      "substitution": 0.9,
+      "inventory_weeks": 4,
+      "tier": 9,
+      "country": "EU",
+      "grade": "Critical",
+      "usd_b": 0.13,
+      "name": "Sivers Photonics"
+    },
+    "credo": {
+      "substitution": 0.08,
+      "inventory_weeks": 4,
+      "tier": 9,
+      "country": "US",
+      "grade": "",
+      "usd_b": 35.7,
+      "name": "Credo Technology"
+    },
+    "astera": {
+      "substitution": 0.23,
+      "inventory_weeks": 4,
+      "tier": 9,
+      "country": "US",
+      "grade": "High",
+      "usd_b": 20.0,
+      "name": "Astera Labs"
+    },
+    "ayar": {
+      "substitution": 0.5,
+      "inventory_weeks": 4,
+      "tier": 9,
+      "country": "US",
+      "grade": "High",
+      "usd_b": null,
+      "name": "Ayar Labs"
+    },
+    "innolight": {
+      "substitution": 0.51,
+      "inventory_weeks": 4,
+      "tier": 9,
+      "country": "CN",
+      "grade": "High",
+      "usd_b": null,
+      "name": "InnoLight"
+    },
+    "lattice": {
+      "substitution": 0.08,
+      "inventory_weeks": 4,
+      "tier": 9,
+      "country": "US",
+      "grade": "",
+      "usd_b": 10.0,
+      "name": "Lattice Semi"
+    },
+    "viavi": {
+      "substitution": 0.08,
+      "inventory_weeks": 4,
+      "tier": 9,
+      "country": "US",
+      "grade": "",
+      "usd_b": 2.5,
+      "name": "Viavi Solutions"
+    },
+    "mellanox": {
+      "substitution": 0.95,
+      "inventory_weeks": 6,
+      "tier": 9,
+      "country": "US",
+      "grade": "Critical",
+      "usd_b": null,
+      "name": "Mellanox (NVIDIA子)"
+    },
+    "murata": {
+      "substitution": 0.08,
+      "inventory_weeks": 4,
+      "tier": 10,
+      "country": "JP",
+      "grade": "",
+      "usd_b": 77.0,
+      "name": "Murata"
+    },
+    "tdk": {
+      "substitution": 0.08,
+      "inventory_weeks": 4,
+      "tier": 10,
+      "country": "JP",
+      "grade": "",
+      "usd_b": 37.5,
+      "name": "TDK"
+    },
+    "sem": {
+      "substitution": 0.08,
+      "inventory_weeks": 4,
+      "tier": 10,
+      "country": "KR",
+      "grade": "",
+      "usd_b": null,
+      "name": "Samsung Electro-M"
+    },
+    "yageo": {
+      "substitution": 0.08,
+      "inventory_weeks": 4,
+      "tier": 10,
+      "country": "TW",
+      "grade": "",
+      "usd_b": 8.0,
+      "name": "Yageo"
+    },
+    "vishay": {
+      "substitution": 0.08,
+      "inventory_weeks": 4,
+      "tier": 10,
+      "country": "US",
+      "grade": "",
+      "usd_b": 3.2,
+      "name": "Vishay"
+    },
+    "amphenol": {
+      "substitution": 0.65,
+      "inventory_weeks": 4,
+      "tier": 10,
+      "country": "US",
+      "grade": "High",
+      "usd_b": 80.0,
+      "name": "Amphenol"
+    },
+    "te_conn": {
+      "substitution": 0.08,
+      "inventory_weeks": 4,
+      "tier": 10,
+      "country": "US",
+      "grade": "",
+      "usd_b": 55.0,
+      "name": "TE Connectivity"
+    },
+    "samtec": {
+      "substitution": 0.08,
+      "inventory_weeks": 4,
+      "tier": 10,
+      "country": "US",
+      "grade": "",
+      "usd_b": null,
+      "name": "Samtec"
+    },
+    "molex": {
+      "substitution": 0.08,
+      "inventory_weeks": 4,
+      "tier": 10,
+      "country": "US",
+      "grade": "",
+      "usd_b": null,
+      "name": "Molex"
+    },
+    "ipex": {
+      "substitution": 0.08,
+      "inventory_weeks": 4,
+      "tier": 10,
+      "country": "JP",
+      "grade": "",
+      "usd_b": null,
+      "name": "I-PEX"
+    },
+    "hirose": {
+      "substitution": 0.08,
+      "inventory_weeks": 4,
+      "tier": 10,
+      "country": "JP",
+      "grade": "",
+      "usd_b": 4.8,
+      "name": "Hirose Electric"
+    },
+    "ttm": {
+      "substitution": 0.08,
+      "inventory_weeks": 4,
+      "tier": 10,
+      "country": "US",
+      "grade": "",
+      "usd_b": 2.0,
+      "name": "TTM Technologies"
+    },
+    "tripod": {
+      "substitution": 0.08,
+      "inventory_weeks": 4,
+      "tier": 10,
+      "country": "TW",
+      "grade": "",
+      "usd_b": 2.3,
+      "name": "Tripod Technology"
+    },
+    "meiko": {
+      "substitution": 0.08,
+      "inventory_weeks": 4,
+      "tier": 10,
+      "country": "JP",
+      "grade": "",
+      "usd_b": 1.2,
+      "name": "Meiko Electronics"
+    },
+    "nvidia": {
+      "substitution": 1.0,
+      "inventory_weeks": 2,
+      "tier": 11,
+      "country": "US",
+      "grade": "",
+      "usd_b": 5316.6,
+      "name": "NVIDIA"
+    },
+    "foxconn": {
+      "substitution": 0.3,
+      "inventory_weeks": 1,
+      "tier": 12,
+      "country": "TW",
+      "grade": "High",
+      "usd_b": 109.9,
+      "name": "Foxconn"
+    },
+    "wistron": {
+      "substitution": 0.3,
+      "inventory_weeks": 1,
+      "tier": 12,
+      "country": "TW",
+      "grade": "Medium",
+      "usd_b": 14.1,
+      "name": "Wistron"
+    },
+    "quanta": {
+      "substitution": 0.3,
+      "inventory_weeks": 1,
+      "tier": 12,
+      "country": "TW",
+      "grade": "Medium",
+      "usd_b": 37.7,
+      "name": "Quanta Computer"
+    },
+    "celestica": {
+      "substitution": 0.08,
+      "inventory_weeks": 4,
+      "tier": 12,
+      "country": "US",
+      "grade": "",
+      "usd_b": 6.0,
+      "name": "Celestica"
+    },
+    "jabil": {
+      "substitution": 0.08,
+      "inventory_weeks": 4,
+      "tier": 12,
+      "country": "US",
+      "grade": "",
+      "usd_b": 19.0,
+      "name": "Jabil"
+    },
+    "flex": {
+      "substitution": 0.08,
+      "inventory_weeks": 4,
+      "tier": 12,
+      "country": "US",
+      "grade": "",
+      "usd_b": 10.5,
+      "name": "Flex"
+    },
+    "delta": {
+      "substitution": 0.08,
+      "inventory_weeks": 4,
+      "tier": 12,
+      "country": "TW",
+      "grade": "",
+      "usd_b": 167.3,
+      "name": "Delta Electronics"
+    },
+    "vertiv": {
+      "substitution": 0.23,
+      "inventory_weeks": 4,
+      "tier": 12,
+      "country": "US",
+      "grade": "High",
+      "usd_b": 124.2,
+      "name": "Vertiv"
+    },
+    "schneider": {
+      "substitution": 0.08,
+      "inventory_weeks": 4,
+      "tier": 12,
+      "country": "EU",
+      "grade": "",
+      "usd_b": 173.0,
+      "name": "Schneider Electric"
+    },
+    "eaton": {
+      "substitution": 0.08,
+      "inventory_weeks": 4,
+      "tier": 12,
+      "country": "EU",
+      "grade": "",
+      "usd_b": 90.0,
+      "name": "Eaton"
+    },
+    "motivair": {
+      "substitution": 0.08,
+      "inventory_weeks": 4,
+      "tier": 12,
+      "country": "US",
+      "grade": "",
+      "usd_b": null,
+      "name": "Motivair"
+    },
+    "asetek": {
+      "substitution": 0.08,
+      "inventory_weeks": 4,
+      "tier": 12,
+      "country": "EU",
+      "grade": "",
+      "usd_b": 0.3,
+      "name": "Asetek"
+    },
+    "coolitsys": {
+      "substitution": 0.08,
+      "inventory_weeks": 4,
+      "tier": 12,
+      "country": "US",
+      "grade": "",
+      "usd_b": null,
+      "name": "CoolIT Systems"
+    },
+    "abb": {
+      "substitution": 0.08,
+      "inventory_weeks": 4,
+      "tier": 12,
+      "country": "EU",
+      "grade": "",
+      "usd_b": 85.0,
+      "name": "ABB"
+    },
+    "corning": {
+      "substitution": 0.14,
+      "inventory_weeks": 4,
+      "tier": 12,
+      "country": "US",
+      "grade": "Medium",
+      "usd_b": 165.1,
+      "name": "Corning"
+    },
+    "sum_fiber": {
+      "substitution": 0.08,
+      "inventory_weeks": 4,
+      "tier": 12,
+      "country": "JP",
+      "grade": "",
+      "usd_b": 52.6,
+      "name": "Sumitomo Elec (광섬유)"
+    },
+    "furukawa": {
+      "substitution": 0.08,
+      "inventory_weeks": 4,
+      "tier": 12,
+      "country": "JP",
+      "grade": "",
+      "usd_b": 21.8,
+      "name": "Furukawa Electric"
+    },
+    "prysmian": {
+      "substitution": 0.08,
+      "inventory_weeks": 4,
+      "tier": 12,
+      "country": "EU",
+      "grade": "",
+      "usd_b": 49.8,
+      "name": "Prysmian"
+    },
+    "sanmina": {
+      "substitution": 0.08,
+      "inventory_weeks": 4,
+      "tier": 12,
+      "country": "US",
+      "grade": "",
+      "usd_b": 2.5,
+      "name": "Sanmina"
+    }
+  },
+  "scenarios": {
+    "S1_taiwan_strait": {
+      "name": "대만해협 분쟁",
+      "icon": "🇹🇼",
+      "shock_nodes": {
+        "tsmc": 1.0,
+        "tsmc_coupe": 1.0,
+        "ase_group": 0.95,
+        "foxconn": 0.85,
+        "wistron": 0.85,
+        "quanta": 0.85,
+        "chroma_ate": 0.9,
+        "umc": 0.8,
+        "win_semi": 0.8
+      },
+      "shock_flows": {
+        "tsmc→nvidia": 1.0,
+        "tsmc→marvell": 1.0,
+        "tsmc→coherent": 1.0,
+        "tsmc→broadcom": 1.0,
+        "tsmc_coupe→nvidia": 1.0,
+        "ase_group→nvidia": 0.9
+      },
+      "duration_weeks": 52,
+      "probability_5y": 0.2,
+      "description": "TSMC·TSMC COUPE 전면 가동 중단. 전 세계 첨단 로직 공급 차단."
+    },
+    "S2_china_indium": {
+      "name": "중국 인듐 수출 금지",
+      "icon": "🇨🇳",
+      "shock_nodes": {
+        "cn_in": 1.0
+      },
+      "shock_flows": {
+        "cn_in→axt": 0.85,
+        "cn_in→sum_elec_inp": 0.85,
+        "cn_in→dowa": 0.9,
+        "dowa→axt": 0.7
+      },
+      "duration_weeks": 36,
+      "probability_5y": 0.35,
+      "description": "인듐 글로벌 70% 공급 차단. InP 기판 체인 마비."
+    },
+    "S3_china_phos": {
+      "name": "중국 적린 수출 통제",
+      "icon": "🇨🇳",
+      "shock_nodes": {
+        "cn_phos": 1.0
+      },
+      "shock_flows": {
+        "cn_phos→axt": 0.9,
+        "cn_phos→sum_elec_inp": 0.9,
+        "axt→coherent": 0.6,
+        "axt→iqe": 0.6,
+        "axt→lumentum": 0.6,
+        "sum_elec_inp→coherent": 0.55
+      },
+      "duration_weeks": 36,
+      "probability_5y": 0.3,
+      "description": "적린 80% 차단. InP 합성 중단."
+    },
+    "S4_aixtron_shock": {
+      "name": "AIXTRON 단일공급 충격",
+      "icon": "⚡",
+      "shock_nodes": {
+        "aixtron": 1.0,
+        "veeco": 0.3
+      },
+      "shock_flows": {
+        "aixtron→iqe": 0.92,
+        "aixtron→coherent": 0.92,
+        "aixtron→lumentum": 0.92,
+        "aixtron→sivers": 0.92,
+        "aixtron→tsmc": 0.7
+      },
+      "duration_weeks": 78,
+      "probability_5y": 0.15,
+      "description": "MOCVD G10-AsP 70-90% 점유. Coherent·Lumentum·IQE 동시 노출."
+    },
+    "S5_japan_export": {
+      "name": "일본 소재·장비 수출 통제",
+      "icon": "🇯🇵",
+      "shock_nodes": {
+        "stella": 0.9,
+        "lasertec": 0.85,
+        "hoya": 0.8
+      },
+      "shock_flows": {
+        "ajinomoto→ibiden": 0.75,
+        "ibiden→tsmc": 0.65,
+        "ibiden→nvidia": 0.65,
+        "resonac→skhynix": 0.7,
+        "resonac→tsmc": 0.65,
+        "resonac→samsung_m": 0.65,
+        "shinetsu_si→tsmc": 0.55,
+        "shinetsu_si→skhynix": 0.55,
+        "shinetsu_si→samsung_f": 0.55,
+        "sumco→tsmc": 0.55,
+        "sumco→skhynix": 0.5,
+        "stella→asml": 0.7,
+        "stella→tsmc": 0.75,
+        "stella→skhynix": 0.7,
+        "agc→tsmc": 0.6,
+        "agc→asml": 0.65,
+        "agc→hoya": 0.7,
+        "hoya→tsmc": 0.7,
+        "hoya→lasertec": 0.75,
+        "lasertec→tsmc": 0.65,
+        "mitsui_chem→tsmc": 0.6,
+        "mitsui_chem→asml": 0.6,
+        "jsr→tsmc": 0.65,
+        "tok→tsmc": 0.6,
+        "hamamatsu→disco": 0.75,
+        "disco→skhynix": 0.65,
+        "disco→tsmc": 0.6,
+        "tel→tsmc": 0.55,
+        "tel→skhynix": 0.55,
+        "advantest→skhynix": 0.5,
+        "jx_metals→tsmc": 0.5,
+        "jx_metals→skhynix": 0.5,
+        "sum_elec_inp→coherent": 0.6
+      },
+      "duration_weeks": 26,
+      "probability_5y": 0.25,
+      "description": "ABF·EUV PR·Si웨이퍼 동시 차질."
+    },
+    "S6_scs_blockade": {
+      "name": "남중국해 봉쇄/물류 차단",
+      "icon": "🌊",
+      "shock_nodes": {},
+      "shock_flows": {
+        "tsmc→nvidia": 0.75,
+        "tsmc→marvell": 0.75,
+        "tsmc→coherent": 0.7,
+        "skhynix→tsmc": 0.7,
+        "samsung_m→tsmc": 0.7,
+        "disco→skhynix": 0.65,
+        "ajinomoto→ibiden": 0.65,
+        "ibiden→tsmc": 0.65,
+        "shinetsu_si→tsmc": 0.65,
+        "sumco→tsmc": 0.65,
+        "resonac→skhynix": 0.65,
+        "asml→tsmc": 0.7,
+        "agc→asml": 0.6,
+        "aixtron→iqe": 0.7,
+        "aixtron→coherent": 0.7,
+        "aixtron→lumentum": 0.7,
+        "dowa→axt": 0.65,
+        "axt→coherent": 0.6,
+        "axt→iqe": 0.6
+      },
+      "duration_weeks": 24,
+      "probability_5y": 0.18,
+      "description": "대만·일본·한국 부품 운송 60% 차질."
+    }
+  },
+  "correlation": [
+    [
+      1.0,
+      0.0,
+      0.0,
+      0.0,
+      0.7,
+      0.5
+    ],
+    [
+      0.0,
+      1.0,
+      0.6,
+      0.0,
+      0.0,
+      0.0
+    ],
+    [
+      0.0,
+      0.6,
+      1.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    [
+      0.0,
+      0.0,
+      0.0,
+      1.0,
+      0.0,
+      0.0
+    ],
+    [
+      0.7,
+      0.0,
+      0.0,
+      0.0,
+      1.0,
+      0.3
+    ],
+    [
+      0.5,
+      0.0,
+      0.0,
+      0.0,
+      0.3,
+      1.0
+    ]
+  ],
+  "scenario_order": [
+    "S1_taiwan_strait",
+    "S2_china_indium",
+    "S3_china_phos",
+    "S4_aixtron_shock",
+    "S5_japan_export",
+    "S6_scs_blockade"
+  ],
+  "reshoring_factor": {
+    "current_2026": {},
+    "2028_phase1": {
+      "micron": 0.9,
+      "tsmc": 0.85,
+      "skhynix": 0.9,
+      "samsung_m": 0.9
+    },
+    "2030_full": {
+      "micron": 0.75,
+      "tsmc": 0.7,
+      "skhynix": 0.8,
+      "samsung_m": 0.8,
+      "entegris": 0.85,
+      "gf": 0.8
+    },
+    "accelerated": {
+      "micron": 0.65,
+      "tsmc": 0.55,
+      "skhynix": 0.7,
+      "samsung_m": 0.7,
+      "entegris": 0.8,
+      "gf": 0.7
+    },
+    "delayed": {
+      "micron": 0.95,
+      "tsmc": 0.92,
+      "skhynix": 0.95,
+      "samsung_m": 0.95
+    }
+  },
+  "default_buffer": 4,
+  "version": "1.0",
+  "generated_at": "2026-05-24"
+}

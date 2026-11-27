@@ -1,0 +1,18 @@
+[
+  {"key":"rohm","opm":2.26,"per":null,"pbr":2.34,"ev_ebitda":25.63,"debt_ratio":-0.50,"revenue_usd":3.21,"price_return_1y":197.0,"confidence":"medium"},
+  {"key":"taiyo_yuden","opm":5.48,"per":84.63,"pbr":3.30,"ev_ebitda":17.62,"debt_ratio":2.50,"revenue_usd":2.37,"price_return_1y":276.12,"confidence":"medium"},
+  {"key":"dnp","opm":6.68,"per":11.23,"pbr":0.90,"ev_ebitda":7.02,"debt_ratio":1.69,"revenue_usd":10.07,"price_return_1y":25.31,"confidence":"medium"},
+  {"key":"toppan","opm":3.72,"per":19.43,"pbr":0.88,"ev_ebitda":8.59,"debt_ratio":3.37,"revenue_usd":12.07,"price_return_1y":11.98,"confidence":"medium"},
+  {"key":"tower","opm":13.93,"per":131.16,"pbr":10.56,"ev_ebitda":57.34,"debt_ratio":-0.29,"revenue_usd":1.62,"price_return_1y":592.42,"confidence":"medium"},
+  {"key":"lumentum","opm":10.22,"per":181.93,"pbr":23.26,"ev_ebitda":145.85,"debt_ratio":6.35,"revenue_usd":2.49,"price_return_1y":1170.22,"confidence":"medium"},
+  {"key":"tripod","opm":18.01,"per":23.83,"pbr":4.40,"ev_ebitda":12.76,"debt_ratio":-0.31,"revenue_usd":2.41,"price_return_1y":139.27,"confidence":"medium"},
+  {"key":"siltronic","opm":-7.34,"per":null,"pbr":1.37,"ev_ebitda":13.32,"debt_ratio":5.05,"revenue_usd":1.41,"price_return_1y":154.50,"confidence":"medium"},
+  {"key":"veeco","opm":4.41,"per":157.14,"pbr":3.99,"ev_ebitda":72.41,"debt_ratio":-4.76,"revenue_usd":0.66,"price_return_1y":200.0,"confidence":"medium"},
+  {"key":"oci_company","opm":-2.87,"per":null,"pbr":1.20,"ev_ebitda":50.05,"debt_ratio":12.69,"revenue_usd":2.46,"price_return_1y":337.06,"confidence":"medium"},
+  {"key":"dongjin","opm":11.99,"per":50.83,"pbr":2.91,"ev_ebitda":16.37,"debt_ratio":3.16,"revenue_usd":0.88,"price_return_1y":117.83,"confidence":"medium"},
+  {"key":"wonik_ips","opm":9.67,"per":79.16,"pbr":6.03,"ev_ebitda":null,"debt_ratio":null,"revenue_usd":0.70,"price_return_1y":453.18,"confidence":"medium"},
+  {"key":"walsin_tech","opm":6.28,"per":62.88,"pbr":2.20,"ev_ebitda":24.54,"debt_ratio":4.70,"revenue_usd":1.16,"price_return_1y":251.56,"confidence":"medium"},
+  {"key":"jenoptik","opm":11.92,"per":31.91,"pbr":2.37,"ev_ebitda":13.89,"debt_ratio":1.99,"revenue_usd":1.12,"price_return_1y":130.84,"confidence":"medium"},
+  {"key":"vertiv","opm":18.80,"per":82.70,"pbr":29.25,"ev_ebitda":53.55,"debt_ratio":1.30,"revenue_usd":10.84,"price_return_1y":247.49,"confidence":"medium"},
+  {"key":"celestica","opm":8.72,"per":44.44,"pbr":19.39,"ev_ebitda":29.89,"debt_ratio":0.66,"revenue_usd":13.79,"price_return_1y":221.90,"confidence":"medium"}
+]
