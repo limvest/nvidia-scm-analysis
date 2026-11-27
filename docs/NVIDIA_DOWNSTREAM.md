@@ -2,6 +2,8 @@
 
 **조사 기준일 2026년 11월 28일** · 데이터센터용 AI 가속기를 대상으로 한다. 4월 공급망 조사에 이어 NVIDIA가 출하한 장비를 누가 운영하고 누가 연산을 사용하는지 추적했다. [고객별 원문과 계산이 담긴 엑셀](NVIDIA-downstream-2026-11.xlsx)
 
+[후속 심층 조사 · 출하 후 서비스 투입 비율, 고객 검수와 실사용률](NVIDIA_GPU_DEPLOYMENT.md)
+
 ## NVIDIA는 얼마나 출하했고, 어디로 팔았나
 
 NVIDIA가 2025년 10월 GTC에서 밝힌 누적 출하 이정표는 Blackwell **600만**이다. 약 1시간 2분 지점에서 출하량을 설명한 뒤 패키지당 GPU 다이 2개와 지역 범위를 언급한다. 이를 600만 장의 설치 카드로 환산하면 고객 장비와 맞지 않을 수 있다. 최근인 2026년 11월 실적 발표에서는 Rubin NVL72의 양산 출하와 실명 운영사를 공개했지만 모델별 출하 대수표는 제공하지 않았다. [NVIDIA GTC 원본](https://www.nvidia.com/en-us/on-demand/session/gtcdc25-dc1204/) · [NVIDIA 분기 발표](https://nvidianews.nvidia.com/news/nvidia-announces-financial-results-for-third-quarter-fiscal-2027)
