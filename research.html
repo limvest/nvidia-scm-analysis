@@ -157,7 +157,7 @@
 
   <section>
     <h2>SCM 공급망 투자 스크리닝</h2>
-    <p class="section-sub">NVIDIA Rubin/Feynman SCM 공급망 상장사 84개 복합 점수 순위 — 2026-05-23 기준</p>
+    <p class="section-sub">NVIDIA Rubin/Feynman SCM 공급망 상장사 84개 조사 대상 중 30개 종목의 복합 점수 — 2026-05-23 기준</p>
 
     <div class="table-wrap">
       <table id="screening-table">
@@ -168,7 +168,7 @@
             <th onclick="sortTable(2)">등급</th>
             <th onclick="sortTable(3)">시총</th>
             <th onclick="sortTable(4)">OPM%</th>
-            <th onclick="sortTable(5)">NvExp</th>
+            <th onclick="sortTable(5)">NV 노출 추정(%)</th>
             <th onclick="sortTable(6)">EV/E</th>
             <th onclick="sortTable(7)">PER</th>
             <th onclick="sortTable(8)">1Y수익</th>
@@ -206,7 +206,7 @@
       <div class="bucket-card theme-a">
         <div class="bucket-label">보조금 (당근)</div>
         <div style="font-size:14px;font-weight:700;margin-bottom:6px;">CHIPS Act</div>
-        <div class="bucket-desc">총 $527억 투자. Intel $7.86B, TSMC $6.6B, Samsung $6.4B, Micron $6.1B, SK Hynix $3.87B, GFS $1.5B. 미국 내 팹 건설 유도.</div>
+        <div class="bucket-desc">2024년 직접지원 약정 상한은 삼성전자 $4.745B, SK하이닉스 $458M. SK하이닉스의 인디애나 투자 계획은 $3.87B. <a href="https://www.nist.gov/chips/chips-program-office-awards?page=1">NIST 지원 내역</a></div>
       </div>
       <div class="bucket-card theme-b">
         <div class="bucket-label">관세 (채찍)</div>
@@ -216,7 +216,7 @@
       <div class="bucket-card theme-c">
         <div class="bucket-label">수출통제 (무기화)</div>
         <div style="font-size:14px;font-weight:700;margin-bottom:6px;">기술 봉쇄</div>
-        <div class="bucket-desc">ASML EUV = 미국 라이선스 없이 불가. Lam/AMAT/KLA 중국 납품 차단. 동맹국도 미국 허가 종속. 중국 WFE 점유율 6.5%로 증가 중.</div>
+        <div class="bucket-desc">네덜란드는 EUV 및 일부 첨단 DUV 장비 수출을 허가제로 관리한다. 미국의 장비·HBM 통제는 품목, 목적지, 최종 용도에 따라 적용된다.</div>
       </div>
     </div>
 
@@ -273,16 +273,16 @@
 <script>
 /* ==================== DATA ==================== */
 var ROWS = [
-  {rank:1,  key:'lasertec',     grade:'A', mcap:'$12B',  opm:42,   nv_exp:95, ev_ebitda:15.2, per:23,    ret1y:'-55%', score:174.8},
+  {rank:1,  key:'lasertec',     grade:'A', mcap:'$12B',  opm:48.8, nv_exp:95, ev_ebitda:15.2, per:23,    ret1y:'-55%', score:178.8},
   {rank:2,  key:'hoya',         grade:'A', mcap:'$25B',  opm:31,   nv_exp:90, ev_ebitda:23.2, per:37,    ret1y:'+52%', score:158.4},
   {rank:3,  key:'mitsui_chem',  grade:'A', mcap:'$4B',   opm:7,    nv_exp:80, ev_ebitda:8.1,  per:33,    ret1y:'+47%', score:147.1},
   {rank:4,  key:'tsmc',         grade:'A', mcap:'$900B', opm:51,   nv_exp:19, ev_ebitda:18.0, per:29,    ret1y:'+120%',score:147.0},
-  {rank:5,  key:'ajinomoto',    grade:'A', mcap:'$18B',  opm:50,   nv_exp:40, ev_ebitda:18.6, per:38,    ret1y:'+57%', score:145.7},
-  {rank:6,  key:'jx_metals',    grade:'A', mcap:'$5B',   opm:12,   nv_exp:70, ev_ebitda:16.6, per:42,    ret1y:'—',    score:136.6},
-  {rank:7,  key:'asmi',         grade:'A', mcap:'$18B',  opm:28,   nv_exp:70, ev_ebitda:29.8, per:59,    ret1y:'—',    score:135.9},
-  {rank:8,  key:'shinetsu_si',  grade:'B', mcap:'$40B',  opm:29,   nv_exp:8,  ev_ebitda:9.0,  per:21,    ret1y:'+41%', score:134.5},
+  {rank:5,  key:'jx_metals',    grade:'A', mcap:'$5B',   opm:12,   nv_exp:70, ev_ebitda:16.6, per:42,    ret1y:'—',    score:136.6},
+  {rank:6,  key:'asmi',         grade:'A', mcap:'$18B',  opm:28,   nv_exp:70, ev_ebitda:29.8, per:59,    ret1y:'—',    score:135.9},
+  {rank:7,  key:'shinetsu_si',  grade:'B', mcap:'$40B',  opm:29,   nv_exp:8,  ev_ebitda:9.0,  per:21,    ret1y:'+41%', score:134.5},
+  {rank:8, key:'skhynix',      grade:'B', mcap:'$95B',  opm:48.6, nv_exp:27, ev_ebitda:12.3, per:16,    ret1y:'+22%', score:130.4},
   {rank:9,  key:'agc',          grade:'B', mcap:'$6B',   opm:8,    nv_exp:60, ev_ebitda:6.4,  per:17,    ret1y:'+27%', score:129.5},
-  {rank:10, key:'skhynix',      grade:'B', mcap:'$95B',  opm:35,   nv_exp:27, ev_ebitda:12.3, per:16,    ret1y:'+22%', score:122.4},
+  {rank:10,  key:'ajinomoto',    grade:'A', mcap:'$18B',  opm:12.6, nv_exp:40, ev_ebitda:18.6, per:38,    ret1y:'+57%', score:124.3},
   {rank:11, key:'cmoc',         grade:'B', mcap:'$15B',  opm:15,   nv_exp:20, ev_ebitda:4.6,  per:8,     ret1y:'-28%', score:121.4},
   {rank:12, key:'aixtron',      grade:'B', mcap:'$3B',   opm:21,   nv_exp:15, ev_ebitda:13.0, per:49,    ret1y:'—',    score:115.8},
   {rank:13, key:'asahi_kasei',  grade:'B', mcap:'$10B',  opm:7,    nv_exp:55, ev_ebitda:6.3,  per:12,    ret1y:'+19%', score:114.3},
@@ -291,18 +291,18 @@ var ROWS = [
   {rank:16, key:'ase_group',    grade:'B', mcap:'$14B',  opm:10,   nv_exp:70, ev_ebitda:11.7, per:31,    ret1y:'+15%', score:110.7},
   {rank:17, key:'hamamatsu',    grade:'A', mcap:'$8B',   opm:7.6,  nv_exp:8,  ev_ebitda:9.5,  per:37,    ret1y:'-15%', score:108.7},
   {rank:18, key:'disco',        grade:'B', mcap:'$20B',  opm:42,   nv_exp:20, ev_ebitda:31.9, per:38,    ret1y:'-10%', score:105.8},
-  {rank:19, key:'sumco',        grade:'B', mcap:'$5B',   opm:0.3,  nv_exp:5,  ev_ebitda:6.9,  per:43,    ret1y:'-30%', score:103.2},
-  {rank:20, key:'advantest',    grade:'B', mcap:'$25B',  opm:35,   nv_exp:20, ev_ebitda:30.0, per:54,    ret1y:'+120%',score:98.7},
+  {rank:19, key:'advantest',    grade:'B', mcap:'$25B',  opm:44.2,   nv_exp:20, ev_ebitda:30.0, per:54,    ret1y:'+120%',score:103.7},
+  {rank:20, key:'sumco',        grade:'B', mcap:'$5B',   opm:0.3,  nv_exp:5,  ev_ebitda:6.9,  per:43,    ret1y:'-30%', score:103.2},
   {rank:21, key:'jenoptik',     grade:'D', mcap:'$1B',   opm:13,   nv_exp:50, ev_ebitda:13.9, per:32,    ret1y:'+131%',score:97.3},
   {rank:22, key:'resonac',      grade:'B', mcap:'$4B',   opm:5,    nv_exp:15, ev_ebitda:8.6,  per:15,    ret1y:'+493%',score:95.8},
   {rank:23, key:'infineon',     grade:'C', mcap:'$40B',  opm:13,   nv_exp:50, ev_ebitda:9.0,  per:23,    ret1y:'-16%', score:95.2},
   {rank:24, key:'fujimi',       grade:'C', mcap:'$2B',   opm:13,   nv_exp:50, ev_ebitda:16.0, per:30,    ret1y:'+102%',score:95.1},
   {rank:25, key:'wus_pcb',      grade:'C', mcap:'$1B',   opm:11,   nv_exp:60, ev_ebitda:13.3, per:10,    ret1y:'—',    score:94.2},
   {rank:26, key:'ibiden',       grade:'B', mcap:'$6B',   opm:14,   nv_exp:60, ev_ebitda:34.0, per:72,    ret1y:'+180%',score:94.0},
-  {rank:27, key:'sum_elec',     grade:'B', mcap:'$15B',  opm:7,    nv_exp:8,  ev_ebitda:15.0, per:26,    ret1y:'+80%', score:89.8},
+  {rank:27, key:'sum_elec_inp',     grade:'B', mcap:'$15B',  opm:7,    nv_exp:8,  ev_ebitda:15.0, per:26,    ret1y:'+80%', score:89.8},
   {rank:28, key:'soulbrain',    grade:'C', mcap:'$1B',   opm:14,   nv_exp:40, ev_ebitda:16.0, per:42,    ret1y:'+159%',score:89.8},
   {rank:29, key:'asml',         grade:'A', mcap:'$290B', opm:35,   nv_exp:15, ev_ebitda:28.2, per:37,    ret1y:'-20%', score:89.0},
-  {rank:30, key:'wacker',       grade:'C', mcap:'$2B',   opm:5,    nv_exp:40, ev_ebitda:28.6, per:null,  ret1y:'+15%', score:88.5}
+  {rank:30, key:'wacker_chemie',       grade:'C', mcap:'$2B',   opm:5,    nv_exp:40, ev_ebitda:28.6, per:null,  ret1y:'+15%', score:88.5}
 ];
 
 var BUCKETS = [
@@ -477,7 +477,7 @@ var PICKS_3_5 = [
     us: '4/5',
     badge: 'B — 장비·소재',
     mech: '미국 유일 대형 반도체 소재사. US 팹 웨이퍼 스타트 당 소모품 소비 비례. CHIPS Act 조건 강화 시 독점 수혜.',
-    kpis: [{l:'분기 매출', v:'$807M'}, {l:'조정 OPM', v:'21.1%'}, {l:'CHIPS Act', v:'$75M'}],
+    kpis: [{l:'분기 매출', v:'$807M'}, {l:'조정 OPM', v:'21.1%'}, {l:'CHIPS Act', v:'최대 $77M'}],
     top: false
   }
 ];
@@ -497,8 +497,8 @@ var PICKS_5_10 = [
     stars: 2.5,
     us: '5/5',
     badge: 'A — CHIPS Act',
-    mech: '미국 유일 선단공정 팹. 정부 9.9% 지분 보유. 18A HVM 개시(2025.10). 국가 보호 자산 — 시장 논리와 별개로 존재 보장.',
-    kpis: [{l:'CHIPS Act', v:'$7.86B'}, {l:'정부지분', v:'9.9%'}, {l:'외부고객', v:'미확보'}],
+    mech: '미국 유일 선단공정 팹. 2025년 8월 지분 매입 계약에 CHIPS 미지급액 $5.7B 포함. 18A HVM 개시(2025.10). 국가 보호 자산 — 시장 논리와 별개로 존재 보장.',
+    kpis: [{l:'CHIPS Act', v:'$7.86B'}, {l:'계약 당시 지분', v:'9.9%'}, {l:'외부고객', v:'미확보'}],
     top: false
   },
   {
@@ -633,6 +633,12 @@ function sortTable(col) {
 
   var sorted = ROWS.slice().sort(function(a, b) {
     var va = a[key], vb = b[key];
+    if (key === 'mcap' || key === 'ret1y') {
+      const number = value => value === '—' ? null : parseFloat(value.replace('$', ''));
+      va = number(va);
+      vb = number(vb);
+    }
+    if (va == null && vb == null) return 0;
     if (va == null) return 1;
     if (vb == null) return -1;
     if (typeof va === 'string' && typeof vb === 'string') {

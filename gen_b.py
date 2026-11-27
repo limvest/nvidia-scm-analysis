@@ -153,7 +153,7 @@ FLOWS = [
 ]
 
 MONEY = [
-    ('NVIDIA','Ayar Labs','$5억 · OIO'),
+    ('NVIDIA','Ayar Labs','Series E 참여'),
 ]
 
 # ── 레이아웃 계산 ─────────────────────────────────────────

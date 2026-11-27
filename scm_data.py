@@ -44,7 +44,7 @@ NODES = [
   {"key":"stella",     "name":"Stella Chemifa",          "stage":1,"sub":"화학",     "country":"JP","grade":"",        "usd":0.5,  "opm":None,"nv_exp":2,   "switch_mo":24, "mkt_shr":None,"note":"고순도 HF · 12N+ 초순도급 일본 집중 · 2019 후 韓 의존도 50% 이하로 감소"},
   {"key":"kanto",      "name":"Kanto Chemical",          "stage":1,"sub":"화학",     "country":"JP","grade":"",        "usd":0.8,  "opm":None,"nv_exp":2,   "switch_mo":12, "mkt_shr":None,"note":"초고순도 시약"},
   {"key":"daikin",     "name":"Daikin (불소)",           "stage":1,"sub":"화학",     "country":"JP","grade":"",        "usd":None, "opm":None,"nv_exp":2,   "switch_mo":18, "mkt_shr":None,"note":"불소가스·불소폴리머"},
-  {"key":"ajinomoto",  "name":"Ajinomoto (ABF필름)",     "stage":1,"sub":"필름",     "country":"JP","grade":"Critical","usd":31.2, "opm":50,  "nv_exp":40,  "switch_mo":72, "mkt_shr":95,  "note":"ABF필름 독점 95%+ · OPM>50% (1차: Ajinomoto IR·TrendForce 2026.5) · Q3 2026 30% 가격인상 확정 · 독점 렌트 구조 · 대체 인증 5~7년"},
+  {"key":"ajinomoto",  "name":"Ajinomoto (ABF필름)",     "stage":1,"sub":"필름",     "country":"JP","grade":"Critical","usd":31.2, "opm":12.6,  "nv_exp":40,  "switch_mo":72, "mkt_shr":95,  "note":"ABF필름 독점 95%+ · 2026년 3월 결산 연결 영업이익률 12.6% · Q3 2026 30% 가격인상 확정 · 독점 렌트 구조 · 대체 인증 5~7년"},
   {"key":"resonac",    "name":"Resonac (NCF필름)",       "stage":1,"sub":"필름",     "country":"JP","grade":"High",    "usd":19.7, "opm":None,"nv_exp":15,  "switch_mo":24, "mkt_shr":35,  "note":"NCF필름 상위3사(Resonac·Henkel·Namics) 합산 99% · HBM TCB공정 필수 · ¥150억 3.5~5배 증설 (1차: Resonac IR) · HBM4E 하이브리드본딩 전환시 수요 감소 리스크"},
   {"key":"henkel",     "name":"Henkel",                  "stage":1,"sub":"필름",     "country":"EU","grade":"",        "usd":32.0, "opm":None,"nv_exp":5,   "switch_mo":12, "mkt_shr":None,"note":"언더필·에폭시 접착 · NCF 3사 중 하나"},
   {"key":"namics",     "name":"Namics",                  "stage":1,"sub":"필름",     "country":"JP","grade":"",        "usd":None, "opm":None,"nv_exp":3,   "switch_mo":12, "mkt_shr":None,"note":"언더필 (Henkel 자회사) · NCF 3사 중 하나"},
@@ -63,7 +63,7 @@ NODES = [
   {"key":"carl_zeiss", "name":"Carl Zeiss SMT",          "stage":3,"sub":"ASML부품", "country":"EU","grade":"Critical","usd":None, "opm":None,"nv_exp":15,  "switch_mo":0,  "mkt_shr":100, "note":"EUV 광학계 100% 독점 → ASML · ASML 지분 24.9% 보유(€1B+€760M 추가투자) · 중국 EUV 복제 불가의 핵심 이유 (1차: ASML 공시)"},
   {"key":"trumpf",     "name":"Trumpf",                  "stage":3,"sub":"ASML부품", "country":"EU","grade":"Critical","usd":None, "opm":None,"nv_exp":12,  "switch_mo":0,  "mkt_shr":100, "note":"CO₂ EUV 레이저 100% → ASML · 비상장 · 독일 정부 전략자산 지정"},
   {"key":"cymer",      "name":"Cymer (ASML자회사)",      "stage":3,"sub":"ASML부품", "country":"US","grade":"Critical","usd":None, "opm":None,"nv_exp":10,  "switch_mo":0,  "mkt_shr":100, "note":"ArF 엑시머 레이저 → ASML 완전인수 · ASML 내재화"},
-  {"key":"hamamatsu",  "name":"Hamamatsu Photonics",     "stage":3,"sub":"Disco부품","country":"JP","grade":"Critical","usd":4.9,  "opm":42,  "nv_exp":8,   "switch_mo":24, "mkt_shr":100, "note":"SD 레이저 단독 → Disco · OPM ~42% · Disco-Hamamatsu 사실상 단독 공급 파트너십"},
+  {"key":"hamamatsu",  "name":"Hamamatsu Photonics",     "stage":3,"sub":"Disco부품","country":"JP","grade":"Critical","usd":4.9,  "opm":7.6,  "nv_exp":8,   "switch_mo":24, "mkt_shr":100, "note":"SD 레이저 단독 → Disco · FY2025 연결 영업이익률 7.6% · Disco-Hamamatsu 사실상 단독 공급 파트너십"},
   {"key":"mks",        "name":"MKS Instruments",         "stage":3,"sub":"장비부품", "country":"US","grade":"",        "usd":3.2,  "opm":None,"nv_exp":5,   "switch_mo":12, "mkt_shr":None,"note":"가스흐름제어·RF전원 → 각 장비사"},
   {"key":"ucl",        "name":"Ultra Clean Holdings",    "stage":3,"sub":"장비부품", "country":"US","grade":"",        "usd":3.8,  "opm":None,"nv_exp":4,   "switch_mo":12, "mkt_shr":None,"note":"가스전달시스템 → 각 장비사"},
 
@@ -81,7 +81,7 @@ NODES = [
 
   # ── Stage 5: 후공정·테스트·포토마스크·유틸리티 장비 ──────────────
   {"key":"disco",      "name":"Disco",                   "stage":5,"sub":"후공정장비","country":"JP","grade":"Critical","usd":44.8, "opm":42.0,"nv_exp":20,  "switch_mo":18, "mkt_shr":None,"note":"그라인딩·다이싱 · FY2026 매출 ¥436.8B +11.1% AI/HBM 직접명시 · OPM ~42% · Hamamatsu SD레이저 단독 의존 (1차: Disco IR FY2026)"},
-  {"key":"advantest",  "name":"Advantest",               "stage":5,"sub":"후공정장비","country":"JP","grade":"High",    "usd":122.0,"opm":None,"nv_exp":20,  "switch_mo":18, "mkt_shr":70,  "note":"HBM·GPU 테스트 1위 ~70% · FY2025 ¥1조1,286B(사상최고) FY2026 가이던스 ¥1조4,200B($9.5B +26%) · 시장규모 $125~130B (1차: Advantest IR)"},
+  {"key":"advantest",  "name":"Advantest",               "stage":5,"sub":"후공정장비","country":"JP","grade":"High",    "usd":122.0,"opm":44.2,"nv_exp":20,  "switch_mo":18, "mkt_shr":70,  "note":"HBM·GPU 테스트 1위 ~70% · FY2025 ¥1조1,286B(사상최고) FY2026 가이던스 ¥1조4,200B($9.5B +26%) · 시장규모 $125~130B (1차: Advantest IR)"},
   {"key":"teradyne",   "name":"Teradyne",                "stage":5,"sub":"후공정장비","country":"US","grade":"Medium",  "usd":17.0, "opm":None,"nv_exp":8,   "switch_mo":18, "mkt_shr":None,"note":"반도체 테스트 · Advantest 대안 · GPU테스트 시장 점유 낮으나 HBM 이외 부품 커버"},
   {"key":"hanmi",      "name":"한미반도체",              "stage":5,"sub":"후공정장비","country":"KR","grade":"High",    "usd":21.0, "opm":43.6,"nv_exp":15,  "switch_mo":12, "mkt_shr":71,  "note":"TC본더 점유 71.2% OPM 43.6% · ★독점 붕괴: SK하이닉스 2025년 가격인상 거부→ASMPT 7대 발주(~300억) + Hanwha Semitech 진입 · 2026 점유 20~30% 급락 예상 · Micron으로 반격 중 (1차: 한미반도체 사업보고서·2차보도)"},
   {"key":"asmpt",      "name":"ASMPT",                   "stage":5,"sub":"후공정장비","country":"HK","grade":"High",    "usd":9.3,  "opm":None,"nv_exp":8,   "switch_mo":12, "mkt_shr":None,"note":"와이어본더·다이본더 · SK하이닉스 TC본더 한미반도체 대안 진입(7대 발주) · 한미반도체 독점 붕괴 수혜 · HBM4E TC본더 공급 경쟁 가속 · 시장점유 2026 20~30% 목표(2차)"},
@@ -123,7 +123,7 @@ NODES = [
   {"key":"gf",         "name":"GlobalFoundries",        "stage":8,"sub":"파운드리", "country":"US","grade":"High",    "usd":44.6, "opm":11.7,"nv_exp":20,  "switch_mo":0,  "mkt_shr":100, "gen":"Feynman","cpo":True,"note":"TeraPHY OIO 칩렛 유일 파운드리(45SPCLO 공정) · FY2025 OPM 11.7% Non-IFRS 15.7% · 2025.11 AMF(싱가포르) 인수로 SiPh 캐파 확대 · 비상장(Mubadala 소유) → 캐파·수율 외부 검증 불가 · Feynman 광인터커넥트 핵심 단일 파운드리 (1차: GF 6-K; AMF 인수 공시)"},
   {"key":"tsmc_coupe", "name":"TSMC COUPE",             "stage":8,"sub":"파운드리", "country":"TW","grade":"Critical","usd":None, "opm":None,"nv_exp":30,  "switch_mo":0,  "mkt_shr":100, "gen":"Feynman","cpo":True,"note":"Co-packaged Optics and Ushered Photonics Engine · NVLink 스위치 CPO 파운드리 · 2026 H2 양산 목표 · NVIDIA 단독 의존 · GF 45SPCLO 대비 후속 통합 플랫폼 · 대만 지정학=TSMC N3P와 동일 리스크 (TrendForce 2026.4; borecraft 2026.5, 2차)"},
   {"key":"tower",      "name":"Tower Semi",             "stage":8,"sub":"파운드리", "country":"IL","grade":"Medium",  "usd":33.2, "opm":9.2, "nv_exp":8,   "switch_mo":36, "mkt_shr":None,"cpo":True,"note":"SiPho PIC 파운드리 · Soitec SOI 1:1 의존 · NVIDIA $13억 SiPho 계약(1차: Tower IR) · Quintessent QD-on-Si 파운드리 파트너 · Q1 2025 OPM 9.2% (1차: Tower 6-K)"},
-  {"key":"skhynix",    "name":"SK Hynix",               "stage":8,"sub":"메모리",   "country":"KR","grade":"Critical","usd":915.5,"opm":72,  "nv_exp":27,  "switch_mo":24, "mkt_shr":70,  "note":"HBM4 주공급 70%(Rubin) · FY2025 OPM 48.6% · Q1 2026 OPM 72%(역대최고) · NVIDIA 매출비중 ~27% · HBM 3년치 완판 (1차: SK하이닉스 IR·CNBC 2026.4.23)"},
+  {"key":"skhynix",    "name":"SK Hynix",               "stage":8,"sub":"메모리",   "country":"KR","grade":"Critical","usd":915.5,"opm":48.6,  "nv_exp":27,  "switch_mo":24, "mkt_shr":70,  "note":"HBM4 주공급 70%(Rubin) · FY2025 OPM 48.6% · Q1 2026 OPM 72%(역대최고) · NVIDIA 매출비중 ~27% · HBM 3년치 완판 (1차: SK하이닉스 IR·CNBC 2026.4.23)"},
   {"key":"micron",     "name":"Micron",                 "stage":8,"sub":"메모리",   "country":"US","grade":"High",    "usd":859.4,"opm":47.0,"nv_exp":17,  "switch_mo":24, "mkt_shr":20,  "note":"HBM4 Rubin 20% 공급 직접명시 · Q1 FY2026 OPM 47%(역대최고) 매출 $13.6B +57% · Vera Rubin용 HBM4 36GB 12-Hi 양산 명시 · 2026 HBM 완판 · HBM TAM $35B→$100B(2028) (1차: Micron 10-Q·8-K·FY2026)"},
   {"key":"samsung_m",  "name":"Samsung Memory",         "stage":8,"sub":"메모리",   "country":"KR","grade":"High",    "usd":None, "opm":None,"nv_exp":10,  "switch_mo":24, "mkt_shr":10,  "note":"HBM4 2차 공급(~10%) · SK하이닉스·Micron 대비 후발 · HBM4E 커스텀 2026.5~6 완료 목표 · HBM 수율 개선 중 (2차: TrendForce)"},
   {"key":"kioxia",     "name":"Kioxia",                 "stage":8,"sub":"메모리",   "country":"JP","grade":"",        "usd":None, "opm":None,"nv_exp":3,   "switch_mo":None,"mkt_shr":None,"note":"NAND 플래시"},
@@ -160,7 +160,7 @@ NODES = [
   {"key":"meiko",      "name":"Meiko Electronics",      "stage":10,"sub":"PCB",     "country":"JP","grade":"",        "usd":1.2,  "opm":None,"nv_exp":5,   "switch_mo":18, "mkt_shr":None,"note":"정밀 PCB"},
 
   # ── Stage 11: NVIDIA ─────────────────────────────────────────────
-  {"key":"nvidia",     "name":"NVIDIA",                 "stage":11,"sub":"통합",    "country":"US","grade":"",        "usd":5316.6,"opm":62.0,"nv_exp":100, "switch_mo":None,"mkt_shr":None,"note":"FY2026 매출 $215.9B +65% · DC 매출 90%+ · GAAP 총이익률 71.1% OPM 62% · R200 GPU ASP ~$55,000 · COGS ~$8,900(ASP의 16%) (1차: NVIDIA 10-K)"},
+  {"key":"nvidia",     "name":"NVIDIA",                 "stage":11,"sub":"통합",    "country":"US","grade":"",        "usd":5316.6,"opm":60.4,"nv_exp":100, "switch_mo":None,"mkt_shr":None,"note":"FY2026 매출 $215.9B +65% · DC 매출 90%+ · GAAP 총이익률 71.1% OPM 62% · R200 GPU ASP ~$55,000 · COGS ~$8,900(ASP의 16%) (1차: NVIDIA 10-K)"},
 
   # ── Stage 12: ODM조립·전원·냉각·광케이블 ────────────────────────
   {"key":"foxconn",    "name":"Foxconn",                "stage":12,"sub":"ODM",     "country":"TW","grade":"High",    "usd":109.9,"opm":3.2, "nv_exp":30,  "switch_mo":12, "mkt_shr":None,"note":"NVL72 주조립 · FY2025 OPM 3.20%(전년 2.92%) · 고가AI랙이 총이익률 오히려 희석 · ODM 3사 AI서버 75~80% 대만집중=TSMC와 동일 지정학 이중노출 (1차: Foxconn IR)"},
@@ -213,7 +213,7 @@ FLOWS = [
 MONEY = [
   ("nvidia","coherent","$20억(보통주)"),
   ("nvidia","lumentum","$20억(전환우선주)"),
-  ("nvidia","ayar","$5억"),
+  ("nvidia","ayar","Series E 참여(금액 미공개)"),
   ("nvidia","marvell","$20억"),
 ]
 

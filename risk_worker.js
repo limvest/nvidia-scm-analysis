@@ -54,6 +54,9 @@ self.onmessage = (e) => {
     const L = useCorrelation ? cholesky(riskData.correlation) : null;
     const probs = order.map(sid => riskData.scenarios[sid].probability_5y);
 
+    const graph = RiskSim.prepareGraph(nodeKeys, flows);
+    // Six binary scenarios yield at most 64 distinct deterministic outcomes per run.
+    const impacts = new Map();
     const results = [];
     const histBins = 21;
     const histogram = Array(histBins).fill(0);
@@ -69,8 +72,12 @@ self.onmessage = (e) => {
         if (uniforms[s] < probs[s]) active.push(order[s]);
       }
 
-      const res = RiskSim.simulate({flows, nodeKeys, riskData, activeScenarios: active, reshoringStage: reshoring, t: week});
-      const imp = res.summary.nvidia_revenue_pct;
+      const key = active.join('|');
+      if (!impacts.has(key)){
+        const res = RiskSim.simulate({flows, nodeKeys, graph, riskData, activeScenarios: active, reshoringStage: reshoring, t: week});
+        impacts.set(key, res.summary.nvidia_revenue_pct);
+      }
+      const imp = impacts.get(key);
       results.push(imp);
       const binIdx = Math.min(histBins-1, Math.max(0, Math.floor((-imp)/5)));
       histogram[binIdx]++;

@@ -13,7 +13,7 @@
 ```
 grade_score = {A:6, B:5, C:4, D:3, E:2, F:1}
 
-quality = (grade/6)*40 + (OPM/60)*20 + (nv_exp/100)*20 + (switch_mo/36)*20
+quality = (grade/6)*40 + (OPM/60)*20 + (nv_exp/100)*20 + (min(switch_mo, 36)/36)*20
 value_score = max(0, 100 - ev_ebitda*1.5)    # ev_ebitda < 150 시
 net_cash_bonus = min(20, abs(debt_ratio)*5)   # debt_ratio < 0 시 (순현금)
 
@@ -36,27 +36,31 @@ composite = quality * (1 + value_score/100) + net_cash_bonus
 
 | 종목 | 항목 | 수정 전 | 수정 후 | 사유 |
 |------|------|---------|---------|------|
-| hamamatsu | OPM | 42% | **7.6%** | 역사적 피크값 오입력 → FY2025 실제값 반영 |
+| hamamatsu | OPM | 42% | **7.6%** | [FY2025 연결 실적](https://www.hamamatsu.com/jp/en/investor-relations/financial-highlights.html) |
+| ajinomoto | 연결 OPM | 50% | **12.6%** | [2026년 3월 결산 영업이익 199,412 / 매출 1,583,719백만 엔](https://www.ajinomoto.co.jp/company/en/ir/news/news-20260519/main/0/link/148th.pdf) |
+| lasertec | 연결 OPM | 42% | **48.8%** | [2025년 6월 결산 영업이익 122,843 / 매출 251,477백만 엔](https://www2.jpx.co.jp/disc/69200/140120250807533568.pdf) |
+| skhynix | FY2025 연결 OPM | 35% | **48.6%** | [2025년 영업이익 47.2063조 / 매출 97.1467조 원](https://news.skhynix.com/en/sk-hynix-announces-fy25-financial-results/) |
+| advantest | FY2025 연결 OPM | 35% | **44.2%** | [2026년 3월 결산 손익계산서](https://www.advantest.com/document/en/investors/ir-library/result/E_FR_FY2025_FN.pdf) |
 | soitec | EV/EBITDA | 4.5x | **10.5x** | Trough EBITDA 기준 재계산 (EV ~€2.1B, EBITDA ~€200M) |
 
 ---
 
 ## 2. 스크리닝 결과 TOP 30
 
-**기준: Grade C 이상, 시총 $500M 이상, 밸류에이션 데이터 보유**
+**표시 대상** · 2026년 5월 스크리닝에 수록된 30개 기업. 표에는 D등급 Jenoptik도 포함된다. 시가총액·수익률의 수집일은 종목별로 다를 수 있다.
 
 | # | Key | 등급 | 시총 | OPM | NvExp | EV/E | PER | 1Y수익 | Score |
 |---|-----|------|------|-----|-------|------|-----|--------|-------|
-| 1 | lasertec | A | $12B | 42% | 95 | 15.2x | 23x | -55% | 174.8 |
+| 1 | lasertec | A | $12B | 48.8% | 95 | 15.2x | 23x | -55% | 178.8 |
 | 2 | hoya | A | $25B | 31% | 90 | 23.2x | 37x | +52% | 158.4 |
 | 3 | mitsui_chem | A | $4B | 7% | 80 | 8.1x | 33x | +47% | 147.1 |
 | 4 | tsmc | A | $900B | 51% | 19 | 18.0x | 29x | +120% | 147.0 |
-| 5 | ajinomoto | A | $18B | 50% | 40 | 18.6x | 38x | +57% | 145.7 |
-| 6 | jx_metals | A | $5B | 12% | 70 | 16.6x | 42x | — | 136.6 |
-| 7 | asmi | A | $18B | 28% | 70 | 29.8x | 59x | — | 135.9 |
-| 8 | shinetsu_si | B | $40B | 29% | 8 | 9.0x | 21x | +41% | 134.5 |
+| 5 | jx_metals | A | $5B | 12% | 70 | 16.6x | 42x | — | 136.6 |
+| 6 | asmi | A | $18B | 28% | 70 | 29.8x | 59x | — | 135.9 |
+| 7 | shinetsu_si | B | $40B | 29% | 8 | 9.0x | 21x | +41% | 134.5 |
+| 8 | skhynix | B | $95B | 48.6% | 27 | 12.3x | 16x | +22% | 130.4 |
 | 9 | agc | B | $6B | 8% | 60 | 6.4x | 17x | +27% | 129.5 |
-| 10 | skhynix | B | $95B | 35% | 27 | 12.3x | 16x | +22% | 122.4 |
+| 10 | ajinomoto | A | $18B | 12.6% | 40 | 18.6x | 38x | +57% | 124.3 |
 | 11 | cmoc | B | $15B | 15% | 20 | 4.6x | 8x | -28% | 121.4 |
 | 12 | aixtron | B | $3B | 21% | 15 | 13.0x | 49x | — | 115.8 |
 | 13 | asahi_kasei | B | $10B | 7% | 55 | 6.3x | 12x | +19% | 114.3 |
@@ -65,8 +69,8 @@ composite = quality * (1 + value_score/100) + net_cash_bonus
 | 16 | ase_group | B | $14B | 10% | 70 | 11.7x | 31x | +15% | 110.7 |
 | 17 | hamamatsu | A | $8B | 7.6% | 8 | 9.5x | 37x | -15% | 108.7 |
 | 18 | disco | B | $20B | 42% | 20 | 31.9x | 38x | -10% | 105.8 |
-| 19 | sumco | B | $5B | 0.3% | 5 | 6.9x | 43x | -30% | 103.2 |
-| 20 | advantest | B | $25B | 35% | 20 | 30.0x | 54x | +120% | 98.7 |
+| 19 | advantest | B | $25B | 44.2% | 20 | 30.0x | 54x | +120% | 103.7 |
+| 20 | sumco | B | $5B | 0.3% | 5 | 6.9x | 43x | -30% | 103.2 |
 | 21 | jenoptik | D | $1B | 13% | 50 | 13.9x | 32x | +131% | 97.3 |
 | 22 | resonac | B | $4B | 5% | 15 | 8.6x | 15x | +493% | 95.8 |
 | 23 | infineon | C | $40B | 13% | 50 | 9.0x | 23x | -16% | 95.2 |

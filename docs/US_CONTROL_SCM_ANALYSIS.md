@@ -13,32 +13,36 @@
 
 | 도구 | 메커니즘 | 최근 사례 |
 |------|---------|---------|
-| **CHIPS Act 보조금** (당근) | 미국 내 팹 건설 유도 | TSMC $6.6B, Intel $7.86B, Micron $6.1B, Samsung $6.4B |
-| **관세** (채찍) | 해외 생산 패널티, 미국 투자 강제 | TSMC의 $165B 투자 약속 = 관세 협박의 결과 |
-| **수출통제** (무기화) | 중국 접근 차단, 동맹국도 미국 허가 종속 | ASML EUV 수출 = 미국 라이선스 없으면 불가. Lam/AMAT/KLA 중국 납품 차단 |
+| **CHIPS Act 보조금** (당근) | 미국 내 팹 건설 유도 | 2024년 약정 상한은 TSMC $6.6B, Intel $7.86B, Micron $6.1B, Samsung $4.745B |
+| **관세** (채찍) | 해외 생산 비용과 투자 유인 변화 | TSMC 미국 투자 계획 $165B. 관세의 기여도는 추정 |
+| **수출통제** (무기화) | 첨단 장비·메모리의 대중 수출 제한 | 네덜란드는 ASML 첨단 노광장비 수출을 허가제로 관리한다. 미국 규정은 품목·목적지·최종 용도에 따라 적용된다. |
 
-### CHIPS Act 집행 현황 (2026.05 기준)
+### CHIPS Act 지원 약정 (2026.05 조사 기준)
 
 | 기업 | 보조금 | 지역 | 핵심 내용 |
 |------|--------|------|---------|
-| Intel Foundry | **$7.86B** + 9.9% 정부지분 | 애리조나·오하이오 | 18A HVM 개시(2025.10). 외부 고객 미확보 |
-| TSMC Arizona | **$6.6B** + $5B 대출 | 애리조나 피닉스 | N4 수율 대만 동등 확인. $165B 투자 약속 |
-| Samsung Austin | **$6.4B** | 텍사스 테일러 | 팹 지연 중 |
+| Intel Foundry | 2024년 약정 **최대 $7.86B** | 애리조나·오하이오 | 2025년 지분 매입 재원에 미지급 보조금 $5.7B 포함 |
+| TSMC Arizona | **최대 $6.6B** + 대출 한도 $5B | 애리조나 피닉스 | N4 수율 대만 동등 확인. $165B 투자 약속 |
+| Samsung Austin | **최대 $4.745B** | 텍사스 테일러 | 팹 지연 중 |
 | Micron | **$6.1B** | 아이다호·뉴욕 | HBM 2026 전량 완판. 아이다호 2027, 뉴욕 2030 |
-| SK Hynix Indiana | **$3.87B** | 인디애나 | HBM 패키징 팹, 2028 양산 목표 |
+| SK Hynix Indiana | **최대 $458M** | 인디애나 | 회사 투자 계획 $3.87B. 2028년 하반기 양산 목표 |
 | GlobalFoundries | **$1.5B** | 뉴욕 Malta·버몬트 | DoD Trusted Foundry, 방산 독점 |
-| Entegris | **$75M** | 콜로라도 | 유일 미국계 대형 반도체 소재사 |
+| Entegris | **최대 $77M** | 콜로라도 | 유일 미국계 대형 반도체 소재사 |
+
+약정액과 지분 전환 조건은 [미 상무부 삼성전자 발표](https://www.nist.gov/news-events/news/2024/12/biden-harris-administration-announces-chips-incentives-award-samsung), [SK하이닉스 지원 내역](https://www.nist.gov/chips/sk-hynix-indiana-west-lafayette), [Entegris 지원 내역](https://www.nist.gov/chips/entegris-colorado-colorado-springs), [Intel 지분 계약 발표](https://www.intel.com/content/www/us/en/newsroom/news/corporate/intel-and-trump-administration-reach-historic-agreement.html)를 기준으로 했다.
 
 ### 수출통제 타임라인
+
+수출통제 발표 자료는 [ASML의 2023년 공지](https://www.asml.com/news/press-releases/2023/statement-regarding-export-control-regulations-dutch-government), [BIS의 2024년 12월 조치](https://www.bis.gov/press-release/commerce-strengthens-export-controls-restrict-chinas-capability-produce-advanced-semiconductors-military), [2025년 파운드리 실사 조치](https://www.bis.gov/press-release/commerce-strengthens-restrictions-advanced-computing-semiconductors-enhance-foundry-due-diligence-prevent)에서 확인할 수 있다.
 
 | 시점 | 조치 |
 |------|------|
 | 2019 | Huawei Entity List 등재 |
 | 2020 | TSMC 대 화웨이 납품 차단 |
 | 2022.10 | BIS 고급 AI칩·장비 대중 수출 통제 강화 |
-| 2023 | ASML EUV 대중 수출 전면 차단 (DUV 일부 포함) |
-| 2024.11 | 추가 확대: Lam/AMAT/KLA 메모리·로직 장비 추가 제한 |
-| 2025 | SMIC Tier 1 EDA 툴 차단, HBM 대중 수출 제한 |
+| 2023.09 | 네덜란드가 기존 EUV 제한에 더해 첨단 액침 DUV 수출 허가제 시행 |
+| 2024.12 | BIS가 반도체 제조장비 24종·소프트웨어 3종과 일부 HBM에 신규 통제 발표 |
+| 2025 | BIS가 첨단 칩 제조에 대한 파운드리 고객 확인 의무 강화 |
 | 2026 | Hua Hong에 장비 출하 중단 명령. 중국 국산 장비 WFE 점유율 6.5% 도달 |
 
 ---
@@ -61,7 +65,7 @@
 
 | 기업 | 분류 | 핵심 포지션 | 비고 |
 |------|------|------------|------|
-| Intel Foundry (INTC) | 팹 | 미국 유일 선단공정 팹 | 정부 9.9% 지분 보유 |
+| Intel Foundry (INTC) | 팹 | 미국 유일 선단공정 팹 | 2025년 8월 계약 당시 지분 9.9% |
 | GlobalFoundries (GFS) | 팹 | DoD Trusted Foundry, 방산 독점 | Cayman 법인 기술적 각주 있음 |
 | KLA (KLAC) | 장비 | 공정제어 장비 50%+ 독점 | 미국 내 연구개발·생산 |
 | Corning (GLW) | 소재 | 광섬유 미국 내 생산, AI 인프라 | NC 히코리 공장 |

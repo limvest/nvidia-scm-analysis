@@ -1241,6 +1241,447 @@
       "grade": "",
       "usd_b": 2.5,
       "name": "Sanmina"
+    },
+    "win_semi": {
+      "substitution": 0.5,
+      "inventory_weeks": 4,
+      "uses_defaults": true,
+      "name": "WIN Semiconductors",
+      "tier": 10,
+      "country": "TW",
+      "usd_b": 0.8
+    },
+    "poet_tech": {
+      "substitution": 0.5,
+      "inventory_weeks": 4,
+      "uses_defaults": true,
+      "name": "POET Technologies",
+      "tier": 10,
+      "country": "US",
+      "usd_b": 0.05
+    },
+    "o_net": {
+      "substitution": 0.5,
+      "inventory_weeks": 4,
+      "uses_defaults": true,
+      "name": "O-Net Technologies",
+      "tier": 6,
+      "country": "CN",
+      "usd_b": 0.4
+    },
+    "enablence": {
+      "substitution": 0.5,
+      "inventory_weeks": 4,
+      "uses_defaults": true,
+      "name": "Enablence Technologies",
+      "tier": 8,
+      "country": "CA",
+      "usd_b": null
+    },
+    "lightium": {
+      "substitution": 0.5,
+      "inventory_weeks": 4,
+      "uses_defaults": true,
+      "name": "LIGHTIUM AG",
+      "tier": 9,
+      "country": "EU",
+      "usd_b": null
+    },
+    "aeva": {
+      "substitution": 0.5,
+      "inventory_weeks": 4,
+      "uses_defaults": true,
+      "name": "Aeva",
+      "tier": 7,
+      "country": "US",
+      "usd_b": 0.05
+    },
+    "lightmatter": {
+      "substitution": 0.5,
+      "inventory_weeks": 4,
+      "uses_defaults": true,
+      "name": "Lightmatter",
+      "tier": 7,
+      "country": "US",
+      "usd_b": null
+    },
+    "lightelligence": {
+      "substitution": 0.5,
+      "inventory_weeks": 4,
+      "uses_defaults": true,
+      "name": "Lightelligence",
+      "tier": 7,
+      "country": "CN",
+      "usd_b": null
+    },
+    "lasertec": {
+      "substitution": 0.5,
+      "inventory_weeks": 4,
+      "uses_defaults": true,
+      "name": "Lasertec",
+      "tier": 4,
+      "country": "JP",
+      "usd_b": 6.2
+    },
+    "hoya": {
+      "substitution": 0.5,
+      "inventory_weeks": 4,
+      "uses_defaults": true,
+      "name": "Hoya",
+      "tier": 4,
+      "country": "JP",
+      "usd_b": 7.1
+    },
+    "agc": {
+      "substitution": 0.5,
+      "inventory_weeks": 4,
+      "uses_defaults": true,
+      "name": "AGC (旭硝子)",
+      "tier": 3,
+      "country": "JP",
+      "usd_b": 16.2
+    },
+    "mitsui_chem": {
+      "substitution": 0.5,
+      "inventory_weeks": 4,
+      "uses_defaults": true,
+      "name": "Mitsui Chemicals",
+      "tier": 3,
+      "country": "JP",
+      "usd_b": 14.2
+    },
+    "jx_metals": {
+      "substitution": 0.5,
+      "inventory_weeks": 4,
+      "uses_defaults": true,
+      "name": "JX Advanced Metals",
+      "tier": 3,
+      "country": "JP",
+      "usd_b": 4.1
+    },
+    "asahi_kasei": {
+      "substitution": 0.5,
+      "inventory_weeks": 4,
+      "uses_defaults": true,
+      "name": "Asahi Kasei",
+      "tier": 3,
+      "country": "JP",
+      "usd_b": 20.1
+    },
+    "rohm": {
+      "substitution": 0.5,
+      "inventory_weeks": 4,
+      "uses_defaults": true,
+      "name": "Rohm",
+      "tier": 2,
+      "country": "JP",
+      "usd_b": 4.0
+    },
+    "taiyo_yuden": {
+      "substitution": 0.5,
+      "inventory_weeks": 4,
+      "uses_defaults": true,
+      "name": "Taiyo Yuden",
+      "tier": 3,
+      "country": "JP",
+      "usd_b": 3.2
+    },
+    "nitto_denko": {
+      "substitution": 0.5,
+      "inventory_weeks": 4,
+      "uses_defaults": true,
+      "name": "Nitto Denko",
+      "tier": 3,
+      "country": "JP",
+      "usd_b": 7.8
+    },
+    "mgc": {
+      "substitution": 0.5,
+      "inventory_weeks": 4,
+      "uses_defaults": true,
+      "name": "Mitsubishi Gas Chemical",
+      "tier": 3,
+      "country": "JP",
+      "usd_b": 3.5
+    },
+    "sumitomo_chem": {
+      "substitution": 0.5,
+      "inventory_weeks": 4,
+      "uses_defaults": true,
+      "name": "Sumitomo Chemical",
+      "tier": 3,
+      "country": "JP",
+      "usd_b": 18.5
+    },
+    "fujimi": {
+      "substitution": 0.5,
+      "inventory_weeks": 4,
+      "uses_defaults": true,
+      "name": "Fujimi",
+      "tier": 3,
+      "country": "JP",
+      "usd_b": 0.8
+    },
+    "renesas": {
+      "substitution": 0.5,
+      "inventory_weeks": 4,
+      "uses_defaults": true,
+      "name": "Renesas Electronics",
+      "tier": 2,
+      "country": "JP",
+      "usd_b": 9.3
+    },
+    "sk_materials": {
+      "substitution": 0.5,
+      "inventory_weeks": 4,
+      "uses_defaults": true,
+      "name": "SK Materials",
+      "tier": 3,
+      "country": "KR",
+      "usd_b": 0.9
+    },
+    "soulbrain": {
+      "substitution": 0.5,
+      "inventory_weeks": 4,
+      "uses_defaults": true,
+      "name": "Soulbrain Holdings",
+      "tier": 3,
+      "country": "KR",
+      "usd_b": 0.8
+    },
+    "oci_company": {
+      "substitution": 0.5,
+      "inventory_weeks": 4,
+      "uses_defaults": true,
+      "name": "OCI Company",
+      "tier": 3,
+      "country": "KR",
+      "usd_b": 2.1
+    },
+    "dongjin": {
+      "substitution": 0.5,
+      "inventory_weeks": 4,
+      "uses_defaults": true,
+      "name": "Dongjin Semichem",
+      "tier": 3,
+      "country": "KR",
+      "usd_b": 0.5
+    },
+    "lg_chem_semi": {
+      "substitution": 0.5,
+      "inventory_weeks": 4,
+      "uses_defaults": true,
+      "name": "LG Chem (반도체소재)",
+      "tier": 3,
+      "country": "KR",
+      "usd_b": 9.2
+    },
+    "isc_korea": {
+      "substitution": 0.5,
+      "inventory_weeks": 4,
+      "uses_defaults": true,
+      "name": "ISC Co.",
+      "tier": 3,
+      "country": "KR",
+      "usd_b": 0.4
+    },
+    "wonik_ips": {
+      "substitution": 0.5,
+      "inventory_weeks": 4,
+      "uses_defaults": true,
+      "name": "Wonik IPS",
+      "tier": 3,
+      "country": "KR",
+      "usd_b": 0.7
+    },
+    "koh_young": {
+      "substitution": 0.5,
+      "inventory_weeks": 4,
+      "uses_defaults": true,
+      "name": "Koh Young Technology",
+      "tier": 3,
+      "country": "KR",
+      "usd_b": 0.3
+    },
+    "ase_group": {
+      "substitution": 0.5,
+      "inventory_weeks": 4,
+      "uses_defaults": true,
+      "name": "ASE Technology (SPIL)",
+      "tier": 1,
+      "country": "TW",
+      "usd_b": 21.0
+    },
+    "nan_ya_pcb": {
+      "substitution": 0.5,
+      "inventory_weeks": 4,
+      "uses_defaults": true,
+      "name": "Nan Ya PCB",
+      "tier": 2,
+      "country": "TW",
+      "usd_b": 1.4
+    },
+    "walsin_tech": {
+      "substitution": 0.5,
+      "inventory_weeks": 4,
+      "uses_defaults": true,
+      "name": "Walsin Technology",
+      "tier": 3,
+      "country": "TW",
+      "usd_b": 0.9
+    },
+    "chroma_ate": {
+      "substitution": 0.5,
+      "inventory_weeks": 4,
+      "uses_defaults": true,
+      "name": "Chroma ATE",
+      "tier": 2,
+      "country": "TW",
+      "usd_b": 0.8
+    },
+    "wus_pcb": {
+      "substitution": 0.5,
+      "inventory_weeks": 4,
+      "uses_defaults": true,
+      "name": "WUS Printed Circuit",
+      "tier": 2,
+      "country": "TW",
+      "usd_b": 1.2
+    },
+    "taiwan_mask": {
+      "substitution": 0.5,
+      "inventory_weeks": 4,
+      "uses_defaults": true,
+      "name": "Taiwan Mask Corp (TMC)",
+      "tier": 3,
+      "country": "TW",
+      "usd_b": 0.3
+    },
+    "powertech_tech": {
+      "substitution": 0.5,
+      "inventory_weeks": 4,
+      "uses_defaults": true,
+      "name": "Powertech Technology (PTI)",
+      "tier": 2,
+      "country": "TW",
+      "usd_b": 2.0
+    },
+    "elite_material": {
+      "substitution": 0.5,
+      "inventory_weeks": 4,
+      "uses_defaults": true,
+      "name": "Elite Material (EMC)",
+      "tier": 3,
+      "country": "TW",
+      "usd_b": 0.7
+    },
+    "asmi": {
+      "substitution": 0.5,
+      "inventory_weeks": 4,
+      "uses_defaults": true,
+      "name": "ASM International",
+      "tier": 4,
+      "country": "EU",
+      "usd_b": 4.1
+    },
+    "basf_semi": {
+      "substitution": 0.5,
+      "inventory_weeks": 4,
+      "uses_defaults": true,
+      "name": "BASF Electronic Materials",
+      "tier": 4,
+      "country": "EU",
+      "usd_b": 69.2
+    },
+    "evonik": {
+      "substitution": 0.5,
+      "inventory_weeks": 4,
+      "uses_defaults": true,
+      "name": "Evonik Industries",
+      "tier": 4,
+      "country": "EU",
+      "usd_b": 17.2
+    },
+    "wacker_chemie": {
+      "substitution": 0.5,
+      "inventory_weeks": 4,
+      "uses_defaults": true,
+      "name": "Wacker Chemie",
+      "tier": 4,
+      "country": "EU",
+      "usd_b": 5.8
+    },
+    "infineon": {
+      "substitution": 0.5,
+      "inventory_weeks": 4,
+      "uses_defaults": true,
+      "name": "Infineon Technologies",
+      "tier": 1,
+      "country": "EU",
+      "usd_b": 15.0
+    },
+    "stmicro": {
+      "substitution": 0.5,
+      "inventory_weeks": 4,
+      "uses_defaults": true,
+      "name": "STMicroelectronics",
+      "tier": 1,
+      "country": "EU",
+      "usd_b": 13.3
+    },
+    "nxp": {
+      "substitution": 0.5,
+      "inventory_weeks": 4,
+      "uses_defaults": true,
+      "name": "NXP Semiconductors",
+      "tier": 2,
+      "country": "EU",
+      "usd_b": 12.7
+    },
+    "jenoptik": {
+      "substitution": 0.5,
+      "inventory_weeks": 4,
+      "uses_defaults": true,
+      "name": "Jenoptik",
+      "tier": 3,
+      "country": "EU",
+      "usd_b": 1.0
+    },
+    "china_re": {
+      "substitution": 0.5,
+      "inventory_weeks": 4,
+      "uses_defaults": true,
+      "name": "China Northern Rare Earth",
+      "tier": 4,
+      "country": "CN",
+      "usd_b": 5.2
+    },
+    "jiangxi_copper": {
+      "substitution": 0.5,
+      "inventory_weeks": 4,
+      "uses_defaults": true,
+      "name": "Jiangxi Copper",
+      "tier": 4,
+      "country": "CN",
+      "usd_b": 22.0
+    },
+    "yunnan_tin": {
+      "substitution": 0.5,
+      "inventory_weeks": 4,
+      "uses_defaults": true,
+      "name": "Yunnan Tin Group",
+      "tier": 4,
+      "country": "CN",
+      "usd_b": 3.8
+    },
+    "cmoc": {
+      "substitution": 0.5,
+      "inventory_weeks": 4,
+      "uses_defaults": true,
+      "name": "CMOC Group (中国钼业)",
+      "tier": 4,
+      "country": "CN",
+      "usd_b": 8.1
     }
   },
   "scenarios": {

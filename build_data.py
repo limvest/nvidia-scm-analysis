@@ -5,7 +5,7 @@ build_data.py: 리포트 md 파싱 -> JS 데이터 생성 -> index.html 빌드
 import re, json, os, sys
 
 BASE      = os.environ.get("SCM_SOURCE_DIR", os.path.join(os.path.dirname(os.path.abspath(__file__)), "source"))
-CHART_DIR = os.path.join(BASE, "차트 ")
+CHART_DIR = os.path.dirname(os.path.abspath(__file__))
 REPORT_MD = os.path.join(BASE, "NVIDIA_Rubin_SCM_최종리포트.md")
 FEYNMAN   = {
     "F1": os.path.join(BASE, "F1_OIO_TeraPHY.md"),

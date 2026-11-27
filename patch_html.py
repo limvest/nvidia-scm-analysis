@@ -66,12 +66,12 @@ document.getElementById('opm-btn').addEventListener('click',()=>{
 });"""
 html = html.replace(old_render_call, new_render_call)
 
-with open("scm_full.html", "w", encoding="utf-8") as f:
+with open("scm_full_legacy.html", "w", encoding="utf-8") as f:
     f.write(html)
 
 print("Done. Verifying...")
 # Quick verify
-with open("scm_full.html", encoding="utf-8") as f:
+with open("scm_full_legacy.html", encoding="utf-8") as f:
     h2 = f.read()
 nodes_count = h2.count('"key":')
 print(f"  key count in HTML: {nodes_count}")

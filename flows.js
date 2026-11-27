@@ -55,7 +55,7 @@ MATERIAL_FLOWS = [
 
 // 머니플로우 (NVIDIA 투자) — 1차 SEC 공시 검증
 MONEY_FLOWS = [
-  {from:"NVIDIA", to:"Coherent", amt:"$20억", detail:"7.79M주@$256.80, 지분9~10%", src:"Coherent 8-K 2026.03 [1차]"},
+  {from:"NVIDIA", to:"Coherent", amt:"$20억", detail:"7,788,161주 × $256.80", src:"Coherent 8-K 2026.03 [1차]"},
   {from:"NVIDIA", to:"Lumentum", amt:"$20억", detail:"전환우선주", src:"Lumentum 8-K 2026.03 [1차]"},
-  {from:"NVIDIA", to:"Ayar Labs", amt:"$5억", detail:"Series E, 기업가치$37.5억", src:"업계보도+SEC [2차]"},
+  {from:"NVIDIA", to:"Ayar Labs", amt:"개별 금액 미공개", detail:"Series E 전체 $5억, 기업가치 $37.5억", src:"Ayar Labs 2026.03.03 [1차]"},
 ];

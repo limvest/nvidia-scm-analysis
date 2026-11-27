@@ -1,6 +1,6 @@
 # NVIDIA Rubin / Feynman 공급망 리스크 분석
 
-NVIDIA 차세대 AI 가속기(Vera Rubin, Feynman)의 공급망을 노드 138개짜리 지도로 정리하고, 특정 지역이나 기업이 멈췄을 때 충격이 어디까지 번지는지 계산하는 시뮬레이터를 만든 분석 프로젝트입니다.
+NVIDIA 차세대 AI 가속기(Vera Rubin, Feynman)의 공급망을 187개 노드와 922개 공급 관계로 정리하고, 특정 지역이나 기업이 멈췄을 때 충격이 어디까지 번지는지 계산하는 시뮬레이터를 만든 분석 프로젝트입니다.
 
 **[라이브 데모](https://nvidia-scm-analysis.vercel.app)** · [투자 리서치 페이지](https://nvidia-scm-analysis.vercel.app/research.html) · [리서치 문서](docs/)
 
@@ -14,7 +14,7 @@ NVIDIA 차세대 AI 가속기(Vera Rubin, Feynman)의 공급망을 노드 138개
 | 주제 | 반도체 공급망 구조와 지정학 리스크 |
 | 한 일 | 공개 자료 조사, 공급망 데이터 모델링, 리스크 시뮬레이터 구현, 리서치 문서 작성 |
 | 도구 | Python(데이터 생성·빌드), JavaScript(시뮬레이터·시각화), Web Worker |
-| 규모 | 노드 138개, 공급 흐름 52개, 충격 시나리오 6개, 상장사 84곳 스크리닝 |
+| 규모 | 웹 지도 노드 187개, 공급 흐름 922개, 충격 시나리오 6개, 상장사 84곳 스크리닝 |
 
 ## 어떤 질문에서 시작했나
 
@@ -28,16 +28,16 @@ AI 가속기 한 대가 나오려면 소재, 장비, 파운드리, 메모리, �
 
 ### 1. 공급망 지도
 
-소재 → 장비 → 웨이퍼·파운드리 → 메모리(HBM) → 패키징(CoWoS) → 광인터커넥트(CPO) → 시스템 순서로, 기업을 노드로 공급 관계를 흐름으로 정리했습니다. 노드마다 국가, 시장 점유율, 대체 공급처 전환에 걸리는 기간, 출처 등급을 붙였습니다. 현재 세대(Rubin, 2026)와 다음 세대(Feynman, 2028~)를 나눠 볼 수 있습니다.
+소재 → 장비 → 웨이퍼·파운드리 → 메모리(HBM) → 패키징(CoWoS) → 광인터커넥트(CPO) → 시스템 순서로, 기업을 노드로 공급 관계를 흐름으로 정리했습니다. 노드마다 국가, 시장 점유율, 대체 공급처 전환에 걸리는 기간, 초크포인트 등급을 붙였습니다. 일부 지표에는 추정치와 결측값이 포함됩니다. 현재 세대(Rubin, 2026)와 다음 세대(Feynman, 2028~)를 나눠 볼 수 있습니다.
 
 ### 2. 리스크 전파 시뮬레이터
 
 노드 하나나 지역 전체를 차단하면 공급 관계를 따라 하류 노드의 공급 손실을 계산합니다.
 
-- 위상 정렬 순서로 상류에서 하류로 손실을 전파합니다.
-- 대체 공급처 비중과 재고 버퍼를 반영합니다.
-- 몬테카를로로 여러 번 돌려 결과 분포를 히스토그램으로 보여 줍니다. 지역 간 동시 발생은 가우시안 코풀라로 상관을 줍니다.
-- 계산은 Web Worker에서 돌려 화면이 멈추지 않습니다. 서버 없이 브라우저만으로 동작합니다.
+- 상류에서 하류 순서로 손실을 전파합니다. 서로 순환하는 노드 사이에서는 전주의 공급 상태를 사용합니다.
+- 대체 공급처 비중과 재고를 반영합니다. 각 시나리오의 지정 기간이 지나면 직접 충격이 종료됩니다.
+- 몬테카를로로 여러 번 돌려 결과 분포를 히스토그램으로 보여 줍니다. 5년 이내 발생확률을 가정해 시나리오를 뽑고, 뽑힌 사건들이 같은 주에 시작한다고 가정해 선택한 주차의 영향을 비교합니다. 상관 옵션을 켜면 가우시안 코풀라를 사용합니다.
+- 몬테카를로 계산은 Web Worker에서 돌려 화면이 멈추지 않습니다. 사용자 브라우저에서 결과를 계산합니다.
 
 ### 3. 충격 시나리오 6개
 
@@ -52,7 +52,7 @@ AI 가속기 한 대가 나오려면 소재, 장비, 파운드리, 메모리, �
 
 ### 4. 단일 실패 지점 순위
 
-차단했을 때 NVIDIA까지 영향이 얼마나 빨리, 직접 도달하는지를 기준으로 노드 중심성을 계산해 병목 순위를 뽑았습니다.
+각 공급자를 하나씩 차단해 26주 안에 NVIDIA가 처음 다운되는 주를 계산합니다. 대체 가능성과 하류 노드 수, 마지막 주의 매출 영향 가정값을 함께 사용해 순위를 매깁니다.
 
 ### 5. 상장사 스크리닝과 리서치 문서
 
@@ -68,10 +68,14 @@ AI 가속기 한 대가 나오려면 소재, 장비, 파운드리, 메모리, �
 
 ## 직접 실행
 
-브라우저에서 `index.html`을 열면 됩니다. 서버가 필요 없습니다.
+저장소 루트에서 로컬 정적 서버를 실행한 뒤 [공급망 지도](http://127.0.0.1:8000/)를 엽니다. 시뮬레이터가 같은 주소에서 JSON과 Web Worker를 로드합니다.
 
 ```bash
-node tests/test_risk_sim.js   # 시뮬레이터 단위 테스트 8개
+python3 -m http.server 8000 --bind 127.0.0.1
+```
+
+```bash
+node tests/test_risk_sim.js
 ```
 
 ## 파일 구성
@@ -82,16 +86,25 @@ node tests/test_risk_sim.js   # 시뮬레이터 단위 테스트 8개
 | `scm_full.html` | 전체 공급망 지도 |
 | `research.html` | 상장사 스크리닝·투자 리서치 페이지 |
 | `risk_sim.js`, `risk_worker.js` | 리스크 전파 엔진과 몬테카를로 Web Worker |
-| `scm_nodes.json`, `nodes_full.json`, `flows.js`, `layout.json` | 노드·흐름·배치 데이터 |
+| `scm_nodes.json`, `nodes_full.json`, `flows.js`, `layout.json` | 이전 138개 노드·52개 흐름 지도와 차트 작업용 자료 |
 | `risk_data.json`, `marketcaps.json` | 시나리오 입력값, 공개 시가총액 |
-| `scm_data.py`, `gen_*.py`, `build_data.py`, `patch_html.py` | 데이터 생성과 HTML 빌드 스크립트 |
+| `scm_data.py`, `gen_*.py`, `build_data.py`, `patch_html.py` | 데이터 동기화, 리포트 빌드, 이전 차트 생성 도구 |
 | `tests/test_risk_sim.js` | 시뮬레이터 단위 테스트 |
+
+웹 지도와 테스트는 `index.html`의 `DATA`를 사용합니다. `gen_risk_data.py`는 기존 시나리오와 개별 추정치를 보존하고 지도에서 이름·시총 등을 동기화합니다. 개별 입력이 없는 노드에는 대체 비중 0.5와 재고 4주를 적용합니다.
 
 `build_data.py`는 원본 리서치 마크다운을 읽어 HTML을 다시 만듭니다. 원본 위치는 `SCM_SOURCE_DIR` 환경변수로 지정하며, 원본 마크다운은 이 저장소에 없습니다.
 
 ## 배운 점과 한계
 
 - **구조를 그려야 보이는 것이 있었습니다.** 표면에서는 한 줄인 공급 관계가, 따라가 보면 원료·기판·장비·전구체 가스까지 여러 층으로 깊어집니다. 병목은 유명한 대기업보다 그 아래 층의 작은 회사에 있는 경우가 많았습니다.
-- **수치는 2026년 5월 공개 자료 기준입니다.** 기업 공시, 업계 보고서, 언론 보도를 썼고 수치마다 출처 등급을 표기했습니다.
+- **수치는 2026년 5월 공개 자료 기준입니다.** 기업 공시, 업계 보고서, 언론 보도를 썼고 자료별 기준일과 추정 여부는 리서치 문서에 표시했습니다.
 - **시뮬레이션 입력은 가정입니다.** 대체 공급 비중, 재고 버퍼, 지역 간 상관계수는 공개 자료로 추정한 값이라, 결과는 정확한 예측이 아니라 상대적인 크기 비교로 봐야 합니다.
-- **투자 리서치 문서는 공급망 분석의 연장선에서 정리한 개인 연구 기록입니다.** 특정 종목의 매수·매도 권유가 아닙니다.
+- **투자 리서치 문서는 공급망 분석의 연장선에서 정리한 개인 연구 기록입니다.** 화면에는 2026년 5월 조사 대상 중 상위 30개를 표시합니다.
+
+## 주요 정정의 1차 자료
+
+- SK하이닉스 인디애나 투자 계획은 38.7억 달러이며 CHIPS 직접지원 한도는 4.58억 달러입니다. 삼성전자의 최종 직접지원 한도는 47.45억 달러입니다. [NIST SK하이닉스](https://www.nist.gov/chips/sk-hynix-indiana-west-lafayette) · [미 상무부 삼성전자 발표](https://www.nist.gov/news-events/news/2024/12/biden-harris-administration-announces-chips-incentives-award-samsung)
+- 2026년 3월 Ayar Labs의 5억 달러는 Series E 전체 조달액입니다. NVIDIA의 개별 출자액은 발표에 기재되지 않았습니다. Coherent는 NVIDIA에 주당 256.80달러로 7,788,161주를 발행했습니다. [Ayar Labs 발표](https://ayarlabs.com/news/ayar-labs-closes-500m-series-e-accelerates-volume-production-of-co-packaged-optics/) · [Coherent SEC 8-K](https://www.sec.gov/Archives/edgar/data/820318/000119312526084366/d42735d8k.htm)
+- FY2026 NVIDIA 연결 매출은 2,159.38억 달러, GAAP 영업이익률은 60.4%입니다. TSMC의 2025년 연결 영업이익률은 50.8%입니다. [NVIDIA 연간 실적](https://nvidianews.nvidia.com/news/nvidia-announces-financial-results-for-fourth-quarter-and-fiscal-2026/) · [TSMC 연차보고서](https://investor.tsmc.com/static/annualReports/2025/english/index.html)
+- 2026년 3월 Vera Rubin 발표에는 Groq 3 LPU를 포함한 칩 7종이 등장합니다. Feynman의 커스텀 HBM과 NVLink 8 CPO는 공식 로드맵에 있으며, GPU 파운드리 공정과 광칩렛 공급사 배정은 이 분석의 가정입니다. [NVIDIA Vera Rubin 발표](https://nvidianews.nvidia.com/news/nvidia-vera-rubin-platform) · [GTC 2026 로드맵](https://images.nvidia.com/nvimages/gtc/pdf/GTC26_SanJose_Highlights_Final.pdf)
