@@ -4,13 +4,15 @@ NVIDIA 차세대 AI 가속기(Vera Rubin, Feynman)의 공급망을 187개 노드
 
 **[라이브 데모](https://nvidia-scm-analysis.vercel.app)** · [투자 리서치 페이지](https://nvidia-scm-analysis.vercel.app/research.html) · [리서치 문서](docs/)
 
+[2026년 11월 후속 조사 · NVIDIA 출하에서 고객과 실제 가동까지](docs/NVIDIA_DOWNSTREAM.md)
+
 ![공급망 지도와 리스크 시뮬레이터](docs/img/supply-chain-map.png)
 
 ## 한눈에 보기
 
 | 항목 | 내용 |
 | --- | --- |
-| 기간 | 2026년 5월 ~ 6월 |
+| 기간 | 2026년 4월 기초 조사 · 5~6월 프로젝트 · 11월 자료 수정 및 고객·가동 현황 후속 조사 |
 | 주제 | 반도체 공급망 구조와 지정학 리스크 |
 | 한 일 | 공개 자료 조사, 공급망 데이터 모델링, 리스크 시뮬레이터 구현, 리서치 문서 작성 |
 | 도구 | Python(데이터 생성·빌드), JavaScript(시뮬레이터·시각화), Web Worker |
